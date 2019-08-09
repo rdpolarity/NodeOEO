@@ -1,0 +1,19 @@
+html {
+  color: black;
+}
+
+.teamContainer {
+  text-align: center;
+}
+
+.teamGroup {
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.teamOptions {
+  padding: 25px;
+}
+
+/*# sourceMappingURL=dashboard.e31bb0bc.css.map */

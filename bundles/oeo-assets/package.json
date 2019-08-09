@@ -1,0 +1,73 @@
+{
+  "name": "oeo-assets",
+  "version": "0.0.0",
+  "description": "Assets for tornament",
+  "author": {
+    "name": "rdpolarity",
+    "email": "rdpolarity@gmail.com",
+    "url": "https://aydie.me"
+  },
+  "scripts": {
+    "build": "parcel build src/dashboard/*.html -d dashboard && parcel build src/graphics/*.html -d graphics",
+    "dev": "parcel watch src/dashboard/*.html -d dashboard --public-url ./"
+  },
+  "files": [
+    "dashboard",
+    "graphics",
+    "extension.js",
+    "extension"
+  ],
+  "keywords": [
+    "",
+    "nodecg-bundle"
+  ],
+  "browserslist": "last 2 chrome versions",
+  "nodecg": {
+    "compatibleRange": "^1.1.1",
+    "dashboardPanels": [
+      {
+        "name": "scoreboard",
+        "title": "Scoreboard",
+        "width": 6,
+        "file": "scoreboard.html",
+        "headerColor": "#EE9B51"
+      },
+      {
+        "name": "annoucement",
+        "title": "Annoucement",
+        "width": 3,
+        "file": "annoucement.html",
+        "headerColor": "#EE9B51"
+      }
+    ],
+    "graphics": [
+      {
+        "file": "graphics.html",
+        "width": 1920,
+        "height": 1080
+      }
+    ],
+    "assetCategories": [
+      {
+        "name": "Team Logo's",
+        "title": "Team Logo's",
+        "allowedTypes": [
+          "jpg",
+          "jpeg",
+          "gif",
+          "png"
+        ]
+      }
+    ]
+  },
+  "repository": "https://github.com/nodecg/nodecg.git",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "sass": "^1.22.9"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.3.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
