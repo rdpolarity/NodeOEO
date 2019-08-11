@@ -1,8 +1,10 @@
 # NodeOEO
 
-Stream management for OEO made in NodeCG
+_Stream management for OEO made in NodeCG_
 
-**Setup**
+**INSTALL BUNDLE DEPENDACIES AND BUILD BUNDLE BEFORE LAUNCHING NODECG SERVER**
+
+**NodeCG Setup**
 
 Install Dependancies
 
