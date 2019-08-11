@@ -32,6 +32,12 @@ Start Dev Mode (_Launches parcel with synchronous export_)
 
 > npm run dev
 
+OR
+
+Start Build
+
+> npm run build
+
 **View Panel**
 
 > localhost:9090
