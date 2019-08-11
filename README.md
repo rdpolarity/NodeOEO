@@ -7,9 +7,13 @@ Stream management for OEO made in NodeCG
 Install Dependancies
 
 > npm install
-> Install Process Manager 2
+
+Install Process Manager 2
+
 > npm i pm2 -g
-> Launch NodeCG Server
+
+Launch NodeCG Server
+
 > pm2 start index.js
 
 **Bundle Setup**
@@ -17,9 +21,13 @@ Install Dependancies
 Move to OEO Bundle
 
 > cd bundles/oeo-assets
-> Install Dependancies
+
+Install Dependancies
+
 > npm install
-> Start Dev Mode (_Launches parcel with synchronous export_)
+
+Start Dev Mode (_Launches parcel with synchronous export_)
+
 > npm run dev
 
 **View Panel**
