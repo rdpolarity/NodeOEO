@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import { Button, TextField, Grid } from "@material-ui/core";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
@@ -13,13 +13,21 @@ const theme = createMuiTheme({
 });
 
 const Annoucement = () => {
+  let message;
+  const handleMsg = e => {
+    message = e.target.value;
+  };
+  const send = () => {
+    nodecg.sendMessage("printMessage", message);
+    console.log(`sent "${message}"`);
+  };
   return (
     <Grid spacing={2} container alignItems="center">
       <Grid item>
-        <TextField variant="outlined" label="message" />
+        <TextField variant="outlined" onChange={handleMsg} label="message" />
       </Grid>
       <Grid item>
-        <Button color="primary" varient="outlined">
+        <Button color="primary" onClick={send} varient="outlined">
           Send
         </Button>
       </Grid>

@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "parcel build src/dashboard/*.html -d dashboard && parcel build src/graphics/*.html -d graphics",
-    "dev": "parcel watch src/dashboard/*.html -d dashboard --public-url ./"
+    "dev": "concurrently \"parcel watch src/dashboard/*.html -d dashboard --public-url ./\" \"parcel watch src/graphics/*.html -d graphics --public-url ./\""
   },
   "files": [
     "dashboard",
@@ -42,7 +42,7 @@
     ],
     "graphics": [
       {
-        "file": "graphics.html",
+        "file": "gameplay.html",
         "width": 1920,
         "height": 1080
       }
@@ -63,10 +63,12 @@
   "repository": "https://github.com/nodecg/nodecg.git",
   "license": "Apache-2.0",
   "devDependencies": {
+    "cssnano": "^4.1.10",
     "sass": "^1.22.9"
   },
   "dependencies": {
     "@material-ui/core": "^4.3.1",
+    "concurrently": "^4.1.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   }

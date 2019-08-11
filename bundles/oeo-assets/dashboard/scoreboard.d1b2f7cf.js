@@ -72394,7 +72394,7 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"C:/Users/admin/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../styles/styles.scss":[function(require,module,exports) {
+},{"./bundle-url":"C:/Users/admin/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../styles/dashboard.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -72407,11 +72407,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = TeamPanel;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
 var _core = require("@material-ui/core");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 const suggestions = [{
   label: "Afghanistan"
@@ -72444,6 +72444,18 @@ const suggestions = [{
 }];
 
 function TeamPanel(props) {
+  const inputLabel = _react.default.useRef(null);
+
+  const [labelWidth, setLabelWidth] = _react.default.useState(0);
+
+  _react.default.useEffect(() => {
+    setLabelWidth(inputLabel.current.offsetWidth);
+  }, []);
+
+  const handleTeam = e => {
+    team = e.target.value;
+  };
+
   const getSide = () => {
     if (props.blue) return "BLUE";
     if (props.red) return "RED";
@@ -72455,23 +72467,44 @@ function TeamPanel(props) {
     container: true,
     direction: "column",
     spacing: 2,
-    className: "teamGroup"
+    className: "group"
   }, _react.default.createElement(_core.Typography, {
     gutterBottom: true,
     variant: "h5"
   }, getSide()), _react.default.createElement(_core.TextField, {
+    className: "gutter",
     variant: "outlined",
     label: "Name"
   }), _react.default.createElement(_core.Grid, {
-    container: true
+    container: true,
+    className: "gutter"
   }, _react.default.createElement(_core.TextField, {
     variant: "outlined",
     label: "Score"
-  }), _react.default.createElement(_core.Button, null, _react.default.createElement(_core.Icon, null, "keyboard_arrow_up")), _react.default.createElement(_core.Button, null, _react.default.createElement(_core.Icon, null, "keyboard_arrow_down"))), _react.default.createElement(_core.Select, {
+  }), _react.default.createElement(_core.Button, null, _react.default.createElement(_core.Icon, null, "keyboard_arrow_up")), _react.default.createElement(_core.Button, null, _react.default.createElement(_core.Icon, null, "keyboard_arrow_down"))), _react.default.createElement(_core.FormControl, {
+    style: {
+      marginTop: 5
+    },
+    variant: "outlined"
+  }, _react.default.createElement(_core.InputLabel, {
+    ref: inputLabel,
+    htmlFor: "team-logo"
+  }, "Age"), _react.default.createElement(_core.Select, {
+    value: "",
     input: _react.default.createElement(_core.OutlinedInput, {
+      labelWidth: labelWidth,
+      id: "team-logo",
       name: "logo"
     })
-  }, _react.default.createElement(_core.MenuItem, null, "testlogo.png"))));
+  }, _react.default.createElement(_core.MenuItem, {
+    value: 10
+  }, "testlogo.png"), _react.default.createElement(_core.MenuItem, {
+    value: 10
+  }, "testlogo.png"), _react.default.createElement(_core.MenuItem, {
+    value: 10
+  }, "testlogo.png"), _react.default.createElement(_core.MenuItem, {
+    value: 10
+  }, "testlogo.png")))));
 }
 },{"react":"../../node_modules/react/index.js","@material-ui/core":"../../node_modules/@material-ui/core/esm/index.js"}],"scoreboard.js":[function(require,module,exports) {
 "use strict";
@@ -72484,7 +72517,7 @@ var _core = require("@material-ui/core");
 
 var _styles = require("@material-ui/core/styles");
 
-require("../styles/styles.scss");
+require("../styles/dashboard.scss");
 
 var _TeamPanel = _interopRequireDefault(require("../components/TeamPanel"));
 
@@ -72496,23 +72529,15 @@ const theme = (0, _styles.createMuiTheme)({
     type: "dark",
     primary: {
       main: "#ED9C4D"
+    },
+    default: {
+      main: "#FFFFFF"
     }
   }
 });
 
-const Scoreboard = () => {
-  return _react.default.createElement(_styles.MuiThemeProvider, {
-    theme: theme
-  }, _react.default.createElement(_core.Grid, {
-    container: true,
-    spacing: 3,
-    justify: "space-evenly",
-    className: "teamContainer"
-  }, _react.default.createElement(_TeamPanel.default, {
-    blue: true
-  }), _react.default.createElement(_core.Button, null, _react.default.createElement(_core.Icon, null, "swap_horiz")), _react.default.createElement(_TeamPanel.default, {
-    red: true
-  })), _react.default.createElement(_core.Grid, {
+const Dashboard = () => {
+  return _react.default.createElement(_core.Grid, {
     container: true,
     justify: "center",
     spacing: 1,
@@ -72527,11 +72552,49 @@ const Scoreboard = () => {
   }, _react.default.createElement(_core.Button, {
     variant: "outlined",
     color: "primary"
-  }, "Reset"))));
+  }, "Reset")));
+};
+
+const Teamboard = () => {
+  return _react.default.createElement(_core.Grid, {
+    container: true,
+    spacing: 3,
+    justify: "space-between",
+    alignItems: "center",
+    className: "teamContainer"
+  }, _react.default.createElement(_TeamPanel.default, {
+    blue: true
+  }), _react.default.createElement(_core.Grid, {
+    item: true
+  }, _react.default.createElement(_core.Button, {
+    style: {
+      height: 50
+    }
+  }, _react.default.createElement(_core.Icon, null, "swap_horiz"))), _react.default.createElement(_TeamPanel.default, {
+    red: true
+  }));
+};
+
+const Scoreboard = () => {
+  return _react.default.createElement(_styles.MuiThemeProvider, {
+    theme: theme
+  }, _react.default.createElement(_core.Grid, {
+    container: true,
+    direction: "column",
+    spacing: 2
+  }, _react.default.createElement(_core.Grid, {
+    item: true,
+    className: "group"
+  }, _react.default.createElement(Dashboard, null)), _react.default.createElement(_core.Grid, {
+    item: true,
+    style: {
+      marginTop: 5
+    }
+  }, _react.default.createElement(Teamboard, null))));
 };
 
 _reactDom.default.render(_react.default.createElement(Scoreboard, null), document.getElementById("root"));
-},{"react":"../../node_modules/react/index.js","react-dom":"../../node_modules/react-dom/index.js","@material-ui/core":"../../node_modules/@material-ui/core/esm/index.js","@material-ui/core/styles":"../../node_modules/@material-ui/core/esm/styles/index.js","../styles/styles.scss":"../styles/styles.scss","../components/TeamPanel":"../components/TeamPanel.jsx"}],"C:/Users/admin/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","react-dom":"../../node_modules/react-dom/index.js","@material-ui/core":"../../node_modules/@material-ui/core/esm/index.js","@material-ui/core/styles":"../../node_modules/@material-ui/core/esm/styles/index.js","../styles/dashboard.scss":"../styles/dashboard.scss","../components/TeamPanel":"../components/TeamPanel.jsx"}],"C:/Users/admin/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -72559,7 +72622,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61524" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59520" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

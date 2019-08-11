@@ -1,56 +1,9 @@
-# Node / Bower
-/bower_components
 /node_modules
-/build/bower_components
-/build/node_modules
-npm-debug.log
-
-# Datastores
-/db/**
-
-# Logs
-/logs/**
-
-# OS specific
-.DS_Store
-
-# JetBrains IDEs (IntelliJ/WebStorm)
-/.idea/compiler.xml
-/.idea/encodings.xml
-/.idea/copyright/profiles_settings.xml
-/.idea/workspace.xml
-/.idea/shelf/
-/.idea/codeStyles/codeStyleConfig.xml
-
-# Code coverage results
-/coverage
-.nyc_output
-
-# Test folders
-/bundles2
-/bundles_off
-/_workingTest
-
-# Compiled docs
-docs
-.grunt
-
-# Assets
+/db
 /assets
-
-/instrumented
-
-# Don't ignore .empty_directory files
-!.empty_directory
-© 2019 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+/db
+/logs
+/bundles/*/node_modules
+/bundles/*/.cache
+/bundles/*/dashboard
+/bundles/*/graphics

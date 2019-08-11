@@ -1,23 +1,16 @@
-html {
-  color: black;
-}
-
-body {
-  padding: 15px;
+.gutter {
+  margin-top: 5px;
 }
 
 .teamContainer {
   text-align: center;
 }
 
-.teamGroup {
+.group {
+  margin: 10px;
   padding: 10px;
   border: 1px solid white;
   border-radius: 5px;
-}
-
-.teamOptions {
-  padding: 25px;
 }
 
 /*# sourceMappingURL=scoreboard.d1b2f7cf.css.map */
