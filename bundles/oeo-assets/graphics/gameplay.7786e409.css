@@ -1,0 +1,96 @@
+body {
+  background-color: blue;
+  background-image: url(OWSpectatorMockup.b371193a.jpg);
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  color: white;
+}
+
+.primary {
+  background-color: #ee9b51;
+}
+.primary p {
+  color: white;
+}
+
+.round-bottom {
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.round-top div {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.round-left div {
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.round-right div {
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.center {
+  text-align: center;
+}
+
+.white {
+  background-color: white;
+}
+.white p {
+  color: black;
+}
+
+.gutter {
+  padding: 10px;
+}
+
+.pad {
+  padding: 10px;
+}
+
+.black {
+  background-color: black;
+}
+.black p {
+  color: white;
+}
+
+.grey {
+  background-color: grey;
+}
+.grey p {
+  color: white;
+}
+
+.pl {
+  margin-left: 10px;
+}
+
+.flip {
+  transform: rotate(90deg);
+}
+
+.box {
+  width: 50px;
+  height: 100%;
+}
+
+.ignore {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+}
+
+.logo {
+  height: 150px;
+  margin: 10px;
+}
+
+/*# sourceMappingURL=gameplay.7786e409.css.map */

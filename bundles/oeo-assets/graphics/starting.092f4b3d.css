@@ -1,0 +1,35 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  color: white;
+}
+
+* {
+  text-shadow: 2px 2px 10px black;
+}
+
+.fit {
+  width: 100vw;
+  height: 100vh;
+}
+
+.blend {
+  background-color: orange;
+  mix-blend-mode: color;
+}
+
+.ignore {
+  position: absolute;
+}
+
+.video {
+  transform: scale(1.5);
+}
+
+.border {
+  padding: 15px;
+  border: 3px solid white;
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=starting.092f4b3d.css.map */

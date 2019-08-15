@@ -6,5 +6,3 @@
 /logs
 /bundles/*/node_modules
 /bundles/*/.cache
-/bundles/*/dashboard
-/bundles/*/graphics
