@@ -72509,7 +72509,7 @@ function TeamPanel(props) {
 },{"react":"../../node_modules/react/index.js","@material-ui/core":"../../node_modules/@material-ui/core/esm/index.js"}],"scoreboard.js":[function(require,module,exports) {
 "use strict";
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
@@ -72522,6 +72522,8 @@ require("../styles/dashboard.scss");
 var _TeamPanel = _interopRequireDefault(require("../components/TeamPanel"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 // Styles
 const theme = (0, _styles.createMuiTheme)({
@@ -72537,6 +72539,14 @@ const theme = (0, _styles.createMuiTheme)({
 });
 
 const Dashboard = () => {
+  const [disable, setdisable] = (0, _react.useState)(false);
+
+  const toggle = e => {
+    setdisable(true);
+    setTimeout(() => setdisable(false), 1000);
+    nodecg.sendMessage("scoreboard-toggle", null);
+  };
+
   return _react.default.createElement(_core.Grid, {
     container: true,
     justify: "center",
@@ -72546,8 +72556,10 @@ const Dashboard = () => {
     item: true
   }, _react.default.createElement(_core.Button, {
     variant: "outlined",
+    disabled: disable,
+    onClick: toggle,
     color: "primary"
-  }, "Show")), _react.default.createElement(_core.Grid, {
+  }, "Toggle")), _react.default.createElement(_core.Grid, {
     item: true
   }, _react.default.createElement(_core.Button, {
     variant: "outlined",
@@ -72622,7 +72634,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59520" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56490" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

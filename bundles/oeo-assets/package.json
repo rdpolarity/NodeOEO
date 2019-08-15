@@ -45,6 +45,11 @@
         "file": "gameplay.html",
         "width": 1920,
         "height": 1080
+      },
+      {
+        "file": "starting.html",
+        "width": 1920,
+        "height": 1080
       }
     ],
     "assetCategories": [
@@ -68,8 +73,13 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.3.1",
+    "animejs": "^3.1.0",
     "concurrently": "^4.1.1",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-anime": "^2.2.0",
+    "react-dom": "^16.8.6",
+    "react-particles-js": "^2.7.0",
+    "react-pose": "^4.0.8",
+    "react-transition-group": "^4.2.2"
   }
 }

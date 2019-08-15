@@ -1,7 +1,8 @@
 /node_modules
 /db
+/.vscode
 /assets
-/db
+/cfg
 /logs
 /bundles/*/node_modules
 /bundles/*/.cache

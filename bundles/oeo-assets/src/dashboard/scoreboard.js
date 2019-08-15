@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import { Button, Grid, Icon, Paper } from "@material-ui/core";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
@@ -19,11 +19,22 @@ const theme = createMuiTheme({
 });
 
 const Dashboard = () => {
+  const [disable, setdisable] = useState(false);
+  const toggle = e => {
+    setdisable(true);
+    setTimeout(() => setdisable(false), 1000);
+    nodecg.sendMessage("scoreboard-toggle", null);
+  };
   return (
     <Grid container justify="center" spacing={1} className="teamOptions">
       <Grid item>
-        <Button variant="outlined" color="primary">
-          Show
+        <Button
+          variant="outlined"
+          disabled={disable}
+          onClick={toggle}
+          color="primary"
+        >
+          Toggle
         </Button>
       </Grid>
       <Grid item>

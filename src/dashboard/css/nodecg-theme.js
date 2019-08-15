@@ -1,4 +1,4 @@
-const $documentContainer = document.createElement("template");
+const $documentContainer = document.createElement('template');
 
 $documentContainer.innerHTML = `<dom-module id="nodecg-theme">
 	<template>
@@ -7,7 +7,7 @@ $documentContainer.innerHTML = `<dom-module id="nodecg-theme">
 			html {
 				color: white;
 
-				--nodecg-brand-blue: #FFFFFF;
+				--nodecg-brand-blue: #00bebe;
 				--nodecg-brand-blue-dark: #004949;
 				--default-primary-color: var(--nodecg-brand-blue);
 				--primary-color: var(--nodecg-brand-blue);

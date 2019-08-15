@@ -18,7 +18,7 @@ const Annoucement = () => {
     message = e.target.value;
   };
   const send = () => {
-    nodecg.sendMessage("printMessage", message);
+    nodecg.sendMessage("annoucement-msg", message);
     console.log(`sent "${message}"`);
   };
   return (

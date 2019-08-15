@@ -72359,7 +72359,7 @@ const Annoucement = () => {
   };
 
   const send = () => {
-    nodecg.sendMessage("printMessage", message);
+    nodecg.sendMessage("annoucement-msg", message);
     console.log(`sent "${message}"`);
   };
 
@@ -72413,7 +72413,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59520" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56490" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

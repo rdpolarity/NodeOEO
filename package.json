@@ -179,7 +179,7 @@
     "gulp": "^4.0.0",
     "gulp-util": "^3.0.8",
     "is-windows": "^1.0.2",
-    "jsdoc": "^3.6.2",
+    "jsdoc": "^3.6.3",
     "minami": "github:nodecg/minami#fbe470b796dd26f2b3d04584e5fc90451bea3ab8",
     "nyc": "^14.1.1",
     "p-retry": "^4.1.0",
