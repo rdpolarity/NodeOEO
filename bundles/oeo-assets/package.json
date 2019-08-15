@@ -78,8 +78,6 @@
     "react": "^16.8.6",
     "react-anime": "^2.2.0",
     "react-dom": "^16.8.6",
-    "react-particles-js": "^2.7.0",
-    "react-pose": "^4.0.8",
-    "react-transition-group": "^4.2.2"
+    "react-particles-js": "^2.7.0"
   }
 }
