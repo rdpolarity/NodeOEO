@@ -1,6 +1,5 @@
 body {
   background-color: blue;
-  background-image: url(OWSpectatorMockup.b371193a.jpg);
 }
 
 * {
@@ -52,6 +51,7 @@ body {
 }
 
 .pad {
+  margin: 10px;
   padding: 10px;
 }
 
@@ -91,6 +91,35 @@ body {
 .logo {
   height: 150px;
   margin: 10px;
+}
+
+.pad {
+  padding: 25px;
+}
+
+.fit {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.teamLogo {
+  height: 250px;
+}
+
+.applyShadow p {
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.applyShadow img {
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+}
+
+.imgShadow {
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+}
+
+.textShadow {
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 /*# sourceMappingURL=gameplay.7786e409.css.map */

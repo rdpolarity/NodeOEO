@@ -1,0 +1,51 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.gutter {
+  margin-top: 5px;
+}
+
+.teamContainer {
+  text-align: center;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.message {
+  padding: 5px 5px;
+}
+
+.group {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+}
+
+.logo {
+  height: 150px;
+}
+
+.logoPreview {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.teamOptions {
+  padding-top: 30px;
+}
+
+/*# sourceMappingURL=teams.24266410.css.map */

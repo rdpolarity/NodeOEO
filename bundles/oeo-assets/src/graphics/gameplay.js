@@ -6,9 +6,7 @@ import logo from "../images/animlogo.gif";
 // styles
 import "../styles/graphics.scss";
 import Anime from "../components/Anime";
-const intro = new Audio(trickle);
-import trickle from "../sounds/trickle.wav";
-const outro = new Audio(trickle);
+import { useReplicant } from "use-nodecg";
 
 nodecg.log.info("[OEO] Session Started");
 
@@ -16,7 +14,9 @@ const Logo = () => {
   return (
     <Grid container justify="flex-end" alignItems="flex-end" className="ignore">
       <Grid item>
-        <img src={logo} className="logo" />
+        <Anime opacity={[0, 1]} delay={2000}>
+          <img src={logo} className="logo" />
+        </Anime>
       </Grid>
     </Grid>
   );
@@ -26,7 +26,7 @@ const Swipe = ({ children }) => {
   return (
     <Anime
       duration={1000}
-      timeout={4000}
+      timeout={12000}
       opacity={[0, 1]}
       translateX={[-50, 0]}
       borderRadius={["100%", 0]}
@@ -71,7 +71,7 @@ const Annoucements = () => {
             <Anime
               width={["100%", 0]}
               opacity={[1, 1]}
-              duration={6000}
+              duration={12000}
               easing="linear"
             >
               <div style={{ height: 5, backgroundColor: "lightBlue" }} />
@@ -98,13 +98,11 @@ const Scoreboard = props => {
   };
 
   useEffect(() => {
-    intro.play();
     const handler = msg => {
       showSwitch();
     };
     nodecg.listenFor("scoreboard-toggle", handler);
     return () => {
-      outro.play();
       nodecg.unlisten("scoreboard-toggle", handler);
     };
   });
@@ -135,13 +133,14 @@ const Scoreboard = props => {
   };
 
   const ScoreData = props => {
-    const { team, score, ...properties } = props;
+    const { team, score, img, ...properties } = props;
     return (
       <Grid container style={{ height: "100%" }} {...properties}>
         <Box color="black">
           <Icon>info</Icon>
         </Box>
         <Box color="#ee9b51">{score}</Box>
+        <img height="50" width="50" src={img ? img : ""} />
 
         <Typography
           variant="h4"
@@ -156,6 +155,16 @@ const Scoreboard = props => {
   Box.defaultProps = {
     width: 50
   };
+
+  const scoreboard = useReplicant("scoreboard")[0];
+  const blueURL =
+    scoreboard && scoreboard.blue.team.hasOwnProperty("logo")
+      ? scoreboard.blue.team.logo.url
+      : "";
+  const redURL =
+    scoreboard && scoreboard.red.team.hasOwnProperty("logo")
+      ? scoreboard.red.team.logo.url
+      : "";
 
   return (
     <div>
@@ -188,14 +197,20 @@ const Scoreboard = props => {
               justify="flex-start"
               direction="row-reverse"
               alignItems="center"
-              team="team1"
-              score={1}
+              img={blueURL}
+              team={scoreboard && scoreboard.blue.team.name}
+              score={scoreboard && scoreboard.blue.score}
             />
           </Paper>
         </Anime>
         <Anime {...animProps} translateX={[100, 0]}>
           <Paper style={{ height: 50, width: 700 }}>
-            <ScoreData team="team2" score={2} alignItems="center" />
+            <ScoreData
+              img={redURL}
+              team={scoreboard && scoreboard.red.team.name}
+              score={scoreboard && scoreboard.red.score}
+              alignItems="center"
+            />
           </Paper>
         </Anime>
       </Grid>

@@ -72401,7 +72401,10 @@ module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
 },{"_css_loader":"C:/Users/admin/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../images/animlogo.gif":[function(require,module,exports) {
 module.exports = "animlogo.4f3210b2.gif";
-},{}],"../../node_modules/animejs/lib/anime.es.js":[function(require,module,exports) {
+},{}],"../../node_modules/react-particles-js/lib/particles.js":[function(require,module,exports) {
+var define;
+!function(e,t){"object"==typeof exports&&"object"==typeof module?module.exports=t(require("react")):"function"==typeof define&&define.amd?define(["react"],t):"object"==typeof exports?exports.Particles=t(require("react")):e.Particles=t(e.React)}(this,function(e){return function(e){var t={};function i(n){if(t[n])return t[n].exports;var r=t[n]={i:n,l:!1,exports:{}};return e[n].call(r.exports,r,r.exports,i),r.l=!0,r.exports}return i.m=e,i.c=t,i.d=function(e,t,n){i.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},i.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.t=function(e,t){if(1&t&&(e=i(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var n=Object.create(null);if(i.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var r in e)i.d(n,r,function(t){return e[t]}.bind(null,r));return n},i.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return i.d(t,"a",t),t},i.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},i.p="",i(i.s=27)}([function(e,t,i){var n=i(18),r="object"==typeof self&&self&&self.Object===Object&&self,a=n||r||Function("return this")();e.exports=a},function(e,t,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),function(e){e.CIRCLE="circle",e.EDGE="edge",e.TRIANGLE="triangle",e.POLYGON="polygon",e.STAR="star",e.IMAGE="image",e.IMAGES="images"}(t.ShapeType||(t.ShapeType={})),function(e){e.TOP="top",e.TOP_RIGHT="top-right",e.RIGHT="right",e.BOTTOM_RIGHT="bottom-right",e.BOTTOM="bottom",e.BOTTOM_LEFT="bottom-left",e.LEFT="left",e.TOP_LEFT="top-left",e.NONE="none"}(t.MoveDirection||(t.MoveDirection={})),function(e){e.BOUNCE="bounce",e.OUT="out"}(t.MoveOutMode||(t.MoveOutMode={})),function(e){e.GRAB="grab",e.PUSH="push",e.REMOVE="remove",e.BUBBLE="bubble",e.REPULSE="repulse"}(t.InteractivityMode||(t.InteractivityMode={})),function(e){e.INLINE="inline",e.INSIDE="inside",e.OUTSIDE="outside"}(t.PolygonType||(t.PolygonType={})),function(e){e.RANDOM_POINT="random-point",e.ONE_PER_POINT="one-per-point",e.RANDOM_LENGTH="random-length",e.EQUIDISTANT="equidistant"}(t.PolygonInlineArrangementType||(t.PolygonInlineArrangementType={})),function(e){e.PATH="path",e.RADIUS="radius"}(t.PolygonMoveType||(t.PolygonMoveType={}))},function(e,t,i){"use strict";function n(e){for(var i in e)t.hasOwnProperty(i)||(t[i]=e[i])}var r=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var a=r(i(15));t.Interactivity=a.default;var o=r(i(29));t.Modes=o.default;var s=r(i(30));t.Particle=s.default;var c=r(i(31));t.ParticleManager=c.default;var l=r(i(32));t.ParticlesLibrary=l.default;var u=r(i(34));t.Vendors=u.default,n(i(35)),n(i(1)),n(i(36)),n(i(4))},function(e,t,i){var n=i(51),r=i(57);e.exports=function(e,t){var i=r(e,t);return n(i)?i:void 0}},function(e,t,i){"use strict";function n(e){return(n="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e})(e)}function r(e,t){return t.indexOf(e)>-1}Object.defineProperty(t,"__esModule",{value:!0}),t.hexToRgb=function(e){e=e.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i,function(e,t,i,n){return t+t+i+i+n+n});var t=/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(e);return t?{r:parseInt(t[1],16),g:parseInt(t[2],16),b:parseInt(t[3],16)}:null},t.clamp=function(e,t,i){return Math.min(Math.max(e,t),i)},t.isInArray=r,t.isEqual=function(e,t){return Array.isArray(t)?r(e,t):t===e},t.deepAssign=function(e){for(var i=arguments.length,r=new Array(i>1?i-1:0),a=1;a<i;a++)r[a-1]=arguments[a];for(var o=0,s=r;o<s.length;o++){var c=s[o];if(null!=c){var l=n(c);if("object"===l){var u=Array.isArray(c);u?"object"===n(e)&&e&&Array.isArray(e)||(e=[]):"object"===n(e)&&e&&!Array.isArray(e)||(e={});var h=function(i){if("__proto__"===i)return"continue";var r=c[i],a="object"===n(r);a&&Array.isArray(r)?e[i]=r.map(function(n){return t.deepAssign(e[i],n)}):e[i]=t.deepAssign(e[i],r)};for(var y in c)h(y)}else e=c}}return e},t.getColor=function(e){var i={};if("object"==n(e))if(e instanceof Array){var r=e[Math.floor(Math.random()*e.length)];i.rgb=t.hexToRgb(r)}else{var a=e.r,o=e.g,s=e.b;if(void 0!==a&&void 0!==o&&void 0!==s)i.rgb={r:a,g:o,b:s};else{var c=e.h,l=e.s,u=e.l;void 0!==c&&void 0!==o&&void 0!==s&&(i.hsl={h:c,s:l,l:u})}}else"random"==e?i.rgb={r:Math.floor(255*Math.random())+1,g:Math.floor(255*Math.random())+1,b:Math.floor(255*Math.random())+1}:"string"==typeof e&&(i.rgb=t.hexToRgb(e));return i}},function(e,t,i){var n=i(41),r=i(42),a=i(43),o=i(44),s=i(45);function c(e){var t=-1,i=null==e?0:e.length;for(this.clear();++t<i;){var n=e[t];this.set(n[0],n[1])}}c.prototype.clear=n,c.prototype.delete=r,c.prototype.get=a,c.prototype.has=o,c.prototype.set=s,e.exports=c},function(e,t,i){var n=i(16);e.exports=function(e,t){for(var i=e.length;i--;)if(n(e[i][0],t))return i;return-1}},function(e,t,i){var n=i(12),r=i(53),a=i(54),o="[object Null]",s="[object Undefined]",c=n?n.toStringTag:void 0;e.exports=function(e){return null==e?void 0===e?s:o:c&&c in Object(e)?r(e):a(e)}},function(e,t,i){var n=i(3)(Object,"create");e.exports=n},function(e,t,i){var n=i(66);e.exports=function(e,t){var i=e.__data__;return n(t)?i["string"==typeof t?"string":"hash"]:i.map}},function(e,t){e.exports=function(e){return null!=e&&"object"==typeof e}},function(e,t,i){var n=i(3)(i(0),"Map");e.exports=n},function(e,t,i){var n=i(0).Symbol;e.exports=n},function(e,t){var i=Array.isArray;e.exports=i},function(t,i){t.exports=e},function(e,t,i){"use strict";function n(e,t){for(var i=0;i<t.length;i++){var n=t[i];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}Object.defineProperty(t,"__esModule",{value:!0});var r,a=i(1);!function(e){e.MOUSEMOVE="mousemove",e.MOUSELEAVE="mouseleave"}(r=t.MouseInteractivityStatus||(t.MouseInteractivityStatus={}));var o=function(){function e(t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.library=t,this.mouseMovePosition={x:0,y:0},this.mouseClickPosition={x:0,y:0},this.mouseClickTime=0,this.onMouseMove=this.onMouseMove.bind(this),this.onMouseLeave=this.onMouseLeave.bind(this),this.onMouseClick=this.onMouseClick.bind(this)}var t,i,o;return t=e,(i=[{key:"attachEventHandlers",value:function(){var e=this.library.getParameter(function(e){return e.interactivity});"window"===e.detect_on?this.interactionElement=window:this.interactionElement=this.library.canvas.element,(e.events.onhover.enable||e.events.onclick.enable)&&(this.interactionElement.addEventListener("mousemove",this.onMouseMove),this.interactionElement.addEventListener("mouseleave",this.onMouseLeave)),e.events.onclick.enable&&this.interactionElement.addEventListener("click",this.onMouseClick)}},{key:"detachEventHandlers",value:function(){var e=this.library.getParameter(function(e){return e.interactivity});this.interactionElement&&((e.events.onhover.enable||e.events.onclick.enable)&&(this.interactionElement.removeEventListener("mousemove",this.onMouseMove),this.interactionElement.removeEventListener("mouseleave",this.onMouseLeave)),e.events.onclick.enable&&this.interactionElement.removeEventListener("click",this.onMouseClick))}},{key:"onMouseMove",value:function(e){var t={x:0,y:0};this.interactionElement===window?(t.x=e.clientX,t.y=e.clientY):(t.x=e.offsetX||e.clientX,t.y=e.offsetY||e.clientY),this.mouseMovePosition=t,this.library.retina&&(this.mouseMovePosition.x*=this.library.canvas.pxratio,this.mouseMovePosition.y*=this.library.canvas.pxratio),this.mouseStatus=r.MOUSEMOVE}},{key:"onMouseLeave",value:function(){this.mouseMovePosition.x=0,this.mouseMovePosition.y=0,this.mouseStatus=r.MOUSELEAVE}},{key:"onMouseClick",value:function(){var e=this,t=this.library.getParameter(function(e){return e.interactivity}),i=this.library.getParameter(function(e){return e.particles}),n=this.library.getParameter(function(e){return e.polygon});if(this.mouseClickPosition=Object.assign({},this.mouseMovePosition),n.enable&&[a.PolygonType.INSIDE,a.PolygonType.OUTSIDE].indexOf(n.type)>-1){var r=this.library.polygonMask.isPointInsidePolygon(this.mouseClickPosition);if(n.type===a.PolygonType.INSIDE&&!r)return;if(n.type===a.PolygonType.OUTSIDE&&r)return}if(this.mouseClickTime=(new Date).getTime(),t.events.onclick.enable)switch(t.events.onclick.mode){case a.InteractivityMode.PUSH:i.move.enable?this.library.modes.pushParticles(t.modes.push.particles_nb,this.mouseClickPosition):1==t.modes.push.particles_nb?this.library.modes.pushParticles(t.modes.push.particles_nb,this.mouseClickPosition):t.modes.push.particles_nb>1&&this.library.modes.pushParticles(t.modes.push.particles_nb);break;case a.InteractivityMode.REMOVE:this.library.modes.removeParticles(t.modes.remove.particles_nb);break;case a.InteractivityMode.BUBBLE:this.library.modes.bubble_clicking=!0;break;case a.InteractivityMode.REPULSE:this.library.modes.repulse_clicking=!0,this.library.modes.repulse_count=0,this.library.modes.repulse_finish=!1,setTimeout(function(){e.library.modes.repulse_clicking=!1},1e3*t.modes.repulse.duration)}}},{key:"linkParticles",value:function(e,t){var i=this.library.manager.getDistance(e,t),n=this.library.canvas,r=this.library.getParameter(function(e){return e.particles.line_linked});if(i<=r.distance){var a=r.opacity-i/(1/r.opacity)/r.distance;if(a>0){var o=r.color_rgb_line,s=o.r,c=o.g,l=o.b;n.ctx.save(),n.ctx.strokeStyle="rgba( ".concat(s,", ").concat(c,", ").concat(l,", ").concat(a," )"),n.ctx.lineWidth=r.width,n.ctx.beginPath(),r.shadow.enable&&(n.ctx.shadowBlur=r.shadow.blur,n.ctx.shadowColor=r.shadow.color),n.ctx.moveTo(e.x,e.y),n.ctx.lineTo(t.x,t.y),n.ctx.stroke(),n.ctx.closePath(),n.ctx.restore()}}}},{key:"attractParticles",value:function(e,t){var i=this.library.manager.getDistances(e,t),n=i.distance,r=i.distanceX,a=i.distanceY,o=this.library.getParameter(function(e){return e.particles.line_linked}),s=this.library.getParameter(function(e){return e.particles.move.attract});if(n<=o.distance){var c=r/(1e3*s.rotateX),l=a/(1e3*s.rotateY);e.vx-=c,e.vy-=l,t.vx+=c,t.vy+=l}}},{key:"bounceParticles",value:function(e,t){this.library.manager.getDistance(e,t)<=e.radius+t.radius&&(e.vx=-e.vx,e.vy=-e.vy,t.vx=-t.vx,t.vy=-t.vy)}}])&&n(t.prototype,i),o&&n(t,o),e}();t.default=o},function(e,t){e.exports=function(e,t){return e===t||e!=e&&t!=t}},function(e,t,i){var n=i(7),r=i(19),a="[object AsyncFunction]",o="[object Function]",s="[object GeneratorFunction]",c="[object Proxy]";e.exports=function(e){if(!r(e))return!1;var t=n(e);return t==o||t==s||t==a||t==c}},function(e,t,i){(function(t){var i="object"==typeof t&&t&&t.Object===Object&&t;e.exports=i}).call(this,i(52))},function(e,t){e.exports=function(e){var t=typeof e;return null!=e&&("object"==t||"function"==t)}},function(e,t){var i=Function.prototype.toString;e.exports=function(e){if(null!=e){try{return i.call(e)}catch(e){}try{return e+""}catch(e){}}return""}},function(e,t,i){var n=i(58),r=i(65),a=i(67),o=i(68),s=i(69);function c(e){var t=-1,i=null==e?0:e.length;for(this.clear();++t<i;){var n=e[t];this.set(n[0],n[1])}}c.prototype.clear=n,c.prototype.delete=r,c.prototype.get=a,c.prototype.has=o,c.prototype.set=s,e.exports=c},function(e,t,i){var n=i(70),r=i(73),a=i(74),o=1,s=2;e.exports=function(e,t,i,c,l,u){var h=i&o,y=e.length,p=t.length;if(y!=p&&!(h&&p>y))return!1;var v=u.get(e);if(v&&u.get(t))return v==t;var f=-1,d=!0,b=i&s?new n:void 0;for(u.set(e,t),u.set(t,e);++f<y;){var g=e[f],m=t[f];if(c)var _=h?c(m,g,f,t,e,u):c(g,m,f,e,t,u);if(void 0!==_){if(_)continue;d=!1;break}if(b){if(!r(t,function(e,t){if(!a(b,t)&&(g===e||l(g,e,i,c,u)))return b.push(t)})){d=!1;break}}else if(g!==m&&!l(g,m,i,c,u)){d=!1;break}}return u.delete(e),u.delete(t),d}},function(e,t,i){(function(e){var n=i(0),r=i(91),a=t&&!t.nodeType&&t,o=a&&"object"==typeof e&&e&&!e.nodeType&&e,s=o&&o.exports===a?n.Buffer:void 0,c=(s?s.isBuffer:void 0)||r;e.exports=c}).call(this,i(24)(e))},function(e,t){e.exports=function(e){return e.webpackPolyfill||(e.deprecate=function(){},e.paths=[],e.children||(e.children=[]),Object.defineProperty(e,"loaded",{enumerable:!0,get:function(){return e.l}}),Object.defineProperty(e,"id",{enumerable:!0,get:function(){return e.i}}),e.webpackPolyfill=1),e}},function(e,t,i){var n=i(93),r=i(94),a=i(95),o=a&&a.isTypedArray,s=o?r(o):n;e.exports=s},function(e,t){var i=9007199254740991;e.exports=function(e){return"number"==typeof e&&e>-1&&e%1==0&&e<=i}},function(e,t,i){"use strict";var n=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var r=n(i(28));t.Particles=r.default,t.default=r.default},function(e,t,i){"use strict";function n(e){return(n="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e})(e)}function r(e,t){for(var i=0;i<t.length;i++){var n=t[i];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}function a(e){if(void 0===e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return e}function o(e,t,i){return(o="undefined"!=typeof Reflect&&Reflect.get?Reflect.get:function(e,t,i){var n=function(e,t){for(;!Object.prototype.hasOwnProperty.call(e,t)&&null!==(e=s(e)););return e}(e,t);if(n){var r=Object.getOwnPropertyDescriptor(n,t);return r.get?r.get.call(i):r.value}})(e,t,i||e)}function s(e){return(s=Object.setPrototypeOf?Object.getPrototypeOf:function(e){return e.__proto__||Object.getPrototypeOf(e)})(e)}function c(e,t){return(c=Object.setPrototypeOf||function(e,t){return e.__proto__=t,e})(e,t)}var l=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var i in e)Object.hasOwnProperty.call(e,i)&&(t[i]=e[i]);return t.default=e,t},u=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var h=l(i(14)),y=i(14),p=i(2),v=u(i(37)),f=function(e){function t(e){var i;return function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t),(i=function(e,t){return!t||"object"!==n(t)&&"function"!=typeof t?a(e):t}(this,s(t).call(this,e))).state={canvas:void 0,library:void 0},i.loadCanvas=i.loadCanvas.bind(a(i)),i}var i,l,u;return function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function");e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,writable:!0,configurable:!0}}),t&&c(e,t)}(t,y.Component),i=t,(l=[{key:"buildParticlesLibrary",value:function(e){try{if(void 0===window)return null}catch(e){return null}return new p.ParticlesLibrary(e)}},{key:"refresh",value:function(e){var t=this,i=this.state.canvas;i&&(this.destroy(),this.setState({library:this.buildParticlesLibrary(e.params)},function(){t.loadCanvas(i)}))}},{key:"destroy",value:function(){this.state.library&&this.state.library.destroy()}},{key:"loadCanvas",value:function(e){var t=this;e&&this.setState({canvas:e},function(){var i=t.state.library;i&&(i.loadCanvas(e),i.start())})}},{key:"shouldComponentUpdate",value:function(e){return!v.default(e,this.props)}},{key:"componentDidUpdate",value:function(){this.refresh(this.props)}},{key:"forceUpdate",value:function(){this.refresh(this.props),o(s(t.prototype),"forceUpdate",this).call(this)}},{key:"componentDidMount",value:function(){this.setState({library:this.buildParticlesLibrary(this.props.params)})}},{key:"componentWillUnmount",value:function(){this.destroy(),this.setState({library:void 0})}},{key:"render",value:function(){var e=this.props,t=e.width,i=e.height,n=e.className,r=e.canvasClassName;return h.createElement("div",{className:n},h.createElement("canvas",{ref:this.loadCanvas,className:r,style:Object.assign({},this.props.style,{width:t,height:i})}))}}])&&r(i.prototype,l),u&&r(i,u),t}();f.defaultProps={width:"100%",height:"100%",params:{},style:{}},t.default=f},function(e,t,i){"use strict";function n(e,t){for(var i=0;i<t.length;i++){var n=t[i];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}Object.defineProperty(t,"__esModule",{value:!0});var r=i(2),a=i(1),o=i(15),s=function(){function e(t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.library=t,this.bubble_clicking=!1,this.bubble_duration_end=!1,this.pushing=!1,this.repulse_clicking=!1,this.repulse_count=0,this.repulse_finish=!1}var t,i,s;return t=e,(i=[{key:"pushParticles",value:function(e,t){var i=this.library.manager,n=this.library.getParameter(function(e){return e.particles});this.pushing=!0;var a=e;n.number.max>0&&(a=n.array.length+e>n.number.max?n.number.max-n.array.length:e);for(var o=0;o<a;o++)n.array.push(new r.Particle(this.library,{position:t})),o===e-1&&(n.move.enable||i.particlesDraw(),this.pushing=!1)}},{key:"removeParticles",value:function(e){var t=this.library.manager,i=this.library.getParameter(function(e){return e.particles});i.array.splice(0,e),i.move.enable||t.particlesDraw()}},{key:"bubbleParticle",value:function(e){var t=this,i=this.library.getParameter(function(e){return e.interactivity}),n=this.library.getParameter(function(e){return e.particles});if(i.events.onhover.enable&&r.isInArray(a.InteractivityMode.BUBBLE,i.events.onhover.mode)){var s=this.library.manager.getDistance(e,this.library.interactivity.mouseMovePosition),c=i.modes.bubble.distance,l=1-s/c;if(s<=c){if(l>=0&&this.library.interactivity.mouseStatus===o.MouseInteractivityStatus.MOUSEMOVE){var u=i.modes.bubble.size,h=n.size.value;if(u!=h)if(u>h){var y=e.radius+u*l;y>=0&&(e.radius_bubble=y)}else{var p=e.radius-u,v=e.radius-p*l;e.radius_bubble=v>0?v:0}if(i.modes.bubble.opacity!==n.opacity.value)if(i.modes.bubble.opacity>n.opacity.value){var f=i.modes.bubble.opacity*l;f>e.opacityValue&&f<=i.modes.bubble.opacity&&(e.bubbleOpacity=f)}else{var d=e.opacityValue-(n.opacity.value-i.modes.bubble.opacity)*l;d<e.opacityValue&&d>=i.modes.bubble.opacity&&(e.bubbleOpacity=d)}}}else e.bubbleOpacity=e.opacityValue,e.radius_bubble=e.radius;this.library.interactivity.mouseStatus===o.MouseInteractivityStatus.MOUSELEAVE&&(e.bubbleOpacity=e.opacityValue,e.radius_bubble=e.radius)}else if(i.events.onclick.enable&&r.isInArray(a.InteractivityMode.BUBBLE,i.events.onclick.mode)&&this.bubble_clicking){var b=this.library.manager.getDistance(e,this.library.interactivity.mouseClickPosition),g=((new Date).getTime()-this.library.interactivity.mouseClickTime)/1e3;g>i.modes.bubble.duration&&(this.bubble_duration_end=!0),g>2*i.modes.bubble.duration&&(this.bubble_clicking=!1,this.bubble_duration_end=!1);var m=function(n,r,a,o,s){if(n!=r)if(t.bubble_duration_end){if(null!=a){var c=n+(n-(o-g*(o-n)/i.modes.bubble.duration));"size"==s&&(e.radius_bubble=c),"opacity"==s&&(e.bubbleOpacity=c)}}else if(b<=i.modes.bubble.distance){if((null!=a?a:o)!=n){var l=o-g*(o-n)/i.modes.bubble.duration;"size"==s&&(e.radius_bubble=l),"opacity"==s&&(e.bubbleOpacity=l)}}else"size"==s&&(e.radius_bubble=void 0),"opacity"==s&&(e.bubbleOpacity=void 0)};this.bubble_clicking&&(m(i.modes.bubble.size,n.size.value,e.radius_bubble,e.radius,"size"),m(i.modes.bubble.opacity,n.opacity.value,e.bubbleOpacity,e.opacityValue,"opacity"))}}},{key:"repulseParticle",value:function(e){var t=this.library.canvas,i=this.library.getParameter(function(e){return e.interactivity}),n=this.library.getParameter(function(e){return e.particles});if(i.events.onhover.enable&&r.isInArray(a.InteractivityMode.REPULSE,i.events.onhover.mode)&&this.library.interactivity.mouseStatus===o.MouseInteractivityStatus.MOUSEMOVE){var s=this.library.manager.getDistances(e,this.library.interactivity.mouseMovePosition),c=s.distance,l={x:s.distanceX/c,y:s.distanceY/c},u=i.modes.repulse.distance,h=r.clamp(1/u*(-1*Math.pow(c/u,2)+1)*u*100,0,50),y={x:e.x+l.x*h,y:e.y+l.y*h};n.move.out_mode===a.MoveOutMode.BOUNCE?(y.x-e.radius>0&&y.x+e.radius<t.width&&(e.x=y.x),y.y-e.radius>0&&y.y+e.radius<t.height&&(e.y=y.y)):(e.x=y.x,e.y=y.y)}else if(i.events.onclick.enable&&r.isInArray(a.InteractivityMode.REPULSE,i.events.onclick.mode))if(this.repulse_finish||(this.repulse_count++,this.repulse_count==n.array.length&&(this.repulse_finish=!0)),this.repulse_clicking){var p=Math.pow(i.modes.repulse.distance/6,3),v=this.library.manager.getDistances(this.library.interactivity.mouseClickPosition,e),f=v.distance,d=v.distanceX,b=v.distanceY,g=-1*(p/Math.pow(f,2));if(f<=p){var m=Math.atan2(b,d);if(e.vx=g*Math.cos(m),e.vy=g*Math.sin(m),n.move.out_mode===a.MoveOutMode.BOUNCE){var _={x:e.x+e.vx,y:e.y+e.vy};_.x+e.radius>t.width?e.vx=-e.vx:_.x-e.radius<0&&(e.vx=-e.vx),_.y+e.radius>t.height?e.vy=-e.vy:_.y-e.radius<0&&(e.vy=-e.vy)}}}else!1===this.repulse_clicking&&(e.vx=e.vx_i,e.vy=e.vy_i)}},{key:"grabParticle",value:function(e){var t=this.library.canvas,i=this.library.getParameter(function(e){return e}),n=i.interactivity,r=i.particles;if(n.events.onhover.enable&&this.library.interactivity.mouseStatus===o.MouseInteractivityStatus.MOUSEMOVE){var a=this.library.manager.getDistance(e,this.library.interactivity.mouseMovePosition);if(a<=n.modes.grab.distance){var s=n.modes.grab,c=s.line_linked.opacity-a/(1/s.line_linked.opacity)/s.distance;if(c>0){var l=r.line_linked.color_rgb_line,u=l.r,h=l.g,y=l.b;t.ctx.strokeStyle="rgba( ".concat(u,", ").concat(h,", ").concat(y,", ").concat(c," )"),t.ctx.lineWidth=r.line_linked.width,t.ctx.beginPath(),t.ctx.moveTo(e.x,e.y),t.ctx.lineTo(this.library.interactivity.mouseMovePosition.x,this.library.interactivity.mouseMovePosition.y),t.ctx.stroke(),t.ctx.closePath()}}}}}])&&n(t.prototype,i),s&&n(t,s),e}();t.default=s},function(e,t,i){"use strict";function n(e,t){for(var i=0;i<t.length;i++){var n=t[i];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}Object.defineProperty(t,"__esModule",{value:!0});var r=i(2),a=i(1),o=i(4),s=function(){function e(t){var i=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},n=i.color,r=i.move,a=i.opacity,o=i.polygon,s=i.position,c=i.shape,l=i.size;!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.library=t,this.setupSize(l),this.setupPosition(r,o,s),this.setupColor(n),this.setupOpacity(a),this.setupAnimation(r),this.setupShape(c)}var t,i,s;return t=e,(i=[{key:"setupSize",value:function(e){var t=this.library.getParameter(function(e){return e.particles.size});e=o.deepAssign({},t,e),this.radius=(e.random?Math.random():1)*e.value,e.anim.enable&&(this.size_status=!1,this.vs=e.anim.speed/100,e.anim.sync||(this.vs=this.vs*Math.random()))}},{key:"setupPosition",value:function(e,t,i){this.initialPosition=i;var n=this.library.getParameter(function(e){return e.particles.move});e=o.deepAssign({},n,e);var r=this.library.getParameter(function(e){return e.polygon});t=o.deepAssign({},r,t);var s=this.library.getParameter(function(e){return e.particles.array}),c=this.library,l=c.canvas,u=c.vendors;if(i)this.x=i.x,this.y=i.y;else if(t.enable){var h;switch(t.type){case a.PolygonType.INLINE:switch(t.inline.arrangement){case a.PolygonInlineArrangementType.RANDOM_POINT:h=this.library.polygonMask.getRandomPointOnPolygonPath();break;case a.PolygonInlineArrangementType.RANDOM_LENGTH:h=this.library.polygonMask.getRandomPointOnPolygonPathByLength();break;case a.PolygonInlineArrangementType.EQUIDISTANT:h=this.library.polygonMask.getEquidistantPoingOnPolygonPathByIndex(s.length);break;case a.PolygonInlineArrangementType.ONE_PER_POINT:default:h=this.library.polygonMask.getPoingOnPolygonPathByIndex(s.length)}break;case a.PolygonType.INSIDE:h=this.library.polygonMask.getRandomPointInsidePolygonPath();break;case a.PolygonType.OUTSIDE:h=this.library.polygonMask.getRandomPointOutsidePolygonPath()}h&&(this.x=h.x,this.y=h.y,this.initialPosition={x:this.x,y:this.y})}void 0!==this.x&&void 0!==this.y||(this.x=Math.random()*l.width,this.y=Math.random()*l.height),this.x>l.width-2*this.radius?this.x=this.x-this.radius:this.x<2*this.radius&&(this.x=this.x+this.radius),this.y>l.height-2*this.radius?this.y=this.y-this.radius:this.y<2*this.radius&&(this.y=this.y+this.radius),e.bounce&&u.checkOverlap(this,{x:this.x,y:this.y})}},{key:"setupColor",value:function(e){var t=this.library.getParameter(function(e){return e.particles.color});e=o.deepAssign({},e,t),this.color=r.getColor(e.value)}},{key:"setupOpacity",value:function(e){var t=this.library.getParameter(function(e){return e.particles.opacity});e=o.deepAssign({},t,e),this.opacityValue=(e.random?Math.random():1)*e.value,e.anim.enable&&(this.opacity_status=!1,this.vo=e.anim.speed/100,e.anim.sync||(this.vo=this.vo*Math.random()))}},{key:"setupAnimation",value:function(e){var t,i=this.library.getParameter(function(e){return e.particles.move});switch((e=o.deepAssign({},i,e)).direction){case a.MoveDirection.TOP:t={x:0,y:-1};break;case a.MoveDirection.TOP_RIGHT:t={x:.5,y:-.5};break;case a.MoveDirection.RIGHT:t={x:1,y:0};break;case a.MoveDirection.BOTTOM_RIGHT:t={x:.5,y:.5};break;case a.MoveDirection.BOTTOM:t={x:0,y:1};break;case a.MoveDirection.BOTTOM_LEFT:t={x:-.5,y:1};break;case a.MoveDirection.LEFT:t={x:-1,y:0};break;case a.MoveDirection.TOP_LEFT:t={x:-.5,y:-.5};break;default:t={x:0,y:0}}e.straight?(this.vx=t.x,this.vy=t.y,e.random&&(this.vx=this.vx*Math.random(),this.vy=this.vy*Math.random())):(this.vx=t.x+Math.random()-.5,this.vy=t.y+Math.random()-.5),this.vx_i=this.vx,this.vy_i=this.vy}},{key:"setupShape",value:function(e){var t=this,i=this.library.getParameter(function(e){return e.particles.shape});e=o.deepAssign({},i,e);var n=this.library.getParameter(function(e){return e.particles.array});if(Array.isArray(e.type)){var r=e.type[Math.floor(Math.random()*e.type.length)];e=o.deepAssign({},e,{type:r})}this.shape=e,e.type!==a.ShapeType.IMAGE&&e.type!==a.ShapeType.IMAGES||(e.type===a.ShapeType.IMAGES?this.shapeImage=this.library.imageManager.getImage(n.length):this.shapeImage=this.library.imageManager.getImage(),"svg"===this.shapeImage.type&&void 0!==this.shapeImage.svgData&&this.library.imageManager.createSvgImage(this.shapeImage.svgData,{color:this.color,opacity:this.opacityValue}).then(function(e){t.shapeImage.elementData=e,t.shapeImage.loaded=!0}))}},{key:"draw",value:function(){var e,t,i,n=this.library,r=n.canvas,o=n.vendors;if(e=void 0!==this.radius_bubble?this.radius_bubble:this.radius,t=void 0!==this.bubbleOpacity?this.bubbleOpacity:this.opacityValue,this.color.rgb){var s=this.color.rgb,c=s.r,l=s.g,u=s.b;i="rgba( ".concat(c,", ").concat(l,", ").concat(u,", ").concat(t," )")}else{var h=this.color.hsl,y=h.h,p=h.s,v=h.l;i="hsla( ".concat(y,", ").concat(p,", ").concat(v,", ").concat(t," )")}switch(r.ctx.fillStyle=i,r.ctx.beginPath(),this.shape.type){case a.ShapeType.CIRCLE:r.ctx.arc(this.x,this.y,e,0,2*Math.PI,!1);break;case a.ShapeType.EDGE:r.ctx.rect(this.x-e,this.y-e,2*e,2*e);break;case a.ShapeType.TRIANGLE:o.drawShape(r.ctx,this.x-e,this.y+e/1.66,2*e,3,2);break;case a.ShapeType.POLYGON:o.drawShape(r.ctx,this.x-e/(this.shape.polygon.nb_sides/3.5),this.y-e/.76,2.66*e/(this.shape.polygon.nb_sides/3),this.shape.polygon.nb_sides,1);break;case a.ShapeType.STAR:o.drawShape(r.ctx,this.x-2*e/(this.shape.polygon.nb_sides/4),this.y-e/1.52,2*e*2.66/(this.shape.polygon.nb_sides/3),this.shape.polygon.nb_sides,2);break;case a.ShapeType.IMAGES:case a.ShapeType.IMAGE:this.shapeImage.elementData&&r.ctx.drawImage(this.shapeImage.elementData,this.x-e,this.y-e,2*e,2*e/this.shapeImage.ratio)}r.ctx.closePath(),this.shape.stroke.width>0&&(r.ctx.strokeStyle=this.shape.stroke.color,r.ctx.lineWidth=this.shape.stroke.width,r.ctx.stroke()),r.ctx.fill()}}])&&n(t.prototype,i),s&&n(t,s),e}();t.default=s},function(e,t,i){"use strict";function n(e,t){for(var i=0;i<t.length;i++){var n=t[i];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}Object.defineProperty(t,"__esModule",{value:!0});var r=i(2),a=i(1),o=function(){function e(t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.library=t,this.particlesCreate=this.particlesCreate.bind(this)}var t,i,o;return t=e,(i=[{key:"particlesCreate",value:function(){var e=this.library.getParameter(function(e){return e.particles}),t=this.library.getParameter(function(e){return e.polygon}),i=e.number.value;t.enable&&t.type===a.PolygonType.INLINE&&t.inline.arrangement===a.PolygonInlineArrangementType.ONE_PER_POINT&&(i=this.library.polygonMask.getVerticesNumber());for(var n=0;n<i;n++)e.array.push(new r.Particle(this.library))}},{key:"particlesUpdate",value:function(){var e=this,t=this.library,i=t.canvas,n=t.modes,o=this.library.getParameter(function(e){return e.interactivity}),s=this.library.getParameter(function(e){return e.particles}),c=this.library.getParameter(function(e){return e.polygon});s.array.forEach(function(t,l){if(s.move.enable){var u=s.move.speed/2;t.x+=t.vx*u,t.y+=t.vy*u}var h;switch(s.opacity.anim.enable&&(1==t.opacity_status?(t.opacityValue>=s.opacity.value&&(t.opacity_status=!1),t.opacityValue+=t.vo):(t.opacityValue<=s.opacity.anim.opacity_min&&(t.opacity_status=!0),t.opacityValue-=t.vo),t.opacityValue<0&&(t.opacityValue=0)),s.size.anim.enable&&(1==t.size_status?(t.radius>=s.size.value&&(t.size_status=!1),t.radius+=t.vs):(t.radius<=s.size.anim.size_min&&(t.size_status=!0),t.radius-=t.vs),t.radius<0&&(t.radius=0)),h="bounce"==s.move.out_mode?{x_left:t.radius,x_right:i.width,y_top:t.radius,y_bottom:i.height}:{x_left:-t.radius,x_right:i.width+t.radius,y_top:-t.radius,y_bottom:i.height+t.radius},t.x-t.radius>i.width?(t.x=h.x_left,t.y=Math.random()*i.height):t.x+t.radius<0&&(t.x=h.x_right,t.y=Math.random()*i.height),t.y-t.radius>i.height?(t.y=h.y_top,t.x=Math.random()*i.width):t.y+t.radius<0&&(t.y=h.y_bottom,t.x=Math.random()*i.width),s.move.out_mode){case"bounce":if(c.enable){var y=c.move.radius;switch(c.type){case a.PolygonType.INLINE:e.getDistance(t.initialPosition,t)>y&&(t.vx=-t.vx+t.vy/2,t.vy=-t.vy+t.vx/2);break;case a.PolygonType.INSIDE:case a.PolygonType.OUTSIDE:var p=c.move.type;if(p===a.PolygonMoveType.RADIUS)e.getDistance(t.initialPosition,t)>y&&(t.vx=-t.vx+t.vy/2,t.vy=-t.vy+t.vx/2);else if(p===a.PolygonMoveType.PATH){var v=c.type===a.PolygonType.INSIDE,f=e.library.polygonMask.isPointInsidePolygon({x:t.x,y:t.y});(v&&!f||!v&&f)&&(t.vx=-t.vx+t.vy/2,t.vy=-t.vy+t.vx/2)}}}else t.x+t.radius>i.width?t.vx=-t.vx:t.x-t.radius<0&&(t.vx=-t.vx),t.y+t.radius>i.height?t.vy=-t.vy:t.y-t.radius<0&&(t.vy=-t.vy)}if(r.isInArray("grab",o.events.onhover.mode)&&n.grabParticle(t),(r.isInArray("bubble",o.events.onhover.mode)||r.isInArray("bubble",o.events.onclick.mode))&&n.bubbleParticle(t),(r.isInArray("repulse",o.events.onhover.mode)||r.isInArray("repulse",o.events.onclick.mode))&&n.repulseParticle(t),s.line_linked.enable||s.move.attract.enable)for(var d=l+1;d<s.array.length;d++){var b=s.array[d];s.line_linked.enable&&e.library.interactivity.linkParticles(t,b),s.move.attract.enable&&e.library.interactivity.attractParticles(t,b),s.move.bounce&&e.library.interactivity.bounceParticles(t,b)}})}},{key:"getDistances",value:function(e,t){var i=e.x-t.x,n=e.y-t.y;return{distance:Math.sqrt(i*i+n*n),distanceX:i,distanceY:n}}},{key:"getDistance",value:function(e,t){return this.getDistances(e,t).distance}},{key:"particlesDraw",value:function(){var e=this.library,t=e.canvas,i=e.manager,n=this.library.getParameter(function(e){return e.particles}),r=this.library.getParameter(function(e){return e.polygon});t.ctx.clearRect(0,0,t.width,t.height),i.particlesUpdate(),n.array.forEach(function(e){e.draw()}),r.enable&&r.draw.enable&&this.library.polygonMask.drawPolygon()}},{key:"particlesEmpty",value:function(){this.library.getParameter(function(e){return e.particles}).array=[]}},{key:"particlesRefresh",value:function(){cancelAnimationFrame(this.library.drawAnimFrame),this.particlesEmpty(),this.library.canvasClear(),this.library.start()}}])&&n(t.prototype,i),o&&n(t,o),e}();t.default=o},function(e,t,i){"use strict";function n(e,t){for(var i=0;i<t.length;i++){var n=t[i];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}Object.defineProperty(t,"__esModule",{value:!0});var r=i(2),a=i(33),o=function(){function e(t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.imageManager=new a.ImageManager,this.retina=!1,this.onWindowResize=this.onWindowResize.bind(this),this.loadParameters(t),this.interactivity=new r.Interactivity(this),this.modes=new r.Modes(this),this.vendors=new r.Vendors(this.imageManager,this.params,this),this.manager=new r.ParticleManager(this),this.polygonMask=new r.PolygonMask(this)}var t,i,o;return t=e,(i=[{key:"getParameter",value:function(e){return e(this.params)}},{key:"setParameters",value:function(e){this.params=r.deepAssign(Object.assign({},this.params),e)}},{key:"loadParameters",value:function(e){var t=r.deepAssign({},r.getDefaultParams(),e);this.params=t}},{key:"loadCanvas",value:function(e){this.canvas={element:e,width:e.offsetWidth,height:e.offsetHeight}}},{key:"start",value:function(){this.interactivity.attachEventHandlers(),this.vendors.start()}},{key:"destroy",value:function(){this.detachListeners(),this.interactivity.detachEventHandlers(),cancelAnimationFrame(this.drawAnimFrame),this.canvasClear()}},{key:"detachListeners",value:function(){window.removeEventListener("resize",this.onWindowResize)}},{key:"retinaInit",value:function(){var e=window.devicePixelRatio;if(this.params.retina_detect&&e>1){this.canvas.pxratio=e,this.canvas.width=this.canvas.element.offsetWidth*this.canvas.pxratio,this.canvas.height=this.canvas.element.offsetHeight*this.canvas.pxratio,this.retina=!0;var t=this.getParameter(function(e){return e});this.setParameters({interactivity:{modes:{bubble:{distance:t.interactivity.modes.bubble.distance*e,size:t.interactivity.modes.bubble.size*e},grab:{distance:t.interactivity.modes.grab.distance*e},repulse:{distance:t.interactivity.modes.repulse.distance*e}}},particles:{line_linked:{distance:t.particles.line_linked.distance*e,width:t.particles.line_linked.width*e},move:{speed:t.particles.move.speed*e},size:{value:t.particles.size.value*e,anim:{speed:t.particles.size.anim.speed*e}}}})}else this.canvas.pxratio=1,this.retina=!1}},{key:"canvasInit",value:function(){var e=this.canvas;e.ctx=e.element.getContext("2d")}},{key:"canvasSize",value:function(){var e=this.canvas;e.element.width=e.width,e.element.height=e.height,this.params&&this.params.interactivity.events.resize&&window.addEventListener("resize",this.onWindowResize)}},{key:"canvasPaint",value:function(){var e=this.canvas;if(e&&e.ctx)try{e.ctx.fillRect(0,0,e.width,e.height)}catch(e){console.warn(e)}}},{key:"canvasClear",value:function(){var e=this.canvas;if(e&&e.ctx)try{e.ctx.clearRect(0,0,e.width,e.height)}catch(e){console.warn(e)}}},{key:"onWindowResize",value:function(){var e=this.canvas,t=this.manager,i=this.vendors;e.width=e.element.offsetWidth,e.height=e.element.offsetHeight,this.retina&&(e.width*=e.pxratio,e.height*=e.pxratio),e.element.width=e.width,e.element.height=e.height,!this.params.particles.move.enable||this.params.polygon.enable?(t.particlesEmpty(),this.polygonMask.initialize(this.getParameter(function(e){return e.polygon})).then(function(){t.particlesCreate(),t.particlesDraw()})):i.densityAutoParticles()}}])&&n(t.prototype,i),o&&n(t,o),e}();t.default=o},function(e,t,i){"use strict";function n(e,t){for(var i=0;i<t.length;i++){var n=t[i];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}Object.defineProperty(t,"__esModule",{value:!0});var r,a=i(1),o=i(4);!function(e){e.SINGLE="single",e.MULTIPLE="multiple"}(r=t.ImageMode||(t.ImageMode={}));var s=function(){function e(){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.singleImage=null,this.multipleImages=[],this.mode=r.SINGLE}var t,i,s;return t=e,(i=[{key:"getImage",value:function(e){if(void 0!==e){if(0===this.multipleImages.length)throw new Error("No images loaded. You may need to define 'shape.type' = 'images'.");return this.multipleImages[e%this.multipleImages.length]}return this.singleImage}},{key:"parseShape",value:function(e){var t=this;if(o.isEqual(a.ShapeType.IMAGE,e.type))return this.mode=r.SINGLE,this.parseSingleImage(e.image).then(function(i){return t.singleImage=i,Object.assign({},e,{image:i})});if(o.isEqual(a.ShapeType.IMAGES,e.type)){this.mode=r.MULTIPLE;var i=e.images.map(function(e){return t.parseSingleImage(e)});return Promise.all(i).then(function(i){return t.multipleImages=i,Object.assign({},e,{images:i})})}return Promise.resolve(e)}},{key:"parseSingleImage",value:function(e){var t,i=this.buildImageObject({height:e.height,width:e.width,src:e.src}),n=e.width/e.height;return n!==1/0&&0!==n||(n=1),i.ratio=n,(t=/^data:image\/(\w{3})\+xml;(.*?)base64,(.*)$/.exec(e.src))?(i.type=t[1],i.svgData=atob(t[3])):(t=/^.*(\w{3})$/.exec(e.src))&&(i.type=t[1]),this.loadImage(i)}},{key:"loadImage",value:function(e){return""!=(e=Object.assign({},e)).src?"svg"==e.type?e.svgData?Promise.resolve(e):this.downloadImage(e.src).then(function(t){return e.svgData=t.response,e}):new Promise(function(t){var i=new Image;i.addEventListener("load",function(){e.elementData=i,t(e)}),i.src=e.src}):Promise.reject(new Error("Error react-particles-js - no image.src"))}},{key:"downloadImage",value:function(e){return new Promise(function(t,i){var n=new XMLHttpRequest;n.open("GET",e),n.onreadystatechange=function(e){4==n.readyState&&(200==n.status?t({response:e.currentTarget.response,xhr:n}):i(new Error("Error react-particles-js - Status code ".concat(n.readyState))))},n.send()})}},{key:"createSvgImage",value:function(e,t){var i=e.replace(/#([0-9A-F]{3,6})|rgb\([0-9,]+\)/gi,function(e,i,n,r){var a;if(t.color.rgb){var o=t.color.rgb,s=o.r,c=o.g,l=o.b;a="rgba( ".concat(s,", ").concat(c,", ").concat(l,", ").concat(t.opacity," )")}else{var u=t.color.hsl,h=u.h,y=u.s,p=u.l;a="rgba( ".concat(h,", ").concat(y,", ").concat(p,", ").concat(t.opacity," )")}return a}),n=new Blob([i],{type:"image/svg+xml;charset=utf-8"}),r=window.URL||window,a=r.createObjectURL(n);return new Promise(function(e){var t=new Image;t.addEventListener("load",function(){r.revokeObjectURL(a),e(t)}),t.src=a})}},{key:"buildImageObject",value:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};return Object.assign({svgData:null,height:0,width:0,ratio:0,src:"",type:""},e)}}])&&n(t.prototype,i),s&&n(t,s),e}();t.ImageManager=s},function(e,t,i){"use strict";function n(e,t){for(var i=0;i<t.length;i++){var n=t[i];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}Object.defineProperty(t,"__esModule",{value:!0});var r=i(2),a=i(1),o=function(){function e(t,i,n){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.imageManager=t,this.initialized=!1,this.params=i,this.library=n,"undefined"!=typeof performance&&(this.lastDraw=performance.now()),this.draw=this.draw.bind(this)}var t,i,o;return t=e,(i=[{key:"densityAutoParticles",value:function(){var e=this.library,t=e.canvas,i=e.modes,n=this.params.particles,r=n.number.density,a=r.value_area;if(r.enable){var o=t.element.width*t.element.height/1e3;this.library.retina&&(o/=2*t.pxratio);var s=o*n.number.value/a,c=n.array.length-s;c<0?i.pushParticles(Math.abs(c)):i.removeParticles(c)}}},{key:"checkOverlap",value:function(e,t){var i=this,n=this.library,r=n.canvas,o=n.vendors;r.width&&r.height&&this.params.particles.array.forEach(function(n){var s=n,c=e.x-s.x,l=e.y-s.y;if(Math.sqrt(c*c+l*l)<=e.radius+s.radius)if(i.library.params.polygon.enable)switch(i.library.params.polygon.inline.arrangement){case a.PolygonInlineArrangementType.RANDOM_LENGTH:case a.PolygonInlineArrangementType.RANDOM_POINT:}else e.x=t?t.x:Math.random()*r.width,e.y=t?t.y:Math.random()*r.height,o.checkOverlap(e)})}},{key:"destroy",value:function(){cancelAnimationFrame(this.library.drawAnimFrame),this.library.canvas.element.remove()}},{key:"drawShape",value:function(e,t,i,n,r,a){var o=r*a,s=r/a,c=180*(s-2)/s,l=Math.PI-Math.PI*c/180;e.save(),e.beginPath(),e.translate(t,i),e.moveTo(0,0);for(var u=0;u<o;u++)e.lineTo(n,0),e.translate(n,0),e.rotate(l);e.fill(),e.restore()}},{key:"exportImg",value:function(){var e=this.library.canvas;window.open(e.element.toDataURL("image/png"),"_blank")}},{key:"draw",value:function(){var e=!0,t=this.library,i=t.manager,n=t.vendors,r=this.params.particles;void 0!==performance&&(performance.now()-this.lastDraw<1e3/this.params.fps_limit?e=!1:this.lastDraw=performance.now());e&&i.particlesDraw(),r.move.enable?this.library.drawAnimFrame=requestAnimationFrame(n.draw):cancelAnimationFrame(this.library.drawAnimFrame)}},{key:"init",value:function(){var e=this;if(!this.initialized){this.initialized=!0;var t=this.library,i=t.manager,n=t.vendors,a=this.params.particles;t.retinaInit(),t.canvasInit(),t.canvasSize(),t.polygonMask.initialize(this.library.getParameter(function(e){return e.polygon})).then(function(){i.particlesCreate(),n.densityAutoParticles(),e.library.setParameters({particles:{line_linked:{color_rgb_line:r.hexToRgb(a.line_linked.color)}}}),e.draw()})}}},{key:"start",value:function(){var e=this,t=this.params.particles;this.imageManager.parseShape(t.shape).then(function(t){e.init()})}}])&&n(t.prototype,i),o&&n(t,o),e}();t.default=o},function(e,t,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=i(1),r=i(4),a={particles:{number:{value:40,max:-1,density:{enable:!1,value_area:1200}},color:{value:"#FFF"},shape:{type:n.ShapeType.CIRCLE,stroke:{width:0,color:"#000000"},polygon:{nb_sides:5},image:{src:"",width:100,height:100},images:[]},opacity:{value:.5,random:!1,anim:{enable:!0,speed:1,opacity_min:.1,sync:!1}},size:{value:1,random:!1,anim:{enable:!1,speed:40,size_min:0,sync:!1}},line_linked:{enable:!0,distance:150,color:"#FFF",opacity:.6,width:1,shadow:{enable:!1,blur:5,color:"lime"}},move:{enable:!0,speed:3,direction:n.MoveDirection.NONE,random:!1,straight:!1,out_mode:n.MoveOutMode.BOUNCE,bounce:!0,attract:{enable:!1,rotateX:3e3,rotateY:3e3}},array:[]},interactivity:{detect_on:"canvas",events:{onhover:{enable:!1,mode:n.InteractivityMode.GRAB},onclick:{enable:!1,mode:n.InteractivityMode.REPULSE},resize:!0},modes:{grab:{distance:180,line_linked:{opacity:.35}},bubble:{distance:200,size:80,duration:.4},repulse:{distance:100,duration:5},push:{particles_nb:4},remove:{particles_nb:2}}},retina_detect:!0,fps_limit:999,polygon:{enable:!1,scale:1,type:n.PolygonType.INLINE,inline:{arrangement:n.PolygonInlineArrangementType.ONE_PER_POINT},draw:{enable:!1,stroke:{width:.5,color:"rgba(255, 255, 255, .1)"}},move:{radius:10,type:n.PolygonMoveType.PATH},url:""}};t.getDefaultParams=function(){return r.deepAssign({},a)}},function(e,t,i){"use strict";function n(e,t){return function(e){if(Array.isArray(e))return e}(e)||function(e,t){var i=[],n=!0,r=!1,a=void 0;try{for(var o,s=e[Symbol.iterator]();!(n=(o=s.next()).done)&&(i.push(o.value),!t||i.length!==t);n=!0);}catch(e){r=!0,a=e}finally{try{n||null==s.return||s.return()}finally{if(r)throw a}}return i}(e,t)||function(){throw new TypeError("Invalid attempt to destructure non-iterable instance")}()}function r(e,t){for(var i=0;i<t.length;i++){var n=t[i];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}Object.defineProperty(t,"__esModule",{value:!0});var a=function(){function e(t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.library=t,this.polygonPathLength=0,this.initialized=!1,this.path2DSupported=!!window.Path2D,this.debounceTime=250,this.parseSvgPathToPolygon=this.parseSvgPathToPolygon.bind(this)}var t,i,a;return t=e,(i=[{key:"initialize",value:function(e){var t=this;return this.polygon=e,e.enable?this.initialized?new Promise(function(e){t.debounceTimer&&clearTimeout(t.debounceTimer),t.debounceTimer=setTimeout(function(){t.parseSvgPathToPolygon().then(function(t){e()})},t.debounceTime)}):this.parseSvgPathToPolygon().then(function(e){t.initialized=!0}):Promise.resolve()}},{key:"getVerticesNumber",value:function(){return this.initialized?this.polygonRaw.length:0}},{key:"parseSvgPathToPolygon",value:function(e){var t=this;e=e||this.polygon.url;var i=this.library.canvas.width===this.lastCanvasWidth&&this.library.canvas.height===this.lastCanvasHeight;return this.polygonRaw&&this.polygonRaw.length&&i?Promise.resolve(this.polygonRaw):this.parseSvgPath(e).then(function(e){return t.polygonData=e,t.polygonWidth=parseInt(t.polygonData.svg.getAttribute("width"))*t.polygon.scale,t.polygonHeight=parseInt(t.polygonData.svg.getAttribute("height"))*t.polygon.scale,t.polygonOffsetX=t.library.canvas.width/2-t.polygonWidth/2,t.polygonOffsetY=t.library.canvas.height/2-t.polygonHeight/2,t.polygonData.paths.length&&(t.polygonPathLength=t.polygonData.paths[0].getTotalLength()),t.polygonRaw=[],t.polygonData.paths.forEach(function(e){for(var i=e.pathSegList.numberOfItems,n=0;n<i;n++){var r={x:0,y:0},a=e.pathSegList.getItem(n);switch(a.pathSegType){case SVGPathSeg.PATHSEG_ARC_ABS:case SVGPathSeg.PATHSEG_CURVETO_CUBIC_ABS:case SVGPathSeg.PATHSEG_CURVETO_CUBIC_SMOOTH_ABS:case SVGPathSeg.PATHSEG_CURVETO_QUADRATIC_ABS:case SVGPathSeg.PATHSEG_CURVETO_QUADRATIC_SMOOTH_ABS:case SVGPathSeg.PATHSEG_LINETO_ABS:case SVGPathSeg.PATHSEG_MOVETO_ABS:r.x=a.x,r.y=a.y;case SVGPathSeg.PATHSEG_LINETO_HORIZONTAL_ABS:r.x=a.x;break;case SVGPathSeg.PATHSEG_LINETO_VERTICAL_ABS:r.y=a.y;break;case SVGPathSeg.PATHSEG_ARC_REL:case SVGPathSeg.PATHSEG_CURVETO_CUBIC_REL:case SVGPathSeg.PATHSEG_CURVETO_CUBIC_SMOOTH_REL:case SVGPathSeg.PATHSEG_CURVETO_QUADRATIC_REL:case SVGPathSeg.PATHSEG_CURVETO_QUADRATIC_SMOOTH_REL:case SVGPathSeg.PATHSEG_LINETO_REL:case SVGPathSeg.PATHSEG_MOVETO_REL:r.x=a.x,r.y=a.y;case SVGPathSeg.PATHSEG_LINETO_HORIZONTAL_REL:r.x=a.x;break;case SVGPathSeg.PATHSEG_LINETO_VERTICAL_REL:r.y=a.y;break;case SVGPathSeg.PATHSEG_UNKNOWN:case SVGPathSeg.PATHSEG_CLOSEPATH:default:continue}t.polygonRaw.push([r.x*t.polygon.scale+t.polygonOffsetX,r.y*t.polygon.scale+t.polygonOffsetY])}}),t.lastCanvasWidth=t.library.canvas.width,t.lastCanvasHeight=t.library.canvas.height,t.createPath2D(),t.polygonRaw})}},{key:"parseSvgPath",value:function(e){return this.polygonData&&this.polygonData.paths&&this.polygonData.paths.length&&this.polygonData.svg?Promise.resolve(this.polygonData):this.library.imageManager.downloadImage(e).then(function(e){return{paths:[e.xhr.responseXML.getElementsByTagName("path")[0]],svg:e.xhr.responseXML.getElementsByTagName("svg")[0]}})}},{key:"getRandomPointOnPolygonPath",value:function(){if(!this.initialized)throw new Error("No polygon data loaded.");var e=n(this.polygonRaw[Math.floor(Math.random()*this.polygonRaw.length)],2);return{x:e[0],y:e[1]}}},{key:"getRandomPointOnPolygonPathByLength",value:function(){if(!this.initialized)throw new Error("No polygon data loaded.");var e=this.polygonData.paths[0].getPointAtLength(Math.floor(Math.random()*this.polygonPathLength)+1);return{x:e.x*this.polygon.scale+this.polygonOffsetX,y:e.y*this.polygon.scale+this.polygonOffsetY}}},{key:"getRandomPointInsidePolygonPath",value:function(){if(!this.initialized)throw new Error("No polygon data loaded.");var e={x:Math.random()*this.library.canvas.width,y:Math.random()*this.library.canvas.height};return this.isPointInsidePolygon(e)?e:this.getRandomPointInsidePolygonPath()}},{key:"getRandomPointOutsidePolygonPath",value:function(){if(!this.initialized)throw new Error("No polygon data loaded.");var e={x:Math.random()*this.library.canvas.width,y:Math.random()*this.library.canvas.height};return this.isPointInsidePolygon(e)?this.getRandomPointOutsidePolygonPath():e}},{key:"isPointInsidePolygon",value:function(e){if(this.path2DSupported&&this.polygonPath)return this.library.canvas.ctx.isPointInPath(this.polygonPath,e.x,e.y);for(var t=!1,i=0,n=this.polygonRaw.length-1;i<this.polygonRaw.length;n=i++){var r=this.polygonRaw[i][0],a=this.polygonRaw[i][1],o=this.polygonRaw[n][0],s=this.polygonRaw[n][1];a>e.y!=s>e.y&&e.x<(o-r)*(e.y-a)/(s-a)+r&&(t=!t)}return t}},{key:"getPoingOnPolygonPathByIndex",value:function(e){if(!this.initialized)throw new Error("No polygon data loaded.");var t=n(this.polygonRaw[e%this.polygonRaw.length],2);return{x:t[0],y:t[1]}}},{key:"getEquidistantPoingOnPolygonPathByIndex",value:function(e){if(!this.initialized)throw new Error("No polygon data loaded.");var t=this.polygonData.paths[0].getPointAtLength(this.polygonPathLength/this.library.getParameter(function(e){return e.particles.number.value})*e);return{x:t.x*this.polygon.scale+this.polygonOffsetX,y:t.y*this.polygon.scale+this.polygonOffsetY}}},{key:"drawPolygon",value:function(){var e=this.library.canvas.ctx;if(!this.path2DSupported){if(!this.initialized)return;e.beginPath(),e.moveTo(this.polygonRaw[0][0],this.polygonRaw[0][1]),this.polygonRaw.forEach(function(t,i){var r=n(t,2),a=r[0],o=r[1];i>0&&e.lineTo(a,o)}),e.closePath()}e.strokeStyle=this.polygon.draw.stroke.color,e.lineWidth=this.polygon.draw.stroke.width,this.polygonPath?e.stroke(this.polygonPath):e.stroke()}},{key:"createPath2D",value:function(){var e=this;this.path2DSupported&&(this.polygonPath=new Path2D,this.polygonPath.moveTo(this.polygonRaw[0][0],this.polygonRaw[0][1]),this.polygonRaw.forEach(function(t,i){var r=n(t,2),a=r[0],o=r[1];i>0&&e.polygonPath.lineTo(a,o)}),this.polygonPath.closePath())}}])&&r(t.prototype,i),a&&r(t,a),e}();t.PolygonMask=a},function(e,t,i){var n=i(38);e.exports=function(e,t){return n(e,t)}},function(e,t,i){var n=i(39),r=i(10);e.exports=function e(t,i,a,o,s){return t===i||(null==t||null==i||!r(t)&&!r(i)?t!=t&&i!=i:n(t,i,a,o,e,s))}},function(e,t,i){var n=i(40),r=i(22),a=i(75),o=i(79),s=i(101),c=i(13),l=i(23),u=i(25),h=1,y="[object Arguments]",p="[object Array]",v="[object Object]",f=Object.prototype.hasOwnProperty;e.exports=function(e,t,i,d,b,g){var m=c(e),_=c(t),P=m?p:s(e),x=_?p:s(t),w=(P=P==y?v:P)==v,O=(x=x==y?v:x)==v,M=P==x;if(M&&l(e)){if(!l(t))return!1;m=!0,w=!1}if(M&&!w)return g||(g=new n),m||u(e)?r(e,t,i,d,b,g):a(e,t,P,i,d,b,g);if(!(i&h)){var E=w&&f.call(e,"__wrapped__"),S=O&&f.call(t,"__wrapped__");if(E||S){var k=E?e.value():e,T=S?t.value():t;return g||(g=new n),b(k,T,i,d,g)}}return!!M&&(g||(g=new n),o(e,t,i,d,b,g))}},function(e,t,i){var n=i(5),r=i(46),a=i(47),o=i(48),s=i(49),c=i(50);function l(e){var t=this.__data__=new n(e);this.size=t.size}l.prototype.clear=r,l.prototype.delete=a,l.prototype.get=o,l.prototype.has=s,l.prototype.set=c,e.exports=l},function(e,t){e.exports=function(){this.__data__=[],this.size=0}},function(e,t,i){var n=i(6),r=Array.prototype.splice;e.exports=function(e){var t=this.__data__,i=n(t,e);return!(i<0||(i==t.length-1?t.pop():r.call(t,i,1),--this.size,0))}},function(e,t,i){var n=i(6);e.exports=function(e){var t=this.__data__,i=n(t,e);return i<0?void 0:t[i][1]}},function(e,t,i){var n=i(6);e.exports=function(e){return n(this.__data__,e)>-1}},function(e,t,i){var n=i(6);e.exports=function(e,t){var i=this.__data__,r=n(i,e);return r<0?(++this.size,i.push([e,t])):i[r][1]=t,this}},function(e,t,i){var n=i(5);e.exports=function(){this.__data__=new n,this.size=0}},function(e,t){e.exports=function(e){var t=this.__data__,i=t.delete(e);return this.size=t.size,i}},function(e,t){e.exports=function(e){return this.__data__.get(e)}},function(e,t){e.exports=function(e){return this.__data__.has(e)}},function(e,t,i){var n=i(5),r=i(11),a=i(21),o=200;e.exports=function(e,t){var i=this.__data__;if(i instanceof n){var s=i.__data__;if(!r||s.length<o-1)return s.push([e,t]),this.size=++i.size,this;i=this.__data__=new a(s)}return i.set(e,t),this.size=i.size,this}},function(e,t,i){var n=i(17),r=i(55),a=i(19),o=i(20),s=/^\[object .+?Constructor\]$/,c=Function.prototype,l=Object.prototype,u=c.toString,h=l.hasOwnProperty,y=RegExp("^"+u.call(h).replace(/[\\^$.*+?()[\]{}|]/g,"\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g,"$1.*?")+"$");e.exports=function(e){return!(!a(e)||r(e))&&(n(e)?y:s).test(o(e))}},function(e,t){var i;i=function(){return this}();try{i=i||new Function("return this")()}catch(e){"object"==typeof window&&(i=window)}e.exports=i},function(e,t,i){var n=i(12),r=Object.prototype,a=r.hasOwnProperty,o=r.toString,s=n?n.toStringTag:void 0;e.exports=function(e){var t=a.call(e,s),i=e[s];try{e[s]=void 0;var n=!0}catch(e){}var r=o.call(e);return n&&(t?e[s]=i:delete e[s]),r}},function(e,t){var i=Object.prototype.toString;e.exports=function(e){return i.call(e)}},function(e,t,i){var n,r=i(56),a=(n=/[^.]+$/.exec(r&&r.keys&&r.keys.IE_PROTO||""))?"Symbol(src)_1."+n:"";e.exports=function(e){return!!a&&a in e}},function(e,t,i){var n=i(0)["__core-js_shared__"];e.exports=n},function(e,t){e.exports=function(e,t){return null==e?void 0:e[t]}},function(e,t,i){var n=i(59),r=i(5),a=i(11);e.exports=function(){this.size=0,this.__data__={hash:new n,map:new(a||r),string:new n}}},function(e,t,i){var n=i(60),r=i(61),a=i(62),o=i(63),s=i(64);function c(e){var t=-1,i=null==e?0:e.length;for(this.clear();++t<i;){var n=e[t];this.set(n[0],n[1])}}c.prototype.clear=n,c.prototype.delete=r,c.prototype.get=a,c.prototype.has=o,c.prototype.set=s,e.exports=c},function(e,t,i){var n=i(8);e.exports=function(){this.__data__=n?n(null):{},this.size=0}},function(e,t){e.exports=function(e){var t=this.has(e)&&delete this.__data__[e];return this.size-=t?1:0,t}},function(e,t,i){var n=i(8),r="__lodash_hash_undefined__",a=Object.prototype.hasOwnProperty;e.exports=function(e){var t=this.__data__;if(n){var i=t[e];return i===r?void 0:i}return a.call(t,e)?t[e]:void 0}},function(e,t,i){var n=i(8),r=Object.prototype.hasOwnProperty;e.exports=function(e){var t=this.__data__;return n?void 0!==t[e]:r.call(t,e)}},function(e,t,i){var n=i(8),r="__lodash_hash_undefined__";e.exports=function(e,t){var i=this.__data__;return this.size+=this.has(e)?0:1,i[e]=n&&void 0===t?r:t,this}},function(e,t,i){var n=i(9);e.exports=function(e){var t=n(this,e).delete(e);return this.size-=t?1:0,t}},function(e,t){e.exports=function(e){var t=typeof e;return"string"==t||"number"==t||"symbol"==t||"boolean"==t?"__proto__"!==e:null===e}},function(e,t,i){var n=i(9);e.exports=function(e){return n(this,e).get(e)}},function(e,t,i){var n=i(9);e.exports=function(e){return n(this,e).has(e)}},function(e,t,i){var n=i(9);e.exports=function(e,t){var i=n(this,e),r=i.size;return i.set(e,t),this.size+=i.size==r?0:1,this}},function(e,t,i){var n=i(21),r=i(71),a=i(72);function o(e){var t=-1,i=null==e?0:e.length;for(this.__data__=new n;++t<i;)this.add(e[t])}o.prototype.add=o.prototype.push=r,o.prototype.has=a,e.exports=o},function(e,t){var i="__lodash_hash_undefined__";e.exports=function(e){return this.__data__.set(e,i),this}},function(e,t){e.exports=function(e){return this.__data__.has(e)}},function(e,t){e.exports=function(e,t){for(var i=-1,n=null==e?0:e.length;++i<n;)if(t(e[i],i,e))return!0;return!1}},function(e,t){e.exports=function(e,t){return e.has(t)}},function(e,t,i){var n=i(12),r=i(76),a=i(16),o=i(22),s=i(77),c=i(78),l=1,u=2,h="[object Boolean]",y="[object Date]",p="[object Error]",v="[object Map]",f="[object Number]",d="[object RegExp]",b="[object Set]",g="[object String]",m="[object Symbol]",_="[object ArrayBuffer]",P="[object DataView]",x=n?n.prototype:void 0,w=x?x.valueOf:void 0;e.exports=function(e,t,i,n,x,O,M){switch(i){case P:if(e.byteLength!=t.byteLength||e.byteOffset!=t.byteOffset)return!1;e=e.buffer,t=t.buffer;case _:return!(e.byteLength!=t.byteLength||!O(new r(e),new r(t)));case h:case y:case f:return a(+e,+t);case p:return e.name==t.name&&e.message==t.message;case d:case g:return e==t+"";case v:var E=s;case b:var S=n&l;if(E||(E=c),e.size!=t.size&&!S)return!1;var k=M.get(e);if(k)return k==t;n|=u,M.set(e,t);var T=o(E(e),E(t),n,x,O,M);return M.delete(e),T;case m:if(w)return w.call(e)==w.call(t)}return!1}},function(e,t,i){var n=i(0).Uint8Array;e.exports=n},function(e,t){e.exports=function(e){var t=-1,i=Array(e.size);return e.forEach(function(e,n){i[++t]=[n,e]}),i}},function(e,t){e.exports=function(e){var t=-1,i=Array(e.size);return e.forEach(function(e){i[++t]=e}),i}},function(e,t,i){var n=i(80),r=1,a=Object.prototype.hasOwnProperty;e.exports=function(e,t,i,o,s,c){var l=i&r,u=n(e),h=u.length;if(h!=n(t).length&&!l)return!1;for(var y=h;y--;){var p=u[y];if(!(l?p in t:a.call(t,p)))return!1}var v=c.get(e);if(v&&c.get(t))return v==t;var f=!0;c.set(e,t),c.set(t,e);for(var d=l;++y<h;){var b=e[p=u[y]],g=t[p];if(o)var m=l?o(g,b,p,t,e,c):o(b,g,p,e,t,c);if(!(void 0===m?b===g||s(b,g,i,o,c):m)){f=!1;break}d||(d="constructor"==p)}if(f&&!d){var _=e.constructor,P=t.constructor;_!=P&&"constructor"in e&&"constructor"in t&&!("function"==typeof _&&_ instanceof _&&"function"==typeof P&&P instanceof P)&&(f=!1)}return c.delete(e),c.delete(t),f}},function(e,t,i){var n=i(81),r=i(83),a=i(86);e.exports=function(e){return n(e,a,r)}},function(e,t,i){var n=i(82),r=i(13);e.exports=function(e,t,i){var a=t(e);return r(e)?a:n(a,i(e))}},function(e,t){e.exports=function(e,t){for(var i=-1,n=t.length,r=e.length;++i<n;)e[r+i]=t[i];return e}},function(e,t,i){var n=i(84),r=i(85),a=Object.prototype.propertyIsEnumerable,o=Object.getOwnPropertySymbols,s=o?function(e){return null==e?[]:(e=Object(e),n(o(e),function(t){return a.call(e,t)}))}:r;e.exports=s},function(e,t){e.exports=function(e,t){for(var i=-1,n=null==e?0:e.length,r=0,a=[];++i<n;){var o=e[i];t(o,i,e)&&(a[r++]=o)}return a}},function(e,t){e.exports=function(){return[]}},function(e,t,i){var n=i(87),r=i(96),a=i(100);e.exports=function(e){return a(e)?n(e):r(e)}},function(e,t,i){var n=i(88),r=i(89),a=i(13),o=i(23),s=i(92),c=i(25),l=Object.prototype.hasOwnProperty;e.exports=function(e,t){var i=a(e),u=!i&&r(e),h=!i&&!u&&o(e),y=!i&&!u&&!h&&c(e),p=i||u||h||y,v=p?n(e.length,String):[],f=v.length;for(var d in e)!t&&!l.call(e,d)||p&&("length"==d||h&&("offset"==d||"parent"==d)||y&&("buffer"==d||"byteLength"==d||"byteOffset"==d)||s(d,f))||v.push(d);return v}},function(e,t){e.exports=function(e,t){for(var i=-1,n=Array(e);++i<e;)n[i]=t(i);return n}},function(e,t,i){var n=i(90),r=i(10),a=Object.prototype,o=a.hasOwnProperty,s=a.propertyIsEnumerable,c=n(function(){return arguments}())?n:function(e){return r(e)&&o.call(e,"callee")&&!s.call(e,"callee")};e.exports=c},function(e,t,i){var n=i(7),r=i(10),a="[object Arguments]";e.exports=function(e){return r(e)&&n(e)==a}},function(e,t){e.exports=function(){return!1}},function(e,t){var i=9007199254740991,n=/^(?:0|[1-9]\d*)$/;e.exports=function(e,t){var r=typeof e;return!!(t=null==t?i:t)&&("number"==r||"symbol"!=r&&n.test(e))&&e>-1&&e%1==0&&e<t}},function(e,t,i){var n=i(7),r=i(26),a=i(10),o={};o["[object Float32Array]"]=o["[object Float64Array]"]=o["[object Int8Array]"]=o["[object Int16Array]"]=o["[object Int32Array]"]=o["[object Uint8Array]"]=o["[object Uint8ClampedArray]"]=o["[object Uint16Array]"]=o["[object Uint32Array]"]=!0,o["[object Arguments]"]=o["[object Array]"]=o["[object ArrayBuffer]"]=o["[object Boolean]"]=o["[object DataView]"]=o["[object Date]"]=o["[object Error]"]=o["[object Function]"]=o["[object Map]"]=o["[object Number]"]=o["[object Object]"]=o["[object RegExp]"]=o["[object Set]"]=o["[object String]"]=o["[object WeakMap]"]=!1,e.exports=function(e){return a(e)&&r(e.length)&&!!o[n(e)]}},function(e,t){e.exports=function(e){return function(t){return e(t)}}},function(e,t,i){(function(e){var n=i(18),r=t&&!t.nodeType&&t,a=r&&"object"==typeof e&&e&&!e.nodeType&&e,o=a&&a.exports===r&&n.process,s=function(){try{var e=a&&a.require&&a.require("util").types;return e||o&&o.binding&&o.binding("util")}catch(e){}}();e.exports=s}).call(this,i(24)(e))},function(e,t,i){var n=i(97),r=i(98),a=Object.prototype.hasOwnProperty;e.exports=function(e){if(!n(e))return r(e);var t=[];for(var i in Object(e))a.call(e,i)&&"constructor"!=i&&t.push(i);return t}},function(e,t){var i=Object.prototype;e.exports=function(e){var t=e&&e.constructor;return e===("function"==typeof t&&t.prototype||i)}},function(e,t,i){var n=i(99)(Object.keys,Object);e.exports=n},function(e,t){e.exports=function(e,t){return function(i){return e(t(i))}}},function(e,t,i){var n=i(17),r=i(26);e.exports=function(e){return null!=e&&r(e.length)&&!n(e)}},function(e,t,i){var n=i(102),r=i(11),a=i(103),o=i(104),s=i(105),c=i(7),l=i(20),u=l(n),h=l(r),y=l(a),p=l(o),v=l(s),f=c;(n&&"[object DataView]"!=f(new n(new ArrayBuffer(1)))||r&&"[object Map]"!=f(new r)||a&&"[object Promise]"!=f(a.resolve())||o&&"[object Set]"!=f(new o)||s&&"[object WeakMap]"!=f(new s))&&(f=function(e){var t=c(e),i="[object Object]"==t?e.constructor:void 0,n=i?l(i):"";if(n)switch(n){case u:return"[object DataView]";case h:return"[object Map]";case y:return"[object Promise]";case p:return"[object Set]";case v:return"[object WeakMap]"}return t}),e.exports=f},function(e,t,i){var n=i(3)(i(0),"DataView");e.exports=n},function(e,t,i){var n=i(3)(i(0),"Promise");e.exports=n},function(e,t,i){var n=i(3)(i(0),"Set");e.exports=n},function(e,t,i){var n=i(3)(i(0),"WeakMap");e.exports=n}])});
+},{"react":"../../node_modules/react/index.js"}],"../../node_modules/animejs/lib/anime.es.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -74140,82 +74143,2267 @@ anime.random = function (min, max) {
 
 var _default = anime;
 exports.default = _default;
-},{}],"../components/Anime.jsx":[function(require,module,exports) {
+},{}],"../../node_modules/lodash.isequal/index.js":[function(require,module,exports) {
+var global = arguments[3];
+
+/**
+ * Lodash (Custom Build) <https://lodash.com/>
+ * Build: `lodash modularize exports="npm" -o ./`
+ * Copyright JS Foundation and other contributors <https://js.foundation/>
+ * Released under MIT license <https://lodash.com/license>
+ * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+ * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+ */
+
+/** Used as the size to enable large array optimizations. */
+var LARGE_ARRAY_SIZE = 200;
+
+/** Used to stand-in for `undefined` hash values. */
+var HASH_UNDEFINED = '__lodash_hash_undefined__';
+
+/** Used to compose bitmasks for value comparisons. */
+var COMPARE_PARTIAL_FLAG = 1,
+    COMPARE_UNORDERED_FLAG = 2;
+
+/** Used as references for various `Number` constants. */
+var MAX_SAFE_INTEGER = 9007199254740991;
+
+/** `Object#toString` result references. */
+var argsTag = '[object Arguments]',
+    arrayTag = '[object Array]',
+    asyncTag = '[object AsyncFunction]',
+    boolTag = '[object Boolean]',
+    dateTag = '[object Date]',
+    errorTag = '[object Error]',
+    funcTag = '[object Function]',
+    genTag = '[object GeneratorFunction]',
+    mapTag = '[object Map]',
+    numberTag = '[object Number]',
+    nullTag = '[object Null]',
+    objectTag = '[object Object]',
+    promiseTag = '[object Promise]',
+    proxyTag = '[object Proxy]',
+    regexpTag = '[object RegExp]',
+    setTag = '[object Set]',
+    stringTag = '[object String]',
+    symbolTag = '[object Symbol]',
+    undefinedTag = '[object Undefined]',
+    weakMapTag = '[object WeakMap]';
+
+var arrayBufferTag = '[object ArrayBuffer]',
+    dataViewTag = '[object DataView]',
+    float32Tag = '[object Float32Array]',
+    float64Tag = '[object Float64Array]',
+    int8Tag = '[object Int8Array]',
+    int16Tag = '[object Int16Array]',
+    int32Tag = '[object Int32Array]',
+    uint8Tag = '[object Uint8Array]',
+    uint8ClampedTag = '[object Uint8ClampedArray]',
+    uint16Tag = '[object Uint16Array]',
+    uint32Tag = '[object Uint32Array]';
+
+/**
+ * Used to match `RegExp`
+ * [syntax characters](http://ecma-international.org/ecma-262/7.0/#sec-patterns).
+ */
+var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
+
+/** Used to detect host constructors (Safari). */
+var reIsHostCtor = /^\[object .+?Constructor\]$/;
+
+/** Used to detect unsigned integer values. */
+var reIsUint = /^(?:0|[1-9]\d*)$/;
+
+/** Used to identify `toStringTag` values of typed arrays. */
+var typedArrayTags = {};
+typedArrayTags[float32Tag] = typedArrayTags[float64Tag] =
+typedArrayTags[int8Tag] = typedArrayTags[int16Tag] =
+typedArrayTags[int32Tag] = typedArrayTags[uint8Tag] =
+typedArrayTags[uint8ClampedTag] = typedArrayTags[uint16Tag] =
+typedArrayTags[uint32Tag] = true;
+typedArrayTags[argsTag] = typedArrayTags[arrayTag] =
+typedArrayTags[arrayBufferTag] = typedArrayTags[boolTag] =
+typedArrayTags[dataViewTag] = typedArrayTags[dateTag] =
+typedArrayTags[errorTag] = typedArrayTags[funcTag] =
+typedArrayTags[mapTag] = typedArrayTags[numberTag] =
+typedArrayTags[objectTag] = typedArrayTags[regexpTag] =
+typedArrayTags[setTag] = typedArrayTags[stringTag] =
+typedArrayTags[weakMapTag] = false;
+
+/** Detect free variable `global` from Node.js. */
+var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
+
+/** Detect free variable `self`. */
+var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+
+/** Used as a reference to the global object. */
+var root = freeGlobal || freeSelf || Function('return this')();
+
+/** Detect free variable `exports`. */
+var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
+
+/** Detect free variable `module`. */
+var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
+
+/** Detect the popular CommonJS extension `module.exports`. */
+var moduleExports = freeModule && freeModule.exports === freeExports;
+
+/** Detect free variable `process` from Node.js. */
+var freeProcess = moduleExports && freeGlobal.process;
+
+/** Used to access faster Node.js helpers. */
+var nodeUtil = (function() {
+  try {
+    return freeProcess && freeProcess.binding && freeProcess.binding('util');
+  } catch (e) {}
+}());
+
+/* Node.js helper references. */
+var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
+
+/**
+ * A specialized version of `_.filter` for arrays without support for
+ * iteratee shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} predicate The function invoked per iteration.
+ * @returns {Array} Returns the new filtered array.
+ */
+function arrayFilter(array, predicate) {
+  var index = -1,
+      length = array == null ? 0 : array.length,
+      resIndex = 0,
+      result = [];
+
+  while (++index < length) {
+    var value = array[index];
+    if (predicate(value, index, array)) {
+      result[resIndex++] = value;
+    }
+  }
+  return result;
+}
+
+/**
+ * Appends the elements of `values` to `array`.
+ *
+ * @private
+ * @param {Array} array The array to modify.
+ * @param {Array} values The values to append.
+ * @returns {Array} Returns `array`.
+ */
+function arrayPush(array, values) {
+  var index = -1,
+      length = values.length,
+      offset = array.length;
+
+  while (++index < length) {
+    array[offset + index] = values[index];
+  }
+  return array;
+}
+
+/**
+ * A specialized version of `_.some` for arrays without support for iteratee
+ * shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} predicate The function invoked per iteration.
+ * @returns {boolean} Returns `true` if any element passes the predicate check,
+ *  else `false`.
+ */
+function arraySome(array, predicate) {
+  var index = -1,
+      length = array == null ? 0 : array.length;
+
+  while (++index < length) {
+    if (predicate(array[index], index, array)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+/**
+ * The base implementation of `_.times` without support for iteratee shorthands
+ * or max array length checks.
+ *
+ * @private
+ * @param {number} n The number of times to invoke `iteratee`.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns the array of results.
+ */
+function baseTimes(n, iteratee) {
+  var index = -1,
+      result = Array(n);
+
+  while (++index < n) {
+    result[index] = iteratee(index);
+  }
+  return result;
+}
+
+/**
+ * The base implementation of `_.unary` without support for storing metadata.
+ *
+ * @private
+ * @param {Function} func The function to cap arguments for.
+ * @returns {Function} Returns the new capped function.
+ */
+function baseUnary(func) {
+  return function(value) {
+    return func(value);
+  };
+}
+
+/**
+ * Checks if a `cache` value for `key` exists.
+ *
+ * @private
+ * @param {Object} cache The cache to query.
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function cacheHas(cache, key) {
+  return cache.has(key);
+}
+
+/**
+ * Gets the value at `key` of `object`.
+ *
+ * @private
+ * @param {Object} [object] The object to query.
+ * @param {string} key The key of the property to get.
+ * @returns {*} Returns the property value.
+ */
+function getValue(object, key) {
+  return object == null ? undefined : object[key];
+}
+
+/**
+ * Converts `map` to its key-value pairs.
+ *
+ * @private
+ * @param {Object} map The map to convert.
+ * @returns {Array} Returns the key-value pairs.
+ */
+function mapToArray(map) {
+  var index = -1,
+      result = Array(map.size);
+
+  map.forEach(function(value, key) {
+    result[++index] = [key, value];
+  });
+  return result;
+}
+
+/**
+ * Creates a unary function that invokes `func` with its argument transformed.
+ *
+ * @private
+ * @param {Function} func The function to wrap.
+ * @param {Function} transform The argument transform.
+ * @returns {Function} Returns the new function.
+ */
+function overArg(func, transform) {
+  return function(arg) {
+    return func(transform(arg));
+  };
+}
+
+/**
+ * Converts `set` to an array of its values.
+ *
+ * @private
+ * @param {Object} set The set to convert.
+ * @returns {Array} Returns the values.
+ */
+function setToArray(set) {
+  var index = -1,
+      result = Array(set.size);
+
+  set.forEach(function(value) {
+    result[++index] = value;
+  });
+  return result;
+}
+
+/** Used for built-in method references. */
+var arrayProto = Array.prototype,
+    funcProto = Function.prototype,
+    objectProto = Object.prototype;
+
+/** Used to detect overreaching core-js shims. */
+var coreJsData = root['__core-js_shared__'];
+
+/** Used to resolve the decompiled source of functions. */
+var funcToString = funcProto.toString;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/** Used to detect methods masquerading as native. */
+var maskSrcKey = (function() {
+  var uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || '');
+  return uid ? ('Symbol(src)_1.' + uid) : '';
+}());
+
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var nativeObjectToString = objectProto.toString;
+
+/** Used to detect if a method is native. */
+var reIsNative = RegExp('^' +
+  funcToString.call(hasOwnProperty).replace(reRegExpChar, '\\$&')
+  .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$'
+);
+
+/** Built-in value references. */
+var Buffer = moduleExports ? root.Buffer : undefined,
+    Symbol = root.Symbol,
+    Uint8Array = root.Uint8Array,
+    propertyIsEnumerable = objectProto.propertyIsEnumerable,
+    splice = arrayProto.splice,
+    symToStringTag = Symbol ? Symbol.toStringTag : undefined;
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeGetSymbols = Object.getOwnPropertySymbols,
+    nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined,
+    nativeKeys = overArg(Object.keys, Object);
+
+/* Built-in method references that are verified to be native. */
+var DataView = getNative(root, 'DataView'),
+    Map = getNative(root, 'Map'),
+    Promise = getNative(root, 'Promise'),
+    Set = getNative(root, 'Set'),
+    WeakMap = getNative(root, 'WeakMap'),
+    nativeCreate = getNative(Object, 'create');
+
+/** Used to detect maps, sets, and weakmaps. */
+var dataViewCtorString = toSource(DataView),
+    mapCtorString = toSource(Map),
+    promiseCtorString = toSource(Promise),
+    setCtorString = toSource(Set),
+    weakMapCtorString = toSource(WeakMap);
+
+/** Used to convert symbols to primitives and strings. */
+var symbolProto = Symbol ? Symbol.prototype : undefined,
+    symbolValueOf = symbolProto ? symbolProto.valueOf : undefined;
+
+/**
+ * Creates a hash object.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function Hash(entries) {
+  var index = -1,
+      length = entries == null ? 0 : entries.length;
+
+  this.clear();
+  while (++index < length) {
+    var entry = entries[index];
+    this.set(entry[0], entry[1]);
+  }
+}
+
+/**
+ * Removes all key-value entries from the hash.
+ *
+ * @private
+ * @name clear
+ * @memberOf Hash
+ */
+function hashClear() {
+  this.__data__ = nativeCreate ? nativeCreate(null) : {};
+  this.size = 0;
+}
+
+/**
+ * Removes `key` and its value from the hash.
+ *
+ * @private
+ * @name delete
+ * @memberOf Hash
+ * @param {Object} hash The hash to modify.
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function hashDelete(key) {
+  var result = this.has(key) && delete this.__data__[key];
+  this.size -= result ? 1 : 0;
+  return result;
+}
+
+/**
+ * Gets the hash value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf Hash
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function hashGet(key) {
+  var data = this.__data__;
+  if (nativeCreate) {
+    var result = data[key];
+    return result === HASH_UNDEFINED ? undefined : result;
+  }
+  return hasOwnProperty.call(data, key) ? data[key] : undefined;
+}
+
+/**
+ * Checks if a hash value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf Hash
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function hashHas(key) {
+  var data = this.__data__;
+  return nativeCreate ? (data[key] !== undefined) : hasOwnProperty.call(data, key);
+}
+
+/**
+ * Sets the hash `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf Hash
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the hash instance.
+ */
+function hashSet(key, value) {
+  var data = this.__data__;
+  this.size += this.has(key) ? 0 : 1;
+  data[key] = (nativeCreate && value === undefined) ? HASH_UNDEFINED : value;
+  return this;
+}
+
+// Add methods to `Hash`.
+Hash.prototype.clear = hashClear;
+Hash.prototype['delete'] = hashDelete;
+Hash.prototype.get = hashGet;
+Hash.prototype.has = hashHas;
+Hash.prototype.set = hashSet;
+
+/**
+ * Creates an list cache object.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function ListCache(entries) {
+  var index = -1,
+      length = entries == null ? 0 : entries.length;
+
+  this.clear();
+  while (++index < length) {
+    var entry = entries[index];
+    this.set(entry[0], entry[1]);
+  }
+}
+
+/**
+ * Removes all key-value entries from the list cache.
+ *
+ * @private
+ * @name clear
+ * @memberOf ListCache
+ */
+function listCacheClear() {
+  this.__data__ = [];
+  this.size = 0;
+}
+
+/**
+ * Removes `key` and its value from the list cache.
+ *
+ * @private
+ * @name delete
+ * @memberOf ListCache
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function listCacheDelete(key) {
+  var data = this.__data__,
+      index = assocIndexOf(data, key);
+
+  if (index < 0) {
+    return false;
+  }
+  var lastIndex = data.length - 1;
+  if (index == lastIndex) {
+    data.pop();
+  } else {
+    splice.call(data, index, 1);
+  }
+  --this.size;
+  return true;
+}
+
+/**
+ * Gets the list cache value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf ListCache
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function listCacheGet(key) {
+  var data = this.__data__,
+      index = assocIndexOf(data, key);
+
+  return index < 0 ? undefined : data[index][1];
+}
+
+/**
+ * Checks if a list cache value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf ListCache
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function listCacheHas(key) {
+  return assocIndexOf(this.__data__, key) > -1;
+}
+
+/**
+ * Sets the list cache `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf ListCache
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the list cache instance.
+ */
+function listCacheSet(key, value) {
+  var data = this.__data__,
+      index = assocIndexOf(data, key);
+
+  if (index < 0) {
+    ++this.size;
+    data.push([key, value]);
+  } else {
+    data[index][1] = value;
+  }
+  return this;
+}
+
+// Add methods to `ListCache`.
+ListCache.prototype.clear = listCacheClear;
+ListCache.prototype['delete'] = listCacheDelete;
+ListCache.prototype.get = listCacheGet;
+ListCache.prototype.has = listCacheHas;
+ListCache.prototype.set = listCacheSet;
+
+/**
+ * Creates a map cache object to store key-value pairs.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function MapCache(entries) {
+  var index = -1,
+      length = entries == null ? 0 : entries.length;
+
+  this.clear();
+  while (++index < length) {
+    var entry = entries[index];
+    this.set(entry[0], entry[1]);
+  }
+}
+
+/**
+ * Removes all key-value entries from the map.
+ *
+ * @private
+ * @name clear
+ * @memberOf MapCache
+ */
+function mapCacheClear() {
+  this.size = 0;
+  this.__data__ = {
+    'hash': new Hash,
+    'map': new (Map || ListCache),
+    'string': new Hash
+  };
+}
+
+/**
+ * Removes `key` and its value from the map.
+ *
+ * @private
+ * @name delete
+ * @memberOf MapCache
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function mapCacheDelete(key) {
+  var result = getMapData(this, key)['delete'](key);
+  this.size -= result ? 1 : 0;
+  return result;
+}
+
+/**
+ * Gets the map value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf MapCache
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function mapCacheGet(key) {
+  return getMapData(this, key).get(key);
+}
+
+/**
+ * Checks if a map value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf MapCache
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function mapCacheHas(key) {
+  return getMapData(this, key).has(key);
+}
+
+/**
+ * Sets the map `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf MapCache
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the map cache instance.
+ */
+function mapCacheSet(key, value) {
+  var data = getMapData(this, key),
+      size = data.size;
+
+  data.set(key, value);
+  this.size += data.size == size ? 0 : 1;
+  return this;
+}
+
+// Add methods to `MapCache`.
+MapCache.prototype.clear = mapCacheClear;
+MapCache.prototype['delete'] = mapCacheDelete;
+MapCache.prototype.get = mapCacheGet;
+MapCache.prototype.has = mapCacheHas;
+MapCache.prototype.set = mapCacheSet;
+
+/**
+ *
+ * Creates an array cache object to store unique values.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [values] The values to cache.
+ */
+function SetCache(values) {
+  var index = -1,
+      length = values == null ? 0 : values.length;
+
+  this.__data__ = new MapCache;
+  while (++index < length) {
+    this.add(values[index]);
+  }
+}
+
+/**
+ * Adds `value` to the array cache.
+ *
+ * @private
+ * @name add
+ * @memberOf SetCache
+ * @alias push
+ * @param {*} value The value to cache.
+ * @returns {Object} Returns the cache instance.
+ */
+function setCacheAdd(value) {
+  this.__data__.set(value, HASH_UNDEFINED);
+  return this;
+}
+
+/**
+ * Checks if `value` is in the array cache.
+ *
+ * @private
+ * @name has
+ * @memberOf SetCache
+ * @param {*} value The value to search for.
+ * @returns {number} Returns `true` if `value` is found, else `false`.
+ */
+function setCacheHas(value) {
+  return this.__data__.has(value);
+}
+
+// Add methods to `SetCache`.
+SetCache.prototype.add = SetCache.prototype.push = setCacheAdd;
+SetCache.prototype.has = setCacheHas;
+
+/**
+ * Creates a stack cache object to store key-value pairs.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function Stack(entries) {
+  var data = this.__data__ = new ListCache(entries);
+  this.size = data.size;
+}
+
+/**
+ * Removes all key-value entries from the stack.
+ *
+ * @private
+ * @name clear
+ * @memberOf Stack
+ */
+function stackClear() {
+  this.__data__ = new ListCache;
+  this.size = 0;
+}
+
+/**
+ * Removes `key` and its value from the stack.
+ *
+ * @private
+ * @name delete
+ * @memberOf Stack
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function stackDelete(key) {
+  var data = this.__data__,
+      result = data['delete'](key);
+
+  this.size = data.size;
+  return result;
+}
+
+/**
+ * Gets the stack value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf Stack
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function stackGet(key) {
+  return this.__data__.get(key);
+}
+
+/**
+ * Checks if a stack value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf Stack
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function stackHas(key) {
+  return this.__data__.has(key);
+}
+
+/**
+ * Sets the stack `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf Stack
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the stack cache instance.
+ */
+function stackSet(key, value) {
+  var data = this.__data__;
+  if (data instanceof ListCache) {
+    var pairs = data.__data__;
+    if (!Map || (pairs.length < LARGE_ARRAY_SIZE - 1)) {
+      pairs.push([key, value]);
+      this.size = ++data.size;
+      return this;
+    }
+    data = this.__data__ = new MapCache(pairs);
+  }
+  data.set(key, value);
+  this.size = data.size;
+  return this;
+}
+
+// Add methods to `Stack`.
+Stack.prototype.clear = stackClear;
+Stack.prototype['delete'] = stackDelete;
+Stack.prototype.get = stackGet;
+Stack.prototype.has = stackHas;
+Stack.prototype.set = stackSet;
+
+/**
+ * Creates an array of the enumerable property names of the array-like `value`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @param {boolean} inherited Specify returning inherited property names.
+ * @returns {Array} Returns the array of property names.
+ */
+function arrayLikeKeys(value, inherited) {
+  var isArr = isArray(value),
+      isArg = !isArr && isArguments(value),
+      isBuff = !isArr && !isArg && isBuffer(value),
+      isType = !isArr && !isArg && !isBuff && isTypedArray(value),
+      skipIndexes = isArr || isArg || isBuff || isType,
+      result = skipIndexes ? baseTimes(value.length, String) : [],
+      length = result.length;
+
+  for (var key in value) {
+    if ((inherited || hasOwnProperty.call(value, key)) &&
+        !(skipIndexes && (
+           // Safari 9 has enumerable `arguments.length` in strict mode.
+           key == 'length' ||
+           // Node.js 0.10 has enumerable non-index properties on buffers.
+           (isBuff && (key == 'offset' || key == 'parent')) ||
+           // PhantomJS 2 has enumerable non-index properties on typed arrays.
+           (isType && (key == 'buffer' || key == 'byteLength' || key == 'byteOffset')) ||
+           // Skip index properties.
+           isIndex(key, length)
+        ))) {
+      result.push(key);
+    }
+  }
+  return result;
+}
+
+/**
+ * Gets the index at which the `key` is found in `array` of key-value pairs.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {*} key The key to search for.
+ * @returns {number} Returns the index of the matched value, else `-1`.
+ */
+function assocIndexOf(array, key) {
+  var length = array.length;
+  while (length--) {
+    if (eq(array[length][0], key)) {
+      return length;
+    }
+  }
+  return -1;
+}
+
+/**
+ * The base implementation of `getAllKeys` and `getAllKeysIn` which uses
+ * `keysFunc` and `symbolsFunc` to get the enumerable property names and
+ * symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Function} keysFunc The function to get the keys of `object`.
+ * @param {Function} symbolsFunc The function to get the symbols of `object`.
+ * @returns {Array} Returns the array of property names and symbols.
+ */
+function baseGetAllKeys(object, keysFunc, symbolsFunc) {
+  var result = keysFunc(object);
+  return isArray(object) ? result : arrayPush(result, symbolsFunc(object));
+}
+
+/**
+ * The base implementation of `getTag` without fallbacks for buggy environments.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */
+function baseGetTag(value) {
+  if (value == null) {
+    return value === undefined ? undefinedTag : nullTag;
+  }
+  return (symToStringTag && symToStringTag in Object(value))
+    ? getRawTag(value)
+    : objectToString(value);
+}
+
+/**
+ * The base implementation of `_.isArguments`.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+ */
+function baseIsArguments(value) {
+  return isObjectLike(value) && baseGetTag(value) == argsTag;
+}
+
+/**
+ * The base implementation of `_.isEqual` which supports partial comparisons
+ * and tracks traversed objects.
+ *
+ * @private
+ * @param {*} value The value to compare.
+ * @param {*} other The other value to compare.
+ * @param {boolean} bitmask The bitmask flags.
+ *  1 - Unordered comparison
+ *  2 - Partial comparison
+ * @param {Function} [customizer] The function to customize comparisons.
+ * @param {Object} [stack] Tracks traversed `value` and `other` objects.
+ * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+ */
+function baseIsEqual(value, other, bitmask, customizer, stack) {
+  if (value === other) {
+    return true;
+  }
+  if (value == null || other == null || (!isObjectLike(value) && !isObjectLike(other))) {
+    return value !== value && other !== other;
+  }
+  return baseIsEqualDeep(value, other, bitmask, customizer, baseIsEqual, stack);
+}
+
+/**
+ * A specialized version of `baseIsEqual` for arrays and objects which performs
+ * deep comparisons and tracks traversed objects enabling objects with circular
+ * references to be compared.
+ *
+ * @private
+ * @param {Object} object The object to compare.
+ * @param {Object} other The other object to compare.
+ * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Object} [stack] Tracks traversed `object` and `other` objects.
+ * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
+ */
+function baseIsEqualDeep(object, other, bitmask, customizer, equalFunc, stack) {
+  var objIsArr = isArray(object),
+      othIsArr = isArray(other),
+      objTag = objIsArr ? arrayTag : getTag(object),
+      othTag = othIsArr ? arrayTag : getTag(other);
+
+  objTag = objTag == argsTag ? objectTag : objTag;
+  othTag = othTag == argsTag ? objectTag : othTag;
+
+  var objIsObj = objTag == objectTag,
+      othIsObj = othTag == objectTag,
+      isSameTag = objTag == othTag;
+
+  if (isSameTag && isBuffer(object)) {
+    if (!isBuffer(other)) {
+      return false;
+    }
+    objIsArr = true;
+    objIsObj = false;
+  }
+  if (isSameTag && !objIsObj) {
+    stack || (stack = new Stack);
+    return (objIsArr || isTypedArray(object))
+      ? equalArrays(object, other, bitmask, customizer, equalFunc, stack)
+      : equalByTag(object, other, objTag, bitmask, customizer, equalFunc, stack);
+  }
+  if (!(bitmask & COMPARE_PARTIAL_FLAG)) {
+    var objIsWrapped = objIsObj && hasOwnProperty.call(object, '__wrapped__'),
+        othIsWrapped = othIsObj && hasOwnProperty.call(other, '__wrapped__');
+
+    if (objIsWrapped || othIsWrapped) {
+      var objUnwrapped = objIsWrapped ? object.value() : object,
+          othUnwrapped = othIsWrapped ? other.value() : other;
+
+      stack || (stack = new Stack);
+      return equalFunc(objUnwrapped, othUnwrapped, bitmask, customizer, stack);
+    }
+  }
+  if (!isSameTag) {
+    return false;
+  }
+  stack || (stack = new Stack);
+  return equalObjects(object, other, bitmask, customizer, equalFunc, stack);
+}
+
+/**
+ * The base implementation of `_.isNative` without bad shim checks.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a native function,
+ *  else `false`.
+ */
+function baseIsNative(value) {
+  if (!isObject(value) || isMasked(value)) {
+    return false;
+  }
+  var pattern = isFunction(value) ? reIsNative : reIsHostCtor;
+  return pattern.test(toSource(value));
+}
+
+/**
+ * The base implementation of `_.isTypedArray` without Node.js optimizations.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+ */
+function baseIsTypedArray(value) {
+  return isObjectLike(value) &&
+    isLength(value.length) && !!typedArrayTags[baseGetTag(value)];
+}
+
+/**
+ * The base implementation of `_.keys` which doesn't treat sparse arrays as dense.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ */
+function baseKeys(object) {
+  if (!isPrototype(object)) {
+    return nativeKeys(object);
+  }
+  var result = [];
+  for (var key in Object(object)) {
+    if (hasOwnProperty.call(object, key) && key != 'constructor') {
+      result.push(key);
+    }
+  }
+  return result;
+}
+
+/**
+ * A specialized version of `baseIsEqualDeep` for arrays with support for
+ * partial deep comparisons.
+ *
+ * @private
+ * @param {Array} array The array to compare.
+ * @param {Array} other The other array to compare.
+ * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Object} stack Tracks traversed `array` and `other` objects.
+ * @returns {boolean} Returns `true` if the arrays are equivalent, else `false`.
+ */
+function equalArrays(array, other, bitmask, customizer, equalFunc, stack) {
+  var isPartial = bitmask & COMPARE_PARTIAL_FLAG,
+      arrLength = array.length,
+      othLength = other.length;
+
+  if (arrLength != othLength && !(isPartial && othLength > arrLength)) {
+    return false;
+  }
+  // Assume cyclic values are equal.
+  var stacked = stack.get(array);
+  if (stacked && stack.get(other)) {
+    return stacked == other;
+  }
+  var index = -1,
+      result = true,
+      seen = (bitmask & COMPARE_UNORDERED_FLAG) ? new SetCache : undefined;
+
+  stack.set(array, other);
+  stack.set(other, array);
+
+  // Ignore non-index properties.
+  while (++index < arrLength) {
+    var arrValue = array[index],
+        othValue = other[index];
+
+    if (customizer) {
+      var compared = isPartial
+        ? customizer(othValue, arrValue, index, other, array, stack)
+        : customizer(arrValue, othValue, index, array, other, stack);
+    }
+    if (compared !== undefined) {
+      if (compared) {
+        continue;
+      }
+      result = false;
+      break;
+    }
+    // Recursively compare arrays (susceptible to call stack limits).
+    if (seen) {
+      if (!arraySome(other, function(othValue, othIndex) {
+            if (!cacheHas(seen, othIndex) &&
+                (arrValue === othValue || equalFunc(arrValue, othValue, bitmask, customizer, stack))) {
+              return seen.push(othIndex);
+            }
+          })) {
+        result = false;
+        break;
+      }
+    } else if (!(
+          arrValue === othValue ||
+            equalFunc(arrValue, othValue, bitmask, customizer, stack)
+        )) {
+      result = false;
+      break;
+    }
+  }
+  stack['delete'](array);
+  stack['delete'](other);
+  return result;
+}
+
+/**
+ * A specialized version of `baseIsEqualDeep` for comparing objects of
+ * the same `toStringTag`.
+ *
+ * **Note:** This function only supports comparing values with tags of
+ * `Boolean`, `Date`, `Error`, `Number`, `RegExp`, or `String`.
+ *
+ * @private
+ * @param {Object} object The object to compare.
+ * @param {Object} other The other object to compare.
+ * @param {string} tag The `toStringTag` of the objects to compare.
+ * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Object} stack Tracks traversed `object` and `other` objects.
+ * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
+ */
+function equalByTag(object, other, tag, bitmask, customizer, equalFunc, stack) {
+  switch (tag) {
+    case dataViewTag:
+      if ((object.byteLength != other.byteLength) ||
+          (object.byteOffset != other.byteOffset)) {
+        return false;
+      }
+      object = object.buffer;
+      other = other.buffer;
+
+    case arrayBufferTag:
+      if ((object.byteLength != other.byteLength) ||
+          !equalFunc(new Uint8Array(object), new Uint8Array(other))) {
+        return false;
+      }
+      return true;
+
+    case boolTag:
+    case dateTag:
+    case numberTag:
+      // Coerce booleans to `1` or `0` and dates to milliseconds.
+      // Invalid dates are coerced to `NaN`.
+      return eq(+object, +other);
+
+    case errorTag:
+      return object.name == other.name && object.message == other.message;
+
+    case regexpTag:
+    case stringTag:
+      // Coerce regexes to strings and treat strings, primitives and objects,
+      // as equal. See http://www.ecma-international.org/ecma-262/7.0/#sec-regexp.prototype.tostring
+      // for more details.
+      return object == (other + '');
+
+    case mapTag:
+      var convert = mapToArray;
+
+    case setTag:
+      var isPartial = bitmask & COMPARE_PARTIAL_FLAG;
+      convert || (convert = setToArray);
+
+      if (object.size != other.size && !isPartial) {
+        return false;
+      }
+      // Assume cyclic values are equal.
+      var stacked = stack.get(object);
+      if (stacked) {
+        return stacked == other;
+      }
+      bitmask |= COMPARE_UNORDERED_FLAG;
+
+      // Recursively compare objects (susceptible to call stack limits).
+      stack.set(object, other);
+      var result = equalArrays(convert(object), convert(other), bitmask, customizer, equalFunc, stack);
+      stack['delete'](object);
+      return result;
+
+    case symbolTag:
+      if (symbolValueOf) {
+        return symbolValueOf.call(object) == symbolValueOf.call(other);
+      }
+  }
+  return false;
+}
+
+/**
+ * A specialized version of `baseIsEqualDeep` for objects with support for
+ * partial deep comparisons.
+ *
+ * @private
+ * @param {Object} object The object to compare.
+ * @param {Object} other The other object to compare.
+ * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Object} stack Tracks traversed `object` and `other` objects.
+ * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
+ */
+function equalObjects(object, other, bitmask, customizer, equalFunc, stack) {
+  var isPartial = bitmask & COMPARE_PARTIAL_FLAG,
+      objProps = getAllKeys(object),
+      objLength = objProps.length,
+      othProps = getAllKeys(other),
+      othLength = othProps.length;
+
+  if (objLength != othLength && !isPartial) {
+    return false;
+  }
+  var index = objLength;
+  while (index--) {
+    var key = objProps[index];
+    if (!(isPartial ? key in other : hasOwnProperty.call(other, key))) {
+      return false;
+    }
+  }
+  // Assume cyclic values are equal.
+  var stacked = stack.get(object);
+  if (stacked && stack.get(other)) {
+    return stacked == other;
+  }
+  var result = true;
+  stack.set(object, other);
+  stack.set(other, object);
+
+  var skipCtor = isPartial;
+  while (++index < objLength) {
+    key = objProps[index];
+    var objValue = object[key],
+        othValue = other[key];
+
+    if (customizer) {
+      var compared = isPartial
+        ? customizer(othValue, objValue, key, other, object, stack)
+        : customizer(objValue, othValue, key, object, other, stack);
+    }
+    // Recursively compare objects (susceptible to call stack limits).
+    if (!(compared === undefined
+          ? (objValue === othValue || equalFunc(objValue, othValue, bitmask, customizer, stack))
+          : compared
+        )) {
+      result = false;
+      break;
+    }
+    skipCtor || (skipCtor = key == 'constructor');
+  }
+  if (result && !skipCtor) {
+    var objCtor = object.constructor,
+        othCtor = other.constructor;
+
+    // Non `Object` object instances with different constructors are not equal.
+    if (objCtor != othCtor &&
+        ('constructor' in object && 'constructor' in other) &&
+        !(typeof objCtor == 'function' && objCtor instanceof objCtor &&
+          typeof othCtor == 'function' && othCtor instanceof othCtor)) {
+      result = false;
+    }
+  }
+  stack['delete'](object);
+  stack['delete'](other);
+  return result;
+}
+
+/**
+ * Creates an array of own enumerable property names and symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names and symbols.
+ */
+function getAllKeys(object) {
+  return baseGetAllKeys(object, keys, getSymbols);
+}
+
+/**
+ * Gets the data for `map`.
+ *
+ * @private
+ * @param {Object} map The map to query.
+ * @param {string} key The reference key.
+ * @returns {*} Returns the map data.
+ */
+function getMapData(map, key) {
+  var data = map.__data__;
+  return isKeyable(key)
+    ? data[typeof key == 'string' ? 'string' : 'hash']
+    : data.map;
+}
+
+/**
+ * Gets the native function at `key` of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {string} key The key of the method to get.
+ * @returns {*} Returns the function if it's native, else `undefined`.
+ */
+function getNative(object, key) {
+  var value = getValue(object, key);
+  return baseIsNative(value) ? value : undefined;
+}
+
+/**
+ * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the raw `toStringTag`.
+ */
+function getRawTag(value) {
+  var isOwn = hasOwnProperty.call(value, symToStringTag),
+      tag = value[symToStringTag];
+
+  try {
+    value[symToStringTag] = undefined;
+    var unmasked = true;
+  } catch (e) {}
+
+  var result = nativeObjectToString.call(value);
+  if (unmasked) {
+    if (isOwn) {
+      value[symToStringTag] = tag;
+    } else {
+      delete value[symToStringTag];
+    }
+  }
+  return result;
+}
+
+/**
+ * Creates an array of the own enumerable symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of symbols.
+ */
+var getSymbols = !nativeGetSymbols ? stubArray : function(object) {
+  if (object == null) {
+    return [];
+  }
+  object = Object(object);
+  return arrayFilter(nativeGetSymbols(object), function(symbol) {
+    return propertyIsEnumerable.call(object, symbol);
+  });
+};
+
+/**
+ * Gets the `toStringTag` of `value`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */
+var getTag = baseGetTag;
+
+// Fallback for data views, maps, sets, and weak maps in IE 11 and promises in Node.js < 6.
+if ((DataView && getTag(new DataView(new ArrayBuffer(1))) != dataViewTag) ||
+    (Map && getTag(new Map) != mapTag) ||
+    (Promise && getTag(Promise.resolve()) != promiseTag) ||
+    (Set && getTag(new Set) != setTag) ||
+    (WeakMap && getTag(new WeakMap) != weakMapTag)) {
+  getTag = function(value) {
+    var result = baseGetTag(value),
+        Ctor = result == objectTag ? value.constructor : undefined,
+        ctorString = Ctor ? toSource(Ctor) : '';
+
+    if (ctorString) {
+      switch (ctorString) {
+        case dataViewCtorString: return dataViewTag;
+        case mapCtorString: return mapTag;
+        case promiseCtorString: return promiseTag;
+        case setCtorString: return setTag;
+        case weakMapCtorString: return weakMapTag;
+      }
+    }
+    return result;
+  };
+}
+
+/**
+ * Checks if `value` is a valid array-like index.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
+ * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
+ */
+function isIndex(value, length) {
+  length = length == null ? MAX_SAFE_INTEGER : length;
+  return !!length &&
+    (typeof value == 'number' || reIsUint.test(value)) &&
+    (value > -1 && value % 1 == 0 && value < length);
+}
+
+/**
+ * Checks if `value` is suitable for use as unique object key.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is suitable, else `false`.
+ */
+function isKeyable(value) {
+  var type = typeof value;
+  return (type == 'string' || type == 'number' || type == 'symbol' || type == 'boolean')
+    ? (value !== '__proto__')
+    : (value === null);
+}
+
+/**
+ * Checks if `func` has its source masked.
+ *
+ * @private
+ * @param {Function} func The function to check.
+ * @returns {boolean} Returns `true` if `func` is masked, else `false`.
+ */
+function isMasked(func) {
+  return !!maskSrcKey && (maskSrcKey in func);
+}
+
+/**
+ * Checks if `value` is likely a prototype object.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.
+ */
+function isPrototype(value) {
+  var Ctor = value && value.constructor,
+      proto = (typeof Ctor == 'function' && Ctor.prototype) || objectProto;
+
+  return value === proto;
+}
+
+/**
+ * Converts `value` to a string using `Object.prototype.toString`.
+ *
+ * @private
+ * @param {*} value The value to convert.
+ * @returns {string} Returns the converted string.
+ */
+function objectToString(value) {
+  return nativeObjectToString.call(value);
+}
+
+/**
+ * Converts `func` to its source code.
+ *
+ * @private
+ * @param {Function} func The function to convert.
+ * @returns {string} Returns the source code.
+ */
+function toSource(func) {
+  if (func != null) {
+    try {
+      return funcToString.call(func);
+    } catch (e) {}
+    try {
+      return (func + '');
+    } catch (e) {}
+  }
+  return '';
+}
+
+/**
+ * Performs a
+ * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+ * comparison between two values to determine if they are equivalent.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to compare.
+ * @param {*} other The other value to compare.
+ * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+ * @example
+ *
+ * var object = { 'a': 1 };
+ * var other = { 'a': 1 };
+ *
+ * _.eq(object, object);
+ * // => true
+ *
+ * _.eq(object, other);
+ * // => false
+ *
+ * _.eq('a', 'a');
+ * // => true
+ *
+ * _.eq('a', Object('a'));
+ * // => false
+ *
+ * _.eq(NaN, NaN);
+ * // => true
+ */
+function eq(value, other) {
+  return value === other || (value !== value && other !== other);
+}
+
+/**
+ * Checks if `value` is likely an `arguments` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+ *  else `false`.
+ * @example
+ *
+ * _.isArguments(function() { return arguments; }());
+ * // => true
+ *
+ * _.isArguments([1, 2, 3]);
+ * // => false
+ */
+var isArguments = baseIsArguments(function() { return arguments; }()) ? baseIsArguments : function(value) {
+  return isObjectLike(value) && hasOwnProperty.call(value, 'callee') &&
+    !propertyIsEnumerable.call(value, 'callee');
+};
+
+/**
+ * Checks if `value` is classified as an `Array` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an array, else `false`.
+ * @example
+ *
+ * _.isArray([1, 2, 3]);
+ * // => true
+ *
+ * _.isArray(document.body.children);
+ * // => false
+ *
+ * _.isArray('abc');
+ * // => false
+ *
+ * _.isArray(_.noop);
+ * // => false
+ */
+var isArray = Array.isArray;
+
+/**
+ * Checks if `value` is array-like. A value is considered array-like if it's
+ * not a function and has a `value.length` that's an integer greater than or
+ * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
+ * @example
+ *
+ * _.isArrayLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isArrayLike(document.body.children);
+ * // => true
+ *
+ * _.isArrayLike('abc');
+ * // => true
+ *
+ * _.isArrayLike(_.noop);
+ * // => false
+ */
+function isArrayLike(value) {
+  return value != null && isLength(value.length) && !isFunction(value);
+}
+
+/**
+ * Checks if `value` is a buffer.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.3.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a buffer, else `false`.
+ * @example
+ *
+ * _.isBuffer(new Buffer(2));
+ * // => true
+ *
+ * _.isBuffer(new Uint8Array(2));
+ * // => false
+ */
+var isBuffer = nativeIsBuffer || stubFalse;
+
+/**
+ * Performs a deep comparison between two values to determine if they are
+ * equivalent.
+ *
+ * **Note:** This method supports comparing arrays, array buffers, booleans,
+ * date objects, error objects, maps, numbers, `Object` objects, regexes,
+ * sets, strings, symbols, and typed arrays. `Object` objects are compared
+ * by their own, not inherited, enumerable properties. Functions and DOM
+ * nodes are compared by strict equality, i.e. `===`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to compare.
+ * @param {*} other The other value to compare.
+ * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+ * @example
+ *
+ * var object = { 'a': 1 };
+ * var other = { 'a': 1 };
+ *
+ * _.isEqual(object, other);
+ * // => true
+ *
+ * object === other;
+ * // => false
+ */
+function isEqual(value, other) {
+  return baseIsEqual(value, other);
+}
+
+/**
+ * Checks if `value` is classified as a `Function` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a function, else `false`.
+ * @example
+ *
+ * _.isFunction(_);
+ * // => true
+ *
+ * _.isFunction(/abc/);
+ * // => false
+ */
+function isFunction(value) {
+  if (!isObject(value)) {
+    return false;
+  }
+  // The use of `Object#toString` avoids issues with the `typeof` operator
+  // in Safari 9 which returns 'object' for typed arrays and other constructors.
+  var tag = baseGetTag(value);
+  return tag == funcTag || tag == genTag || tag == asyncTag || tag == proxyTag;
+}
+
+/**
+ * Checks if `value` is a valid array-like length.
+ *
+ * **Note:** This method is loosely based on
+ * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
+ * @example
+ *
+ * _.isLength(3);
+ * // => true
+ *
+ * _.isLength(Number.MIN_VALUE);
+ * // => false
+ *
+ * _.isLength(Infinity);
+ * // => false
+ *
+ * _.isLength('3');
+ * // => false
+ */
+function isLength(value) {
+  return typeof value == 'number' &&
+    value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
+}
+
+/**
+ * Checks if `value` is the
+ * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+ * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+ * @example
+ *
+ * _.isObject({});
+ * // => true
+ *
+ * _.isObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isObject(_.noop);
+ * // => true
+ *
+ * _.isObject(null);
+ * // => false
+ */
+function isObject(value) {
+  var type = typeof value;
+  return value != null && (type == 'object' || type == 'function');
+}
+
+/**
+ * Checks if `value` is object-like. A value is object-like if it's not `null`
+ * and has a `typeof` result of "object".
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+ * @example
+ *
+ * _.isObjectLike({});
+ * // => true
+ *
+ * _.isObjectLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isObjectLike(_.noop);
+ * // => false
+ *
+ * _.isObjectLike(null);
+ * // => false
+ */
+function isObjectLike(value) {
+  return value != null && typeof value == 'object';
+}
+
+/**
+ * Checks if `value` is classified as a typed array.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+ * @example
+ *
+ * _.isTypedArray(new Uint8Array);
+ * // => true
+ *
+ * _.isTypedArray([]);
+ * // => false
+ */
+var isTypedArray = nodeIsTypedArray ? baseUnary(nodeIsTypedArray) : baseIsTypedArray;
+
+/**
+ * Creates an array of the own enumerable property names of `object`.
+ *
+ * **Note:** Non-object values are coerced to objects. See the
+ * [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
+ * for more details.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.keys(new Foo);
+ * // => ['a', 'b'] (iteration order is not guaranteed)
+ *
+ * _.keys('hi');
+ * // => ['0', '1']
+ */
+function keys(object) {
+  return isArrayLike(object) ? arrayLikeKeys(object) : baseKeys(object);
+}
+
+/**
+ * This method returns a new empty array.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.13.0
+ * @category Util
+ * @returns {Array} Returns the new empty array.
+ * @example
+ *
+ * var arrays = _.times(2, _.stubArray);
+ *
+ * console.log(arrays);
+ * // => [[], []]
+ *
+ * console.log(arrays[0] === arrays[1]);
+ * // => false
+ */
+function stubArray() {
+  return [];
+}
+
+/**
+ * This method returns `false`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.13.0
+ * @category Util
+ * @returns {boolean} Returns `false`.
+ * @example
+ *
+ * _.times(2, _.stubFalse);
+ * // => [false, false]
+ */
+function stubFalse() {
+  return false;
+}
+
+module.exports = isEqual;
+
+},{}],"../../node_modules/react-countdown-now/dist/index.es.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = Anime;
+exports.calcTimeDelta = calcTimeDelta;
+exports.formatTimeDelta = formatTimeDelta;
+exports.zeroPad = zeroPad;
+exports.default = void 0;
 
-var _react = _interopRequireWildcard(require("react"));
+var _react = _interopRequireDefault(require("react"));
 
-var _animejs = _interopRequireDefault(require("animejs"));
+var _propTypes = _interopRequireDefault(require("prop-types"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-
-function Anime(props) {
-  const {
-    render,
-    children,
-    ...properties
-  } = props;
-  delete properties.targets;
-  let parent = (0, _react.useRef)();
-  const [mount, setMount] = (0, _react.useState)(true);
-  const [rerender, setRerender] = (0, _react.useState)(false);
-  (0, _react.useEffect)(() => {
-    if (rerender && render) (0, _animejs.default)({ ...properties,
-      targets: parent.current
-    });
-  });
-  (0, _react.useEffect)(() => {
-    if (render) {
-      (0, _animejs.default)({ ...properties,
-        targets: parent.current,
-        complete: e => {
-          props.timeout && setTimeout(() => {
-            (0, _animejs.default)({ ...properties,
-              targets: parent.current,
-              direction: "reverse",
-              complete: e => e.complete && setMount(false)
-            });
-          }, props.timeout + props.delay);
-        }
-      });
-      setMount(true);
-    }
-
-    if (!render) {
-      setRerender(true);
-      (0, _animejs.default)({ ...properties,
-        targets: parent.current,
-        direction: "reverse",
-        complete: e => e.complete && setMount(false)
-      });
-    }
-  }, [render]);
-  const progress = (0, _react.createContext)("test");
-  return mount && _react.default.createElement("div", {
-    style: {
-      opacity: 0
-    },
-    ref: parent
-  }, children);
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
 }
 
-Anime.defaultProps = {
-  render: true,
-  delay: 0
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
+
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function");
+  }
+
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) _setPrototypeOf(subClass, superClass);
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
+}
+
+function _setPrototypeOf(o, p) {
+  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+
+  return _setPrototypeOf(o, p);
+}
+
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return self;
+}
+
+function _possibleConstructorReturn(self, call) {
+  if (call && (typeof call === "object" || typeof call === "function")) {
+    return call;
+  }
+
+  return _assertThisInitialized(self);
+}
+
+function _toConsumableArray(arr) {
+  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
+}
+
+function _arrayWithoutHoles(arr) {
+  if (Array.isArray(arr)) {
+    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) arr2[i] = arr[i];
+
+    return arr2;
+  }
+}
+
+function _iterableToArray(iter) {
+  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
+}
+
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance");
+}
+
+function zeroPad(value) {
+  var length = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
+  var strValue = String(value);
+  if (length === 0) return strValue;
+  var match = strValue.match(/(.*?)([0-9]+)(.*)/);
+  var prefix = match ? match[1] : '';
+  var suffix = match ? match[3] : '';
+  var strNo = match ? match[2] : strValue;
+  var paddedNo = strNo.length >= length ? strNo : (_toConsumableArray(Array(length)).map(function () {
+    return '0';
+  }).join('') + strNo).slice(length * -1);
+  return "".concat(prefix).concat(paddedNo).concat(suffix);
+}
+
+var timeDeltaFormatOptionsDefaults = {
+  daysInHours: false,
+  zeroPadTime: 2
 };
-},{"react":"../../node_modules/react/index.js","animejs":"../../node_modules/animejs/lib/anime.es.js"}],"../../node_modules/react-particles-js/lib/particles.js":[function(require,module,exports) {
-var define;
-!function(e,t){"object"==typeof exports&&"object"==typeof module?module.exports=t(require("react")):"function"==typeof define&&define.amd?define(["react"],t):"object"==typeof exports?exports.Particles=t(require("react")):e.Particles=t(e.React)}(this,function(e){return function(e){var t={};function i(n){if(t[n])return t[n].exports;var r=t[n]={i:n,l:!1,exports:{}};return e[n].call(r.exports,r,r.exports,i),r.l=!0,r.exports}return i.m=e,i.c=t,i.d=function(e,t,n){i.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},i.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.t=function(e,t){if(1&t&&(e=i(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var n=Object.create(null);if(i.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var r in e)i.d(n,r,function(t){return e[t]}.bind(null,r));return n},i.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return i.d(t,"a",t),t},i.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},i.p="",i(i.s=27)}([function(e,t,i){var n=i(18),r="object"==typeof self&&self&&self.Object===Object&&self,a=n||r||Function("return this")();e.exports=a},function(e,t,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),function(e){e.CIRCLE="circle",e.EDGE="edge",e.TRIANGLE="triangle",e.POLYGON="polygon",e.STAR="star",e.IMAGE="image",e.IMAGES="images"}(t.ShapeType||(t.ShapeType={})),function(e){e.TOP="top",e.TOP_RIGHT="top-right",e.RIGHT="right",e.BOTTOM_RIGHT="bottom-right",e.BOTTOM="bottom",e.BOTTOM_LEFT="bottom-left",e.LEFT="left",e.TOP_LEFT="top-left",e.NONE="none"}(t.MoveDirection||(t.MoveDirection={})),function(e){e.BOUNCE="bounce",e.OUT="out"}(t.MoveOutMode||(t.MoveOutMode={})),function(e){e.GRAB="grab",e.PUSH="push",e.REMOVE="remove",e.BUBBLE="bubble",e.REPULSE="repulse"}(t.InteractivityMode||(t.InteractivityMode={})),function(e){e.INLINE="inline",e.INSIDE="inside",e.OUTSIDE="outside"}(t.PolygonType||(t.PolygonType={})),function(e){e.RANDOM_POINT="random-point",e.ONE_PER_POINT="one-per-point",e.RANDOM_LENGTH="random-length",e.EQUIDISTANT="equidistant"}(t.PolygonInlineArrangementType||(t.PolygonInlineArrangementType={})),function(e){e.PATH="path",e.RADIUS="radius"}(t.PolygonMoveType||(t.PolygonMoveType={}))},function(e,t,i){"use strict";function n(e){for(var i in e)t.hasOwnProperty(i)||(t[i]=e[i])}var r=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var a=r(i(15));t.Interactivity=a.default;var o=r(i(29));t.Modes=o.default;var s=r(i(30));t.Particle=s.default;var c=r(i(31));t.ParticleManager=c.default;var l=r(i(32));t.ParticlesLibrary=l.default;var u=r(i(34));t.Vendors=u.default,n(i(35)),n(i(1)),n(i(36)),n(i(4))},function(e,t,i){var n=i(51),r=i(57);e.exports=function(e,t){var i=r(e,t);return n(i)?i:void 0}},function(e,t,i){"use strict";function n(e){return(n="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e})(e)}function r(e,t){return t.indexOf(e)>-1}Object.defineProperty(t,"__esModule",{value:!0}),t.hexToRgb=function(e){e=e.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i,function(e,t,i,n){return t+t+i+i+n+n});var t=/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(e);return t?{r:parseInt(t[1],16),g:parseInt(t[2],16),b:parseInt(t[3],16)}:null},t.clamp=function(e,t,i){return Math.min(Math.max(e,t),i)},t.isInArray=r,t.isEqual=function(e,t){return Array.isArray(t)?r(e,t):t===e},t.deepAssign=function(e){for(var i=arguments.length,r=new Array(i>1?i-1:0),a=1;a<i;a++)r[a-1]=arguments[a];for(var o=0,s=r;o<s.length;o++){var c=s[o];if(null!=c){var l=n(c);if("object"===l){var u=Array.isArray(c);u?"object"===n(e)&&e&&Array.isArray(e)||(e=[]):"object"===n(e)&&e&&!Array.isArray(e)||(e={});var h=function(i){if("__proto__"===i)return"continue";var r=c[i],a="object"===n(r);a&&Array.isArray(r)?e[i]=r.map(function(n){return t.deepAssign(e[i],n)}):e[i]=t.deepAssign(e[i],r)};for(var y in c)h(y)}else e=c}}return e},t.getColor=function(e){var i={};if("object"==n(e))if(e instanceof Array){var r=e[Math.floor(Math.random()*e.length)];i.rgb=t.hexToRgb(r)}else{var a=e.r,o=e.g,s=e.b;if(void 0!==a&&void 0!==o&&void 0!==s)i.rgb={r:a,g:o,b:s};else{var c=e.h,l=e.s,u=e.l;void 0!==c&&void 0!==o&&void 0!==s&&(i.hsl={h:c,s:l,l:u})}}else"random"==e?i.rgb={r:Math.floor(255*Math.random())+1,g:Math.floor(255*Math.random())+1,b:Math.floor(255*Math.random())+1}:"string"==typeof e&&(i.rgb=t.hexToRgb(e));return i}},function(e,t,i){var n=i(41),r=i(42),a=i(43),o=i(44),s=i(45);function c(e){var t=-1,i=null==e?0:e.length;for(this.clear();++t<i;){var n=e[t];this.set(n[0],n[1])}}c.prototype.clear=n,c.prototype.delete=r,c.prototype.get=a,c.prototype.has=o,c.prototype.set=s,e.exports=c},function(e,t,i){var n=i(16);e.exports=function(e,t){for(var i=e.length;i--;)if(n(e[i][0],t))return i;return-1}},function(e,t,i){var n=i(12),r=i(53),a=i(54),o="[object Null]",s="[object Undefined]",c=n?n.toStringTag:void 0;e.exports=function(e){return null==e?void 0===e?s:o:c&&c in Object(e)?r(e):a(e)}},function(e,t,i){var n=i(3)(Object,"create");e.exports=n},function(e,t,i){var n=i(66);e.exports=function(e,t){var i=e.__data__;return n(t)?i["string"==typeof t?"string":"hash"]:i.map}},function(e,t){e.exports=function(e){return null!=e&&"object"==typeof e}},function(e,t,i){var n=i(3)(i(0),"Map");e.exports=n},function(e,t,i){var n=i(0).Symbol;e.exports=n},function(e,t){var i=Array.isArray;e.exports=i},function(t,i){t.exports=e},function(e,t,i){"use strict";function n(e,t){for(var i=0;i<t.length;i++){var n=t[i];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}Object.defineProperty(t,"__esModule",{value:!0});var r,a=i(1);!function(e){e.MOUSEMOVE="mousemove",e.MOUSELEAVE="mouseleave"}(r=t.MouseInteractivityStatus||(t.MouseInteractivityStatus={}));var o=function(){function e(t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.library=t,this.mouseMovePosition={x:0,y:0},this.mouseClickPosition={x:0,y:0},this.mouseClickTime=0,this.onMouseMove=this.onMouseMove.bind(this),this.onMouseLeave=this.onMouseLeave.bind(this),this.onMouseClick=this.onMouseClick.bind(this)}var t,i,o;return t=e,(i=[{key:"attachEventHandlers",value:function(){var e=this.library.getParameter(function(e){return e.interactivity});"window"===e.detect_on?this.interactionElement=window:this.interactionElement=this.library.canvas.element,(e.events.onhover.enable||e.events.onclick.enable)&&(this.interactionElement.addEventListener("mousemove",this.onMouseMove),this.interactionElement.addEventListener("mouseleave",this.onMouseLeave)),e.events.onclick.enable&&this.interactionElement.addEventListener("click",this.onMouseClick)}},{key:"detachEventHandlers",value:function(){var e=this.library.getParameter(function(e){return e.interactivity});this.interactionElement&&((e.events.onhover.enable||e.events.onclick.enable)&&(this.interactionElement.removeEventListener("mousemove",this.onMouseMove),this.interactionElement.removeEventListener("mouseleave",this.onMouseLeave)),e.events.onclick.enable&&this.interactionElement.removeEventListener("click",this.onMouseClick))}},{key:"onMouseMove",value:function(e){var t={x:0,y:0};this.interactionElement===window?(t.x=e.clientX,t.y=e.clientY):(t.x=e.offsetX||e.clientX,t.y=e.offsetY||e.clientY),this.mouseMovePosition=t,this.library.retina&&(this.mouseMovePosition.x*=this.library.canvas.pxratio,this.mouseMovePosition.y*=this.library.canvas.pxratio),this.mouseStatus=r.MOUSEMOVE}},{key:"onMouseLeave",value:function(){this.mouseMovePosition.x=0,this.mouseMovePosition.y=0,this.mouseStatus=r.MOUSELEAVE}},{key:"onMouseClick",value:function(){var e=this,t=this.library.getParameter(function(e){return e.interactivity}),i=this.library.getParameter(function(e){return e.particles}),n=this.library.getParameter(function(e){return e.polygon});if(this.mouseClickPosition=Object.assign({},this.mouseMovePosition),n.enable&&[a.PolygonType.INSIDE,a.PolygonType.OUTSIDE].indexOf(n.type)>-1){var r=this.library.polygonMask.isPointInsidePolygon(this.mouseClickPosition);if(n.type===a.PolygonType.INSIDE&&!r)return;if(n.type===a.PolygonType.OUTSIDE&&r)return}if(this.mouseClickTime=(new Date).getTime(),t.events.onclick.enable)switch(t.events.onclick.mode){case a.InteractivityMode.PUSH:i.move.enable?this.library.modes.pushParticles(t.modes.push.particles_nb,this.mouseClickPosition):1==t.modes.push.particles_nb?this.library.modes.pushParticles(t.modes.push.particles_nb,this.mouseClickPosition):t.modes.push.particles_nb>1&&this.library.modes.pushParticles(t.modes.push.particles_nb);break;case a.InteractivityMode.REMOVE:this.library.modes.removeParticles(t.modes.remove.particles_nb);break;case a.InteractivityMode.BUBBLE:this.library.modes.bubble_clicking=!0;break;case a.InteractivityMode.REPULSE:this.library.modes.repulse_clicking=!0,this.library.modes.repulse_count=0,this.library.modes.repulse_finish=!1,setTimeout(function(){e.library.modes.repulse_clicking=!1},1e3*t.modes.repulse.duration)}}},{key:"linkParticles",value:function(e,t){var i=this.library.manager.getDistance(e,t),n=this.library.canvas,r=this.library.getParameter(function(e){return e.particles.line_linked});if(i<=r.distance){var a=r.opacity-i/(1/r.opacity)/r.distance;if(a>0){var o=r.color_rgb_line,s=o.r,c=o.g,l=o.b;n.ctx.save(),n.ctx.strokeStyle="rgba( ".concat(s,", ").concat(c,", ").concat(l,", ").concat(a," )"),n.ctx.lineWidth=r.width,n.ctx.beginPath(),r.shadow.enable&&(n.ctx.shadowBlur=r.shadow.blur,n.ctx.shadowColor=r.shadow.color),n.ctx.moveTo(e.x,e.y),n.ctx.lineTo(t.x,t.y),n.ctx.stroke(),n.ctx.closePath(),n.ctx.restore()}}}},{key:"attractParticles",value:function(e,t){var i=this.library.manager.getDistances(e,t),n=i.distance,r=i.distanceX,a=i.distanceY,o=this.library.getParameter(function(e){return e.particles.line_linked}),s=this.library.getParameter(function(e){return e.particles.move.attract});if(n<=o.distance){var c=r/(1e3*s.rotateX),l=a/(1e3*s.rotateY);e.vx-=c,e.vy-=l,t.vx+=c,t.vy+=l}}},{key:"bounceParticles",value:function(e,t){this.library.manager.getDistance(e,t)<=e.radius+t.radius&&(e.vx=-e.vx,e.vy=-e.vy,t.vx=-t.vx,t.vy=-t.vy)}}])&&n(t.prototype,i),o&&n(t,o),e}();t.default=o},function(e,t){e.exports=function(e,t){return e===t||e!=e&&t!=t}},function(e,t,i){var n=i(7),r=i(19),a="[object AsyncFunction]",o="[object Function]",s="[object GeneratorFunction]",c="[object Proxy]";e.exports=function(e){if(!r(e))return!1;var t=n(e);return t==o||t==s||t==a||t==c}},function(e,t,i){(function(t){var i="object"==typeof t&&t&&t.Object===Object&&t;e.exports=i}).call(this,i(52))},function(e,t){e.exports=function(e){var t=typeof e;return null!=e&&("object"==t||"function"==t)}},function(e,t){var i=Function.prototype.toString;e.exports=function(e){if(null!=e){try{return i.call(e)}catch(e){}try{return e+""}catch(e){}}return""}},function(e,t,i){var n=i(58),r=i(65),a=i(67),o=i(68),s=i(69);function c(e){var t=-1,i=null==e?0:e.length;for(this.clear();++t<i;){var n=e[t];this.set(n[0],n[1])}}c.prototype.clear=n,c.prototype.delete=r,c.prototype.get=a,c.prototype.has=o,c.prototype.set=s,e.exports=c},function(e,t,i){var n=i(70),r=i(73),a=i(74),o=1,s=2;e.exports=function(e,t,i,c,l,u){var h=i&o,y=e.length,p=t.length;if(y!=p&&!(h&&p>y))return!1;var v=u.get(e);if(v&&u.get(t))return v==t;var f=-1,d=!0,b=i&s?new n:void 0;for(u.set(e,t),u.set(t,e);++f<y;){var g=e[f],m=t[f];if(c)var _=h?c(m,g,f,t,e,u):c(g,m,f,e,t,u);if(void 0!==_){if(_)continue;d=!1;break}if(b){if(!r(t,function(e,t){if(!a(b,t)&&(g===e||l(g,e,i,c,u)))return b.push(t)})){d=!1;break}}else if(g!==m&&!l(g,m,i,c,u)){d=!1;break}}return u.delete(e),u.delete(t),d}},function(e,t,i){(function(e){var n=i(0),r=i(91),a=t&&!t.nodeType&&t,o=a&&"object"==typeof e&&e&&!e.nodeType&&e,s=o&&o.exports===a?n.Buffer:void 0,c=(s?s.isBuffer:void 0)||r;e.exports=c}).call(this,i(24)(e))},function(e,t){e.exports=function(e){return e.webpackPolyfill||(e.deprecate=function(){},e.paths=[],e.children||(e.children=[]),Object.defineProperty(e,"loaded",{enumerable:!0,get:function(){return e.l}}),Object.defineProperty(e,"id",{enumerable:!0,get:function(){return e.i}}),e.webpackPolyfill=1),e}},function(e,t,i){var n=i(93),r=i(94),a=i(95),o=a&&a.isTypedArray,s=o?r(o):n;e.exports=s},function(e,t){var i=9007199254740991;e.exports=function(e){return"number"==typeof e&&e>-1&&e%1==0&&e<=i}},function(e,t,i){"use strict";var n=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var r=n(i(28));t.Particles=r.default,t.default=r.default},function(e,t,i){"use strict";function n(e){return(n="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e})(e)}function r(e,t){for(var i=0;i<t.length;i++){var n=t[i];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}function a(e){if(void 0===e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return e}function o(e,t,i){return(o="undefined"!=typeof Reflect&&Reflect.get?Reflect.get:function(e,t,i){var n=function(e,t){for(;!Object.prototype.hasOwnProperty.call(e,t)&&null!==(e=s(e)););return e}(e,t);if(n){var r=Object.getOwnPropertyDescriptor(n,t);return r.get?r.get.call(i):r.value}})(e,t,i||e)}function s(e){return(s=Object.setPrototypeOf?Object.getPrototypeOf:function(e){return e.__proto__||Object.getPrototypeOf(e)})(e)}function c(e,t){return(c=Object.setPrototypeOf||function(e,t){return e.__proto__=t,e})(e,t)}var l=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var i in e)Object.hasOwnProperty.call(e,i)&&(t[i]=e[i]);return t.default=e,t},u=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var h=l(i(14)),y=i(14),p=i(2),v=u(i(37)),f=function(e){function t(e){var i;return function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t),(i=function(e,t){return!t||"object"!==n(t)&&"function"!=typeof t?a(e):t}(this,s(t).call(this,e))).state={canvas:void 0,library:void 0},i.loadCanvas=i.loadCanvas.bind(a(i)),i}var i,l,u;return function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function");e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,writable:!0,configurable:!0}}),t&&c(e,t)}(t,y.Component),i=t,(l=[{key:"buildParticlesLibrary",value:function(e){try{if(void 0===window)return null}catch(e){return null}return new p.ParticlesLibrary(e)}},{key:"refresh",value:function(e){var t=this,i=this.state.canvas;i&&(this.destroy(),this.setState({library:this.buildParticlesLibrary(e.params)},function(){t.loadCanvas(i)}))}},{key:"destroy",value:function(){this.state.library&&this.state.library.destroy()}},{key:"loadCanvas",value:function(e){var t=this;e&&this.setState({canvas:e},function(){var i=t.state.library;i&&(i.loadCanvas(e),i.start())})}},{key:"shouldComponentUpdate",value:function(e){return!v.default(e,this.props)}},{key:"componentDidUpdate",value:function(){this.refresh(this.props)}},{key:"forceUpdate",value:function(){this.refresh(this.props),o(s(t.prototype),"forceUpdate",this).call(this)}},{key:"componentDidMount",value:function(){this.setState({library:this.buildParticlesLibrary(this.props.params)})}},{key:"componentWillUnmount",value:function(){this.destroy(),this.setState({library:void 0})}},{key:"render",value:function(){var e=this.props,t=e.width,i=e.height,n=e.className,r=e.canvasClassName;return h.createElement("div",{className:n},h.createElement("canvas",{ref:this.loadCanvas,className:r,style:Object.assign({},this.props.style,{width:t,height:i})}))}}])&&r(i.prototype,l),u&&r(i,u),t}();f.defaultProps={width:"100%",height:"100%",params:{},style:{}},t.default=f},function(e,t,i){"use strict";function n(e,t){for(var i=0;i<t.length;i++){var n=t[i];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}Object.defineProperty(t,"__esModule",{value:!0});var r=i(2),a=i(1),o=i(15),s=function(){function e(t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.library=t,this.bubble_clicking=!1,this.bubble_duration_end=!1,this.pushing=!1,this.repulse_clicking=!1,this.repulse_count=0,this.repulse_finish=!1}var t,i,s;return t=e,(i=[{key:"pushParticles",value:function(e,t){var i=this.library.manager,n=this.library.getParameter(function(e){return e.particles});this.pushing=!0;var a=e;n.number.max>0&&(a=n.array.length+e>n.number.max?n.number.max-n.array.length:e);for(var o=0;o<a;o++)n.array.push(new r.Particle(this.library,{position:t})),o===e-1&&(n.move.enable||i.particlesDraw(),this.pushing=!1)}},{key:"removeParticles",value:function(e){var t=this.library.manager,i=this.library.getParameter(function(e){return e.particles});i.array.splice(0,e),i.move.enable||t.particlesDraw()}},{key:"bubbleParticle",value:function(e){var t=this,i=this.library.getParameter(function(e){return e.interactivity}),n=this.library.getParameter(function(e){return e.particles});if(i.events.onhover.enable&&r.isInArray(a.InteractivityMode.BUBBLE,i.events.onhover.mode)){var s=this.library.manager.getDistance(e,this.library.interactivity.mouseMovePosition),c=i.modes.bubble.distance,l=1-s/c;if(s<=c){if(l>=0&&this.library.interactivity.mouseStatus===o.MouseInteractivityStatus.MOUSEMOVE){var u=i.modes.bubble.size,h=n.size.value;if(u!=h)if(u>h){var y=e.radius+u*l;y>=0&&(e.radius_bubble=y)}else{var p=e.radius-u,v=e.radius-p*l;e.radius_bubble=v>0?v:0}if(i.modes.bubble.opacity!==n.opacity.value)if(i.modes.bubble.opacity>n.opacity.value){var f=i.modes.bubble.opacity*l;f>e.opacityValue&&f<=i.modes.bubble.opacity&&(e.bubbleOpacity=f)}else{var d=e.opacityValue-(n.opacity.value-i.modes.bubble.opacity)*l;d<e.opacityValue&&d>=i.modes.bubble.opacity&&(e.bubbleOpacity=d)}}}else e.bubbleOpacity=e.opacityValue,e.radius_bubble=e.radius;this.library.interactivity.mouseStatus===o.MouseInteractivityStatus.MOUSELEAVE&&(e.bubbleOpacity=e.opacityValue,e.radius_bubble=e.radius)}else if(i.events.onclick.enable&&r.isInArray(a.InteractivityMode.BUBBLE,i.events.onclick.mode)&&this.bubble_clicking){var b=this.library.manager.getDistance(e,this.library.interactivity.mouseClickPosition),g=((new Date).getTime()-this.library.interactivity.mouseClickTime)/1e3;g>i.modes.bubble.duration&&(this.bubble_duration_end=!0),g>2*i.modes.bubble.duration&&(this.bubble_clicking=!1,this.bubble_duration_end=!1);var m=function(n,r,a,o,s){if(n!=r)if(t.bubble_duration_end){if(null!=a){var c=n+(n-(o-g*(o-n)/i.modes.bubble.duration));"size"==s&&(e.radius_bubble=c),"opacity"==s&&(e.bubbleOpacity=c)}}else if(b<=i.modes.bubble.distance){if((null!=a?a:o)!=n){var l=o-g*(o-n)/i.modes.bubble.duration;"size"==s&&(e.radius_bubble=l),"opacity"==s&&(e.bubbleOpacity=l)}}else"size"==s&&(e.radius_bubble=void 0),"opacity"==s&&(e.bubbleOpacity=void 0)};this.bubble_clicking&&(m(i.modes.bubble.size,n.size.value,e.radius_bubble,e.radius,"size"),m(i.modes.bubble.opacity,n.opacity.value,e.bubbleOpacity,e.opacityValue,"opacity"))}}},{key:"repulseParticle",value:function(e){var t=this.library.canvas,i=this.library.getParameter(function(e){return e.interactivity}),n=this.library.getParameter(function(e){return e.particles});if(i.events.onhover.enable&&r.isInArray(a.InteractivityMode.REPULSE,i.events.onhover.mode)&&this.library.interactivity.mouseStatus===o.MouseInteractivityStatus.MOUSEMOVE){var s=this.library.manager.getDistances(e,this.library.interactivity.mouseMovePosition),c=s.distance,l={x:s.distanceX/c,y:s.distanceY/c},u=i.modes.repulse.distance,h=r.clamp(1/u*(-1*Math.pow(c/u,2)+1)*u*100,0,50),y={x:e.x+l.x*h,y:e.y+l.y*h};n.move.out_mode===a.MoveOutMode.BOUNCE?(y.x-e.radius>0&&y.x+e.radius<t.width&&(e.x=y.x),y.y-e.radius>0&&y.y+e.radius<t.height&&(e.y=y.y)):(e.x=y.x,e.y=y.y)}else if(i.events.onclick.enable&&r.isInArray(a.InteractivityMode.REPULSE,i.events.onclick.mode))if(this.repulse_finish||(this.repulse_count++,this.repulse_count==n.array.length&&(this.repulse_finish=!0)),this.repulse_clicking){var p=Math.pow(i.modes.repulse.distance/6,3),v=this.library.manager.getDistances(this.library.interactivity.mouseClickPosition,e),f=v.distance,d=v.distanceX,b=v.distanceY,g=-1*(p/Math.pow(f,2));if(f<=p){var m=Math.atan2(b,d);if(e.vx=g*Math.cos(m),e.vy=g*Math.sin(m),n.move.out_mode===a.MoveOutMode.BOUNCE){var _={x:e.x+e.vx,y:e.y+e.vy};_.x+e.radius>t.width?e.vx=-e.vx:_.x-e.radius<0&&(e.vx=-e.vx),_.y+e.radius>t.height?e.vy=-e.vy:_.y-e.radius<0&&(e.vy=-e.vy)}}}else!1===this.repulse_clicking&&(e.vx=e.vx_i,e.vy=e.vy_i)}},{key:"grabParticle",value:function(e){var t=this.library.canvas,i=this.library.getParameter(function(e){return e}),n=i.interactivity,r=i.particles;if(n.events.onhover.enable&&this.library.interactivity.mouseStatus===o.MouseInteractivityStatus.MOUSEMOVE){var a=this.library.manager.getDistance(e,this.library.interactivity.mouseMovePosition);if(a<=n.modes.grab.distance){var s=n.modes.grab,c=s.line_linked.opacity-a/(1/s.line_linked.opacity)/s.distance;if(c>0){var l=r.line_linked.color_rgb_line,u=l.r,h=l.g,y=l.b;t.ctx.strokeStyle="rgba( ".concat(u,", ").concat(h,", ").concat(y,", ").concat(c," )"),t.ctx.lineWidth=r.line_linked.width,t.ctx.beginPath(),t.ctx.moveTo(e.x,e.y),t.ctx.lineTo(this.library.interactivity.mouseMovePosition.x,this.library.interactivity.mouseMovePosition.y),t.ctx.stroke(),t.ctx.closePath()}}}}}])&&n(t.prototype,i),s&&n(t,s),e}();t.default=s},function(e,t,i){"use strict";function n(e,t){for(var i=0;i<t.length;i++){var n=t[i];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}Object.defineProperty(t,"__esModule",{value:!0});var r=i(2),a=i(1),o=i(4),s=function(){function e(t){var i=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},n=i.color,r=i.move,a=i.opacity,o=i.polygon,s=i.position,c=i.shape,l=i.size;!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.library=t,this.setupSize(l),this.setupPosition(r,o,s),this.setupColor(n),this.setupOpacity(a),this.setupAnimation(r),this.setupShape(c)}var t,i,s;return t=e,(i=[{key:"setupSize",value:function(e){var t=this.library.getParameter(function(e){return e.particles.size});e=o.deepAssign({},t,e),this.radius=(e.random?Math.random():1)*e.value,e.anim.enable&&(this.size_status=!1,this.vs=e.anim.speed/100,e.anim.sync||(this.vs=this.vs*Math.random()))}},{key:"setupPosition",value:function(e,t,i){this.initialPosition=i;var n=this.library.getParameter(function(e){return e.particles.move});e=o.deepAssign({},n,e);var r=this.library.getParameter(function(e){return e.polygon});t=o.deepAssign({},r,t);var s=this.library.getParameter(function(e){return e.particles.array}),c=this.library,l=c.canvas,u=c.vendors;if(i)this.x=i.x,this.y=i.y;else if(t.enable){var h;switch(t.type){case a.PolygonType.INLINE:switch(t.inline.arrangement){case a.PolygonInlineArrangementType.RANDOM_POINT:h=this.library.polygonMask.getRandomPointOnPolygonPath();break;case a.PolygonInlineArrangementType.RANDOM_LENGTH:h=this.library.polygonMask.getRandomPointOnPolygonPathByLength();break;case a.PolygonInlineArrangementType.EQUIDISTANT:h=this.library.polygonMask.getEquidistantPoingOnPolygonPathByIndex(s.length);break;case a.PolygonInlineArrangementType.ONE_PER_POINT:default:h=this.library.polygonMask.getPoingOnPolygonPathByIndex(s.length)}break;case a.PolygonType.INSIDE:h=this.library.polygonMask.getRandomPointInsidePolygonPath();break;case a.PolygonType.OUTSIDE:h=this.library.polygonMask.getRandomPointOutsidePolygonPath()}h&&(this.x=h.x,this.y=h.y,this.initialPosition={x:this.x,y:this.y})}void 0!==this.x&&void 0!==this.y||(this.x=Math.random()*l.width,this.y=Math.random()*l.height),this.x>l.width-2*this.radius?this.x=this.x-this.radius:this.x<2*this.radius&&(this.x=this.x+this.radius),this.y>l.height-2*this.radius?this.y=this.y-this.radius:this.y<2*this.radius&&(this.y=this.y+this.radius),e.bounce&&u.checkOverlap(this,{x:this.x,y:this.y})}},{key:"setupColor",value:function(e){var t=this.library.getParameter(function(e){return e.particles.color});e=o.deepAssign({},e,t),this.color=r.getColor(e.value)}},{key:"setupOpacity",value:function(e){var t=this.library.getParameter(function(e){return e.particles.opacity});e=o.deepAssign({},t,e),this.opacityValue=(e.random?Math.random():1)*e.value,e.anim.enable&&(this.opacity_status=!1,this.vo=e.anim.speed/100,e.anim.sync||(this.vo=this.vo*Math.random()))}},{key:"setupAnimation",value:function(e){var t,i=this.library.getParameter(function(e){return e.particles.move});switch((e=o.deepAssign({},i,e)).direction){case a.MoveDirection.TOP:t={x:0,y:-1};break;case a.MoveDirection.TOP_RIGHT:t={x:.5,y:-.5};break;case a.MoveDirection.RIGHT:t={x:1,y:0};break;case a.MoveDirection.BOTTOM_RIGHT:t={x:.5,y:.5};break;case a.MoveDirection.BOTTOM:t={x:0,y:1};break;case a.MoveDirection.BOTTOM_LEFT:t={x:-.5,y:1};break;case a.MoveDirection.LEFT:t={x:-1,y:0};break;case a.MoveDirection.TOP_LEFT:t={x:-.5,y:-.5};break;default:t={x:0,y:0}}e.straight?(this.vx=t.x,this.vy=t.y,e.random&&(this.vx=this.vx*Math.random(),this.vy=this.vy*Math.random())):(this.vx=t.x+Math.random()-.5,this.vy=t.y+Math.random()-.5),this.vx_i=this.vx,this.vy_i=this.vy}},{key:"setupShape",value:function(e){var t=this,i=this.library.getParameter(function(e){return e.particles.shape});e=o.deepAssign({},i,e);var n=this.library.getParameter(function(e){return e.particles.array});if(Array.isArray(e.type)){var r=e.type[Math.floor(Math.random()*e.type.length)];e=o.deepAssign({},e,{type:r})}this.shape=e,e.type!==a.ShapeType.IMAGE&&e.type!==a.ShapeType.IMAGES||(e.type===a.ShapeType.IMAGES?this.shapeImage=this.library.imageManager.getImage(n.length):this.shapeImage=this.library.imageManager.getImage(),"svg"===this.shapeImage.type&&void 0!==this.shapeImage.svgData&&this.library.imageManager.createSvgImage(this.shapeImage.svgData,{color:this.color,opacity:this.opacityValue}).then(function(e){t.shapeImage.elementData=e,t.shapeImage.loaded=!0}))}},{key:"draw",value:function(){var e,t,i,n=this.library,r=n.canvas,o=n.vendors;if(e=void 0!==this.radius_bubble?this.radius_bubble:this.radius,t=void 0!==this.bubbleOpacity?this.bubbleOpacity:this.opacityValue,this.color.rgb){var s=this.color.rgb,c=s.r,l=s.g,u=s.b;i="rgba( ".concat(c,", ").concat(l,", ").concat(u,", ").concat(t," )")}else{var h=this.color.hsl,y=h.h,p=h.s,v=h.l;i="hsla( ".concat(y,", ").concat(p,", ").concat(v,", ").concat(t," )")}switch(r.ctx.fillStyle=i,r.ctx.beginPath(),this.shape.type){case a.ShapeType.CIRCLE:r.ctx.arc(this.x,this.y,e,0,2*Math.PI,!1);break;case a.ShapeType.EDGE:r.ctx.rect(this.x-e,this.y-e,2*e,2*e);break;case a.ShapeType.TRIANGLE:o.drawShape(r.ctx,this.x-e,this.y+e/1.66,2*e,3,2);break;case a.ShapeType.POLYGON:o.drawShape(r.ctx,this.x-e/(this.shape.polygon.nb_sides/3.5),this.y-e/.76,2.66*e/(this.shape.polygon.nb_sides/3),this.shape.polygon.nb_sides,1);break;case a.ShapeType.STAR:o.drawShape(r.ctx,this.x-2*e/(this.shape.polygon.nb_sides/4),this.y-e/1.52,2*e*2.66/(this.shape.polygon.nb_sides/3),this.shape.polygon.nb_sides,2);break;case a.ShapeType.IMAGES:case a.ShapeType.IMAGE:this.shapeImage.elementData&&r.ctx.drawImage(this.shapeImage.elementData,this.x-e,this.y-e,2*e,2*e/this.shapeImage.ratio)}r.ctx.closePath(),this.shape.stroke.width>0&&(r.ctx.strokeStyle=this.shape.stroke.color,r.ctx.lineWidth=this.shape.stroke.width,r.ctx.stroke()),r.ctx.fill()}}])&&n(t.prototype,i),s&&n(t,s),e}();t.default=s},function(e,t,i){"use strict";function n(e,t){for(var i=0;i<t.length;i++){var n=t[i];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}Object.defineProperty(t,"__esModule",{value:!0});var r=i(2),a=i(1),o=function(){function e(t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.library=t,this.particlesCreate=this.particlesCreate.bind(this)}var t,i,o;return t=e,(i=[{key:"particlesCreate",value:function(){var e=this.library.getParameter(function(e){return e.particles}),t=this.library.getParameter(function(e){return e.polygon}),i=e.number.value;t.enable&&t.type===a.PolygonType.INLINE&&t.inline.arrangement===a.PolygonInlineArrangementType.ONE_PER_POINT&&(i=this.library.polygonMask.getVerticesNumber());for(var n=0;n<i;n++)e.array.push(new r.Particle(this.library))}},{key:"particlesUpdate",value:function(){var e=this,t=this.library,i=t.canvas,n=t.modes,o=this.library.getParameter(function(e){return e.interactivity}),s=this.library.getParameter(function(e){return e.particles}),c=this.library.getParameter(function(e){return e.polygon});s.array.forEach(function(t,l){if(s.move.enable){var u=s.move.speed/2;t.x+=t.vx*u,t.y+=t.vy*u}var h;switch(s.opacity.anim.enable&&(1==t.opacity_status?(t.opacityValue>=s.opacity.value&&(t.opacity_status=!1),t.opacityValue+=t.vo):(t.opacityValue<=s.opacity.anim.opacity_min&&(t.opacity_status=!0),t.opacityValue-=t.vo),t.opacityValue<0&&(t.opacityValue=0)),s.size.anim.enable&&(1==t.size_status?(t.radius>=s.size.value&&(t.size_status=!1),t.radius+=t.vs):(t.radius<=s.size.anim.size_min&&(t.size_status=!0),t.radius-=t.vs),t.radius<0&&(t.radius=0)),h="bounce"==s.move.out_mode?{x_left:t.radius,x_right:i.width,y_top:t.radius,y_bottom:i.height}:{x_left:-t.radius,x_right:i.width+t.radius,y_top:-t.radius,y_bottom:i.height+t.radius},t.x-t.radius>i.width?(t.x=h.x_left,t.y=Math.random()*i.height):t.x+t.radius<0&&(t.x=h.x_right,t.y=Math.random()*i.height),t.y-t.radius>i.height?(t.y=h.y_top,t.x=Math.random()*i.width):t.y+t.radius<0&&(t.y=h.y_bottom,t.x=Math.random()*i.width),s.move.out_mode){case"bounce":if(c.enable){var y=c.move.radius;switch(c.type){case a.PolygonType.INLINE:e.getDistance(t.initialPosition,t)>y&&(t.vx=-t.vx+t.vy/2,t.vy=-t.vy+t.vx/2);break;case a.PolygonType.INSIDE:case a.PolygonType.OUTSIDE:var p=c.move.type;if(p===a.PolygonMoveType.RADIUS)e.getDistance(t.initialPosition,t)>y&&(t.vx=-t.vx+t.vy/2,t.vy=-t.vy+t.vx/2);else if(p===a.PolygonMoveType.PATH){var v=c.type===a.PolygonType.INSIDE,f=e.library.polygonMask.isPointInsidePolygon({x:t.x,y:t.y});(v&&!f||!v&&f)&&(t.vx=-t.vx+t.vy/2,t.vy=-t.vy+t.vx/2)}}}else t.x+t.radius>i.width?t.vx=-t.vx:t.x-t.radius<0&&(t.vx=-t.vx),t.y+t.radius>i.height?t.vy=-t.vy:t.y-t.radius<0&&(t.vy=-t.vy)}if(r.isInArray("grab",o.events.onhover.mode)&&n.grabParticle(t),(r.isInArray("bubble",o.events.onhover.mode)||r.isInArray("bubble",o.events.onclick.mode))&&n.bubbleParticle(t),(r.isInArray("repulse",o.events.onhover.mode)||r.isInArray("repulse",o.events.onclick.mode))&&n.repulseParticle(t),s.line_linked.enable||s.move.attract.enable)for(var d=l+1;d<s.array.length;d++){var b=s.array[d];s.line_linked.enable&&e.library.interactivity.linkParticles(t,b),s.move.attract.enable&&e.library.interactivity.attractParticles(t,b),s.move.bounce&&e.library.interactivity.bounceParticles(t,b)}})}},{key:"getDistances",value:function(e,t){var i=e.x-t.x,n=e.y-t.y;return{distance:Math.sqrt(i*i+n*n),distanceX:i,distanceY:n}}},{key:"getDistance",value:function(e,t){return this.getDistances(e,t).distance}},{key:"particlesDraw",value:function(){var e=this.library,t=e.canvas,i=e.manager,n=this.library.getParameter(function(e){return e.particles}),r=this.library.getParameter(function(e){return e.polygon});t.ctx.clearRect(0,0,t.width,t.height),i.particlesUpdate(),n.array.forEach(function(e){e.draw()}),r.enable&&r.draw.enable&&this.library.polygonMask.drawPolygon()}},{key:"particlesEmpty",value:function(){this.library.getParameter(function(e){return e.particles}).array=[]}},{key:"particlesRefresh",value:function(){cancelAnimationFrame(this.library.drawAnimFrame),this.particlesEmpty(),this.library.canvasClear(),this.library.start()}}])&&n(t.prototype,i),o&&n(t,o),e}();t.default=o},function(e,t,i){"use strict";function n(e,t){for(var i=0;i<t.length;i++){var n=t[i];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}Object.defineProperty(t,"__esModule",{value:!0});var r=i(2),a=i(33),o=function(){function e(t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.imageManager=new a.ImageManager,this.retina=!1,this.onWindowResize=this.onWindowResize.bind(this),this.loadParameters(t),this.interactivity=new r.Interactivity(this),this.modes=new r.Modes(this),this.vendors=new r.Vendors(this.imageManager,this.params,this),this.manager=new r.ParticleManager(this),this.polygonMask=new r.PolygonMask(this)}var t,i,o;return t=e,(i=[{key:"getParameter",value:function(e){return e(this.params)}},{key:"setParameters",value:function(e){this.params=r.deepAssign(Object.assign({},this.params),e)}},{key:"loadParameters",value:function(e){var t=r.deepAssign({},r.getDefaultParams(),e);this.params=t}},{key:"loadCanvas",value:function(e){this.canvas={element:e,width:e.offsetWidth,height:e.offsetHeight}}},{key:"start",value:function(){this.interactivity.attachEventHandlers(),this.vendors.start()}},{key:"destroy",value:function(){this.detachListeners(),this.interactivity.detachEventHandlers(),cancelAnimationFrame(this.drawAnimFrame),this.canvasClear()}},{key:"detachListeners",value:function(){window.removeEventListener("resize",this.onWindowResize)}},{key:"retinaInit",value:function(){var e=window.devicePixelRatio;if(this.params.retina_detect&&e>1){this.canvas.pxratio=e,this.canvas.width=this.canvas.element.offsetWidth*this.canvas.pxratio,this.canvas.height=this.canvas.element.offsetHeight*this.canvas.pxratio,this.retina=!0;var t=this.getParameter(function(e){return e});this.setParameters({interactivity:{modes:{bubble:{distance:t.interactivity.modes.bubble.distance*e,size:t.interactivity.modes.bubble.size*e},grab:{distance:t.interactivity.modes.grab.distance*e},repulse:{distance:t.interactivity.modes.repulse.distance*e}}},particles:{line_linked:{distance:t.particles.line_linked.distance*e,width:t.particles.line_linked.width*e},move:{speed:t.particles.move.speed*e},size:{value:t.particles.size.value*e,anim:{speed:t.particles.size.anim.speed*e}}}})}else this.canvas.pxratio=1,this.retina=!1}},{key:"canvasInit",value:function(){var e=this.canvas;e.ctx=e.element.getContext("2d")}},{key:"canvasSize",value:function(){var e=this.canvas;e.element.width=e.width,e.element.height=e.height,this.params&&this.params.interactivity.events.resize&&window.addEventListener("resize",this.onWindowResize)}},{key:"canvasPaint",value:function(){var e=this.canvas;if(e&&e.ctx)try{e.ctx.fillRect(0,0,e.width,e.height)}catch(e){console.warn(e)}}},{key:"canvasClear",value:function(){var e=this.canvas;if(e&&e.ctx)try{e.ctx.clearRect(0,0,e.width,e.height)}catch(e){console.warn(e)}}},{key:"onWindowResize",value:function(){var e=this.canvas,t=this.manager,i=this.vendors;e.width=e.element.offsetWidth,e.height=e.element.offsetHeight,this.retina&&(e.width*=e.pxratio,e.height*=e.pxratio),e.element.width=e.width,e.element.height=e.height,!this.params.particles.move.enable||this.params.polygon.enable?(t.particlesEmpty(),this.polygonMask.initialize(this.getParameter(function(e){return e.polygon})).then(function(){t.particlesCreate(),t.particlesDraw()})):i.densityAutoParticles()}}])&&n(t.prototype,i),o&&n(t,o),e}();t.default=o},function(e,t,i){"use strict";function n(e,t){for(var i=0;i<t.length;i++){var n=t[i];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}Object.defineProperty(t,"__esModule",{value:!0});var r,a=i(1),o=i(4);!function(e){e.SINGLE="single",e.MULTIPLE="multiple"}(r=t.ImageMode||(t.ImageMode={}));var s=function(){function e(){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.singleImage=null,this.multipleImages=[],this.mode=r.SINGLE}var t,i,s;return t=e,(i=[{key:"getImage",value:function(e){if(void 0!==e){if(0===this.multipleImages.length)throw new Error("No images loaded. You may need to define 'shape.type' = 'images'.");return this.multipleImages[e%this.multipleImages.length]}return this.singleImage}},{key:"parseShape",value:function(e){var t=this;if(o.isEqual(a.ShapeType.IMAGE,e.type))return this.mode=r.SINGLE,this.parseSingleImage(e.image).then(function(i){return t.singleImage=i,Object.assign({},e,{image:i})});if(o.isEqual(a.ShapeType.IMAGES,e.type)){this.mode=r.MULTIPLE;var i=e.images.map(function(e){return t.parseSingleImage(e)});return Promise.all(i).then(function(i){return t.multipleImages=i,Object.assign({},e,{images:i})})}return Promise.resolve(e)}},{key:"parseSingleImage",value:function(e){var t,i=this.buildImageObject({height:e.height,width:e.width,src:e.src}),n=e.width/e.height;return n!==1/0&&0!==n||(n=1),i.ratio=n,(t=/^data:image\/(\w{3})\+xml;(.*?)base64,(.*)$/.exec(e.src))?(i.type=t[1],i.svgData=atob(t[3])):(t=/^.*(\w{3})$/.exec(e.src))&&(i.type=t[1]),this.loadImage(i)}},{key:"loadImage",value:function(e){return""!=(e=Object.assign({},e)).src?"svg"==e.type?e.svgData?Promise.resolve(e):this.downloadImage(e.src).then(function(t){return e.svgData=t.response,e}):new Promise(function(t){var i=new Image;i.addEventListener("load",function(){e.elementData=i,t(e)}),i.src=e.src}):Promise.reject(new Error("Error react-particles-js - no image.src"))}},{key:"downloadImage",value:function(e){return new Promise(function(t,i){var n=new XMLHttpRequest;n.open("GET",e),n.onreadystatechange=function(e){4==n.readyState&&(200==n.status?t({response:e.currentTarget.response,xhr:n}):i(new Error("Error react-particles-js - Status code ".concat(n.readyState))))},n.send()})}},{key:"createSvgImage",value:function(e,t){var i=e.replace(/#([0-9A-F]{3,6})|rgb\([0-9,]+\)/gi,function(e,i,n,r){var a;if(t.color.rgb){var o=t.color.rgb,s=o.r,c=o.g,l=o.b;a="rgba( ".concat(s,", ").concat(c,", ").concat(l,", ").concat(t.opacity," )")}else{var u=t.color.hsl,h=u.h,y=u.s,p=u.l;a="rgba( ".concat(h,", ").concat(y,", ").concat(p,", ").concat(t.opacity," )")}return a}),n=new Blob([i],{type:"image/svg+xml;charset=utf-8"}),r=window.URL||window,a=r.createObjectURL(n);return new Promise(function(e){var t=new Image;t.addEventListener("load",function(){r.revokeObjectURL(a),e(t)}),t.src=a})}},{key:"buildImageObject",value:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};return Object.assign({svgData:null,height:0,width:0,ratio:0,src:"",type:""},e)}}])&&n(t.prototype,i),s&&n(t,s),e}();t.ImageManager=s},function(e,t,i){"use strict";function n(e,t){for(var i=0;i<t.length;i++){var n=t[i];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}Object.defineProperty(t,"__esModule",{value:!0});var r=i(2),a=i(1),o=function(){function e(t,i,n){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.imageManager=t,this.initialized=!1,this.params=i,this.library=n,"undefined"!=typeof performance&&(this.lastDraw=performance.now()),this.draw=this.draw.bind(this)}var t,i,o;return t=e,(i=[{key:"densityAutoParticles",value:function(){var e=this.library,t=e.canvas,i=e.modes,n=this.params.particles,r=n.number.density,a=r.value_area;if(r.enable){var o=t.element.width*t.element.height/1e3;this.library.retina&&(o/=2*t.pxratio);var s=o*n.number.value/a,c=n.array.length-s;c<0?i.pushParticles(Math.abs(c)):i.removeParticles(c)}}},{key:"checkOverlap",value:function(e,t){var i=this,n=this.library,r=n.canvas,o=n.vendors;r.width&&r.height&&this.params.particles.array.forEach(function(n){var s=n,c=e.x-s.x,l=e.y-s.y;if(Math.sqrt(c*c+l*l)<=e.radius+s.radius)if(i.library.params.polygon.enable)switch(i.library.params.polygon.inline.arrangement){case a.PolygonInlineArrangementType.RANDOM_LENGTH:case a.PolygonInlineArrangementType.RANDOM_POINT:}else e.x=t?t.x:Math.random()*r.width,e.y=t?t.y:Math.random()*r.height,o.checkOverlap(e)})}},{key:"destroy",value:function(){cancelAnimationFrame(this.library.drawAnimFrame),this.library.canvas.element.remove()}},{key:"drawShape",value:function(e,t,i,n,r,a){var o=r*a,s=r/a,c=180*(s-2)/s,l=Math.PI-Math.PI*c/180;e.save(),e.beginPath(),e.translate(t,i),e.moveTo(0,0);for(var u=0;u<o;u++)e.lineTo(n,0),e.translate(n,0),e.rotate(l);e.fill(),e.restore()}},{key:"exportImg",value:function(){var e=this.library.canvas;window.open(e.element.toDataURL("image/png"),"_blank")}},{key:"draw",value:function(){var e=!0,t=this.library,i=t.manager,n=t.vendors,r=this.params.particles;void 0!==performance&&(performance.now()-this.lastDraw<1e3/this.params.fps_limit?e=!1:this.lastDraw=performance.now());e&&i.particlesDraw(),r.move.enable?this.library.drawAnimFrame=requestAnimationFrame(n.draw):cancelAnimationFrame(this.library.drawAnimFrame)}},{key:"init",value:function(){var e=this;if(!this.initialized){this.initialized=!0;var t=this.library,i=t.manager,n=t.vendors,a=this.params.particles;t.retinaInit(),t.canvasInit(),t.canvasSize(),t.polygonMask.initialize(this.library.getParameter(function(e){return e.polygon})).then(function(){i.particlesCreate(),n.densityAutoParticles(),e.library.setParameters({particles:{line_linked:{color_rgb_line:r.hexToRgb(a.line_linked.color)}}}),e.draw()})}}},{key:"start",value:function(){var e=this,t=this.params.particles;this.imageManager.parseShape(t.shape).then(function(t){e.init()})}}])&&n(t.prototype,i),o&&n(t,o),e}();t.default=o},function(e,t,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=i(1),r=i(4),a={particles:{number:{value:40,max:-1,density:{enable:!1,value_area:1200}},color:{value:"#FFF"},shape:{type:n.ShapeType.CIRCLE,stroke:{width:0,color:"#000000"},polygon:{nb_sides:5},image:{src:"",width:100,height:100},images:[]},opacity:{value:.5,random:!1,anim:{enable:!0,speed:1,opacity_min:.1,sync:!1}},size:{value:1,random:!1,anim:{enable:!1,speed:40,size_min:0,sync:!1}},line_linked:{enable:!0,distance:150,color:"#FFF",opacity:.6,width:1,shadow:{enable:!1,blur:5,color:"lime"}},move:{enable:!0,speed:3,direction:n.MoveDirection.NONE,random:!1,straight:!1,out_mode:n.MoveOutMode.BOUNCE,bounce:!0,attract:{enable:!1,rotateX:3e3,rotateY:3e3}},array:[]},interactivity:{detect_on:"canvas",events:{onhover:{enable:!1,mode:n.InteractivityMode.GRAB},onclick:{enable:!1,mode:n.InteractivityMode.REPULSE},resize:!0},modes:{grab:{distance:180,line_linked:{opacity:.35}},bubble:{distance:200,size:80,duration:.4},repulse:{distance:100,duration:5},push:{particles_nb:4},remove:{particles_nb:2}}},retina_detect:!0,fps_limit:999,polygon:{enable:!1,scale:1,type:n.PolygonType.INLINE,inline:{arrangement:n.PolygonInlineArrangementType.ONE_PER_POINT},draw:{enable:!1,stroke:{width:.5,color:"rgba(255, 255, 255, .1)"}},move:{radius:10,type:n.PolygonMoveType.PATH},url:""}};t.getDefaultParams=function(){return r.deepAssign({},a)}},function(e,t,i){"use strict";function n(e,t){return function(e){if(Array.isArray(e))return e}(e)||function(e,t){var i=[],n=!0,r=!1,a=void 0;try{for(var o,s=e[Symbol.iterator]();!(n=(o=s.next()).done)&&(i.push(o.value),!t||i.length!==t);n=!0);}catch(e){r=!0,a=e}finally{try{n||null==s.return||s.return()}finally{if(r)throw a}}return i}(e,t)||function(){throw new TypeError("Invalid attempt to destructure non-iterable instance")}()}function r(e,t){for(var i=0;i<t.length;i++){var n=t[i];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}Object.defineProperty(t,"__esModule",{value:!0});var a=function(){function e(t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.library=t,this.polygonPathLength=0,this.initialized=!1,this.path2DSupported=!!window.Path2D,this.debounceTime=250,this.parseSvgPathToPolygon=this.parseSvgPathToPolygon.bind(this)}var t,i,a;return t=e,(i=[{key:"initialize",value:function(e){var t=this;return this.polygon=e,e.enable?this.initialized?new Promise(function(e){t.debounceTimer&&clearTimeout(t.debounceTimer),t.debounceTimer=setTimeout(function(){t.parseSvgPathToPolygon().then(function(t){e()})},t.debounceTime)}):this.parseSvgPathToPolygon().then(function(e){t.initialized=!0}):Promise.resolve()}},{key:"getVerticesNumber",value:function(){return this.initialized?this.polygonRaw.length:0}},{key:"parseSvgPathToPolygon",value:function(e){var t=this;e=e||this.polygon.url;var i=this.library.canvas.width===this.lastCanvasWidth&&this.library.canvas.height===this.lastCanvasHeight;return this.polygonRaw&&this.polygonRaw.length&&i?Promise.resolve(this.polygonRaw):this.parseSvgPath(e).then(function(e){return t.polygonData=e,t.polygonWidth=parseInt(t.polygonData.svg.getAttribute("width"))*t.polygon.scale,t.polygonHeight=parseInt(t.polygonData.svg.getAttribute("height"))*t.polygon.scale,t.polygonOffsetX=t.library.canvas.width/2-t.polygonWidth/2,t.polygonOffsetY=t.library.canvas.height/2-t.polygonHeight/2,t.polygonData.paths.length&&(t.polygonPathLength=t.polygonData.paths[0].getTotalLength()),t.polygonRaw=[],t.polygonData.paths.forEach(function(e){for(var i=e.pathSegList.numberOfItems,n=0;n<i;n++){var r={x:0,y:0},a=e.pathSegList.getItem(n);switch(a.pathSegType){case SVGPathSeg.PATHSEG_ARC_ABS:case SVGPathSeg.PATHSEG_CURVETO_CUBIC_ABS:case SVGPathSeg.PATHSEG_CURVETO_CUBIC_SMOOTH_ABS:case SVGPathSeg.PATHSEG_CURVETO_QUADRATIC_ABS:case SVGPathSeg.PATHSEG_CURVETO_QUADRATIC_SMOOTH_ABS:case SVGPathSeg.PATHSEG_LINETO_ABS:case SVGPathSeg.PATHSEG_MOVETO_ABS:r.x=a.x,r.y=a.y;case SVGPathSeg.PATHSEG_LINETO_HORIZONTAL_ABS:r.x=a.x;break;case SVGPathSeg.PATHSEG_LINETO_VERTICAL_ABS:r.y=a.y;break;case SVGPathSeg.PATHSEG_ARC_REL:case SVGPathSeg.PATHSEG_CURVETO_CUBIC_REL:case SVGPathSeg.PATHSEG_CURVETO_CUBIC_SMOOTH_REL:case SVGPathSeg.PATHSEG_CURVETO_QUADRATIC_REL:case SVGPathSeg.PATHSEG_CURVETO_QUADRATIC_SMOOTH_REL:case SVGPathSeg.PATHSEG_LINETO_REL:case SVGPathSeg.PATHSEG_MOVETO_REL:r.x=a.x,r.y=a.y;case SVGPathSeg.PATHSEG_LINETO_HORIZONTAL_REL:r.x=a.x;break;case SVGPathSeg.PATHSEG_LINETO_VERTICAL_REL:r.y=a.y;break;case SVGPathSeg.PATHSEG_UNKNOWN:case SVGPathSeg.PATHSEG_CLOSEPATH:default:continue}t.polygonRaw.push([r.x*t.polygon.scale+t.polygonOffsetX,r.y*t.polygon.scale+t.polygonOffsetY])}}),t.lastCanvasWidth=t.library.canvas.width,t.lastCanvasHeight=t.library.canvas.height,t.createPath2D(),t.polygonRaw})}},{key:"parseSvgPath",value:function(e){return this.polygonData&&this.polygonData.paths&&this.polygonData.paths.length&&this.polygonData.svg?Promise.resolve(this.polygonData):this.library.imageManager.downloadImage(e).then(function(e){return{paths:[e.xhr.responseXML.getElementsByTagName("path")[0]],svg:e.xhr.responseXML.getElementsByTagName("svg")[0]}})}},{key:"getRandomPointOnPolygonPath",value:function(){if(!this.initialized)throw new Error("No polygon data loaded.");var e=n(this.polygonRaw[Math.floor(Math.random()*this.polygonRaw.length)],2);return{x:e[0],y:e[1]}}},{key:"getRandomPointOnPolygonPathByLength",value:function(){if(!this.initialized)throw new Error("No polygon data loaded.");var e=this.polygonData.paths[0].getPointAtLength(Math.floor(Math.random()*this.polygonPathLength)+1);return{x:e.x*this.polygon.scale+this.polygonOffsetX,y:e.y*this.polygon.scale+this.polygonOffsetY}}},{key:"getRandomPointInsidePolygonPath",value:function(){if(!this.initialized)throw new Error("No polygon data loaded.");var e={x:Math.random()*this.library.canvas.width,y:Math.random()*this.library.canvas.height};return this.isPointInsidePolygon(e)?e:this.getRandomPointInsidePolygonPath()}},{key:"getRandomPointOutsidePolygonPath",value:function(){if(!this.initialized)throw new Error("No polygon data loaded.");var e={x:Math.random()*this.library.canvas.width,y:Math.random()*this.library.canvas.height};return this.isPointInsidePolygon(e)?this.getRandomPointOutsidePolygonPath():e}},{key:"isPointInsidePolygon",value:function(e){if(this.path2DSupported&&this.polygonPath)return this.library.canvas.ctx.isPointInPath(this.polygonPath,e.x,e.y);for(var t=!1,i=0,n=this.polygonRaw.length-1;i<this.polygonRaw.length;n=i++){var r=this.polygonRaw[i][0],a=this.polygonRaw[i][1],o=this.polygonRaw[n][0],s=this.polygonRaw[n][1];a>e.y!=s>e.y&&e.x<(o-r)*(e.y-a)/(s-a)+r&&(t=!t)}return t}},{key:"getPoingOnPolygonPathByIndex",value:function(e){if(!this.initialized)throw new Error("No polygon data loaded.");var t=n(this.polygonRaw[e%this.polygonRaw.length],2);return{x:t[0],y:t[1]}}},{key:"getEquidistantPoingOnPolygonPathByIndex",value:function(e){if(!this.initialized)throw new Error("No polygon data loaded.");var t=this.polygonData.paths[0].getPointAtLength(this.polygonPathLength/this.library.getParameter(function(e){return e.particles.number.value})*e);return{x:t.x*this.polygon.scale+this.polygonOffsetX,y:t.y*this.polygon.scale+this.polygonOffsetY}}},{key:"drawPolygon",value:function(){var e=this.library.canvas.ctx;if(!this.path2DSupported){if(!this.initialized)return;e.beginPath(),e.moveTo(this.polygonRaw[0][0],this.polygonRaw[0][1]),this.polygonRaw.forEach(function(t,i){var r=n(t,2),a=r[0],o=r[1];i>0&&e.lineTo(a,o)}),e.closePath()}e.strokeStyle=this.polygon.draw.stroke.color,e.lineWidth=this.polygon.draw.stroke.width,this.polygonPath?e.stroke(this.polygonPath):e.stroke()}},{key:"createPath2D",value:function(){var e=this;this.path2DSupported&&(this.polygonPath=new Path2D,this.polygonPath.moveTo(this.polygonRaw[0][0],this.polygonRaw[0][1]),this.polygonRaw.forEach(function(t,i){var r=n(t,2),a=r[0],o=r[1];i>0&&e.polygonPath.lineTo(a,o)}),this.polygonPath.closePath())}}])&&r(t.prototype,i),a&&r(t,a),e}();t.PolygonMask=a},function(e,t,i){var n=i(38);e.exports=function(e,t){return n(e,t)}},function(e,t,i){var n=i(39),r=i(10);e.exports=function e(t,i,a,o,s){return t===i||(null==t||null==i||!r(t)&&!r(i)?t!=t&&i!=i:n(t,i,a,o,e,s))}},function(e,t,i){var n=i(40),r=i(22),a=i(75),o=i(79),s=i(101),c=i(13),l=i(23),u=i(25),h=1,y="[object Arguments]",p="[object Array]",v="[object Object]",f=Object.prototype.hasOwnProperty;e.exports=function(e,t,i,d,b,g){var m=c(e),_=c(t),P=m?p:s(e),x=_?p:s(t),w=(P=P==y?v:P)==v,O=(x=x==y?v:x)==v,M=P==x;if(M&&l(e)){if(!l(t))return!1;m=!0,w=!1}if(M&&!w)return g||(g=new n),m||u(e)?r(e,t,i,d,b,g):a(e,t,P,i,d,b,g);if(!(i&h)){var E=w&&f.call(e,"__wrapped__"),S=O&&f.call(t,"__wrapped__");if(E||S){var k=E?e.value():e,T=S?t.value():t;return g||(g=new n),b(k,T,i,d,g)}}return!!M&&(g||(g=new n),o(e,t,i,d,b,g))}},function(e,t,i){var n=i(5),r=i(46),a=i(47),o=i(48),s=i(49),c=i(50);function l(e){var t=this.__data__=new n(e);this.size=t.size}l.prototype.clear=r,l.prototype.delete=a,l.prototype.get=o,l.prototype.has=s,l.prototype.set=c,e.exports=l},function(e,t){e.exports=function(){this.__data__=[],this.size=0}},function(e,t,i){var n=i(6),r=Array.prototype.splice;e.exports=function(e){var t=this.__data__,i=n(t,e);return!(i<0||(i==t.length-1?t.pop():r.call(t,i,1),--this.size,0))}},function(e,t,i){var n=i(6);e.exports=function(e){var t=this.__data__,i=n(t,e);return i<0?void 0:t[i][1]}},function(e,t,i){var n=i(6);e.exports=function(e){return n(this.__data__,e)>-1}},function(e,t,i){var n=i(6);e.exports=function(e,t){var i=this.__data__,r=n(i,e);return r<0?(++this.size,i.push([e,t])):i[r][1]=t,this}},function(e,t,i){var n=i(5);e.exports=function(){this.__data__=new n,this.size=0}},function(e,t){e.exports=function(e){var t=this.__data__,i=t.delete(e);return this.size=t.size,i}},function(e,t){e.exports=function(e){return this.__data__.get(e)}},function(e,t){e.exports=function(e){return this.__data__.has(e)}},function(e,t,i){var n=i(5),r=i(11),a=i(21),o=200;e.exports=function(e,t){var i=this.__data__;if(i instanceof n){var s=i.__data__;if(!r||s.length<o-1)return s.push([e,t]),this.size=++i.size,this;i=this.__data__=new a(s)}return i.set(e,t),this.size=i.size,this}},function(e,t,i){var n=i(17),r=i(55),a=i(19),o=i(20),s=/^\[object .+?Constructor\]$/,c=Function.prototype,l=Object.prototype,u=c.toString,h=l.hasOwnProperty,y=RegExp("^"+u.call(h).replace(/[\\^$.*+?()[\]{}|]/g,"\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g,"$1.*?")+"$");e.exports=function(e){return!(!a(e)||r(e))&&(n(e)?y:s).test(o(e))}},function(e,t){var i;i=function(){return this}();try{i=i||new Function("return this")()}catch(e){"object"==typeof window&&(i=window)}e.exports=i},function(e,t,i){var n=i(12),r=Object.prototype,a=r.hasOwnProperty,o=r.toString,s=n?n.toStringTag:void 0;e.exports=function(e){var t=a.call(e,s),i=e[s];try{e[s]=void 0;var n=!0}catch(e){}var r=o.call(e);return n&&(t?e[s]=i:delete e[s]),r}},function(e,t){var i=Object.prototype.toString;e.exports=function(e){return i.call(e)}},function(e,t,i){var n,r=i(56),a=(n=/[^.]+$/.exec(r&&r.keys&&r.keys.IE_PROTO||""))?"Symbol(src)_1."+n:"";e.exports=function(e){return!!a&&a in e}},function(e,t,i){var n=i(0)["__core-js_shared__"];e.exports=n},function(e,t){e.exports=function(e,t){return null==e?void 0:e[t]}},function(e,t,i){var n=i(59),r=i(5),a=i(11);e.exports=function(){this.size=0,this.__data__={hash:new n,map:new(a||r),string:new n}}},function(e,t,i){var n=i(60),r=i(61),a=i(62),o=i(63),s=i(64);function c(e){var t=-1,i=null==e?0:e.length;for(this.clear();++t<i;){var n=e[t];this.set(n[0],n[1])}}c.prototype.clear=n,c.prototype.delete=r,c.prototype.get=a,c.prototype.has=o,c.prototype.set=s,e.exports=c},function(e,t,i){var n=i(8);e.exports=function(){this.__data__=n?n(null):{},this.size=0}},function(e,t){e.exports=function(e){var t=this.has(e)&&delete this.__data__[e];return this.size-=t?1:0,t}},function(e,t,i){var n=i(8),r="__lodash_hash_undefined__",a=Object.prototype.hasOwnProperty;e.exports=function(e){var t=this.__data__;if(n){var i=t[e];return i===r?void 0:i}return a.call(t,e)?t[e]:void 0}},function(e,t,i){var n=i(8),r=Object.prototype.hasOwnProperty;e.exports=function(e){var t=this.__data__;return n?void 0!==t[e]:r.call(t,e)}},function(e,t,i){var n=i(8),r="__lodash_hash_undefined__";e.exports=function(e,t){var i=this.__data__;return this.size+=this.has(e)?0:1,i[e]=n&&void 0===t?r:t,this}},function(e,t,i){var n=i(9);e.exports=function(e){var t=n(this,e).delete(e);return this.size-=t?1:0,t}},function(e,t){e.exports=function(e){var t=typeof e;return"string"==t||"number"==t||"symbol"==t||"boolean"==t?"__proto__"!==e:null===e}},function(e,t,i){var n=i(9);e.exports=function(e){return n(this,e).get(e)}},function(e,t,i){var n=i(9);e.exports=function(e){return n(this,e).has(e)}},function(e,t,i){var n=i(9);e.exports=function(e,t){var i=n(this,e),r=i.size;return i.set(e,t),this.size+=i.size==r?0:1,this}},function(e,t,i){var n=i(21),r=i(71),a=i(72);function o(e){var t=-1,i=null==e?0:e.length;for(this.__data__=new n;++t<i;)this.add(e[t])}o.prototype.add=o.prototype.push=r,o.prototype.has=a,e.exports=o},function(e,t){var i="__lodash_hash_undefined__";e.exports=function(e){return this.__data__.set(e,i),this}},function(e,t){e.exports=function(e){return this.__data__.has(e)}},function(e,t){e.exports=function(e,t){for(var i=-1,n=null==e?0:e.length;++i<n;)if(t(e[i],i,e))return!0;return!1}},function(e,t){e.exports=function(e,t){return e.has(t)}},function(e,t,i){var n=i(12),r=i(76),a=i(16),o=i(22),s=i(77),c=i(78),l=1,u=2,h="[object Boolean]",y="[object Date]",p="[object Error]",v="[object Map]",f="[object Number]",d="[object RegExp]",b="[object Set]",g="[object String]",m="[object Symbol]",_="[object ArrayBuffer]",P="[object DataView]",x=n?n.prototype:void 0,w=x?x.valueOf:void 0;e.exports=function(e,t,i,n,x,O,M){switch(i){case P:if(e.byteLength!=t.byteLength||e.byteOffset!=t.byteOffset)return!1;e=e.buffer,t=t.buffer;case _:return!(e.byteLength!=t.byteLength||!O(new r(e),new r(t)));case h:case y:case f:return a(+e,+t);case p:return e.name==t.name&&e.message==t.message;case d:case g:return e==t+"";case v:var E=s;case b:var S=n&l;if(E||(E=c),e.size!=t.size&&!S)return!1;var k=M.get(e);if(k)return k==t;n|=u,M.set(e,t);var T=o(E(e),E(t),n,x,O,M);return M.delete(e),T;case m:if(w)return w.call(e)==w.call(t)}return!1}},function(e,t,i){var n=i(0).Uint8Array;e.exports=n},function(e,t){e.exports=function(e){var t=-1,i=Array(e.size);return e.forEach(function(e,n){i[++t]=[n,e]}),i}},function(e,t){e.exports=function(e){var t=-1,i=Array(e.size);return e.forEach(function(e){i[++t]=e}),i}},function(e,t,i){var n=i(80),r=1,a=Object.prototype.hasOwnProperty;e.exports=function(e,t,i,o,s,c){var l=i&r,u=n(e),h=u.length;if(h!=n(t).length&&!l)return!1;for(var y=h;y--;){var p=u[y];if(!(l?p in t:a.call(t,p)))return!1}var v=c.get(e);if(v&&c.get(t))return v==t;var f=!0;c.set(e,t),c.set(t,e);for(var d=l;++y<h;){var b=e[p=u[y]],g=t[p];if(o)var m=l?o(g,b,p,t,e,c):o(b,g,p,e,t,c);if(!(void 0===m?b===g||s(b,g,i,o,c):m)){f=!1;break}d||(d="constructor"==p)}if(f&&!d){var _=e.constructor,P=t.constructor;_!=P&&"constructor"in e&&"constructor"in t&&!("function"==typeof _&&_ instanceof _&&"function"==typeof P&&P instanceof P)&&(f=!1)}return c.delete(e),c.delete(t),f}},function(e,t,i){var n=i(81),r=i(83),a=i(86);e.exports=function(e){return n(e,a,r)}},function(e,t,i){var n=i(82),r=i(13);e.exports=function(e,t,i){var a=t(e);return r(e)?a:n(a,i(e))}},function(e,t){e.exports=function(e,t){for(var i=-1,n=t.length,r=e.length;++i<n;)e[r+i]=t[i];return e}},function(e,t,i){var n=i(84),r=i(85),a=Object.prototype.propertyIsEnumerable,o=Object.getOwnPropertySymbols,s=o?function(e){return null==e?[]:(e=Object(e),n(o(e),function(t){return a.call(e,t)}))}:r;e.exports=s},function(e,t){e.exports=function(e,t){for(var i=-1,n=null==e?0:e.length,r=0,a=[];++i<n;){var o=e[i];t(o,i,e)&&(a[r++]=o)}return a}},function(e,t){e.exports=function(){return[]}},function(e,t,i){var n=i(87),r=i(96),a=i(100);e.exports=function(e){return a(e)?n(e):r(e)}},function(e,t,i){var n=i(88),r=i(89),a=i(13),o=i(23),s=i(92),c=i(25),l=Object.prototype.hasOwnProperty;e.exports=function(e,t){var i=a(e),u=!i&&r(e),h=!i&&!u&&o(e),y=!i&&!u&&!h&&c(e),p=i||u||h||y,v=p?n(e.length,String):[],f=v.length;for(var d in e)!t&&!l.call(e,d)||p&&("length"==d||h&&("offset"==d||"parent"==d)||y&&("buffer"==d||"byteLength"==d||"byteOffset"==d)||s(d,f))||v.push(d);return v}},function(e,t){e.exports=function(e,t){for(var i=-1,n=Array(e);++i<e;)n[i]=t(i);return n}},function(e,t,i){var n=i(90),r=i(10),a=Object.prototype,o=a.hasOwnProperty,s=a.propertyIsEnumerable,c=n(function(){return arguments}())?n:function(e){return r(e)&&o.call(e,"callee")&&!s.call(e,"callee")};e.exports=c},function(e,t,i){var n=i(7),r=i(10),a="[object Arguments]";e.exports=function(e){return r(e)&&n(e)==a}},function(e,t){e.exports=function(){return!1}},function(e,t){var i=9007199254740991,n=/^(?:0|[1-9]\d*)$/;e.exports=function(e,t){var r=typeof e;return!!(t=null==t?i:t)&&("number"==r||"symbol"!=r&&n.test(e))&&e>-1&&e%1==0&&e<t}},function(e,t,i){var n=i(7),r=i(26),a=i(10),o={};o["[object Float32Array]"]=o["[object Float64Array]"]=o["[object Int8Array]"]=o["[object Int16Array]"]=o["[object Int32Array]"]=o["[object Uint8Array]"]=o["[object Uint8ClampedArray]"]=o["[object Uint16Array]"]=o["[object Uint32Array]"]=!0,o["[object Arguments]"]=o["[object Array]"]=o["[object ArrayBuffer]"]=o["[object Boolean]"]=o["[object DataView]"]=o["[object Date]"]=o["[object Error]"]=o["[object Function]"]=o["[object Map]"]=o["[object Number]"]=o["[object Object]"]=o["[object RegExp]"]=o["[object Set]"]=o["[object String]"]=o["[object WeakMap]"]=!1,e.exports=function(e){return a(e)&&r(e.length)&&!!o[n(e)]}},function(e,t){e.exports=function(e){return function(t){return e(t)}}},function(e,t,i){(function(e){var n=i(18),r=t&&!t.nodeType&&t,a=r&&"object"==typeof e&&e&&!e.nodeType&&e,o=a&&a.exports===r&&n.process,s=function(){try{var e=a&&a.require&&a.require("util").types;return e||o&&o.binding&&o.binding("util")}catch(e){}}();e.exports=s}).call(this,i(24)(e))},function(e,t,i){var n=i(97),r=i(98),a=Object.prototype.hasOwnProperty;e.exports=function(e){if(!n(e))return r(e);var t=[];for(var i in Object(e))a.call(e,i)&&"constructor"!=i&&t.push(i);return t}},function(e,t){var i=Object.prototype;e.exports=function(e){var t=e&&e.constructor;return e===("function"==typeof t&&t.prototype||i)}},function(e,t,i){var n=i(99)(Object.keys,Object);e.exports=n},function(e,t){e.exports=function(e,t){return function(i){return e(t(i))}}},function(e,t,i){var n=i(17),r=i(26);e.exports=function(e){return null!=e&&r(e.length)&&!n(e)}},function(e,t,i){var n=i(102),r=i(11),a=i(103),o=i(104),s=i(105),c=i(7),l=i(20),u=l(n),h=l(r),y=l(a),p=l(o),v=l(s),f=c;(n&&"[object DataView]"!=f(new n(new ArrayBuffer(1)))||r&&"[object Map]"!=f(new r)||a&&"[object Promise]"!=f(a.resolve())||o&&"[object Set]"!=f(new o)||s&&"[object WeakMap]"!=f(new s))&&(f=function(e){var t=c(e),i="[object Object]"==t?e.constructor:void 0,n=i?l(i):"";if(n)switch(n){case u:return"[object DataView]";case h:return"[object Map]";case y:return"[object Promise]";case p:return"[object Set]";case v:return"[object WeakMap]"}return t}),e.exports=f},function(e,t,i){var n=i(3)(i(0),"DataView");e.exports=n},function(e,t,i){var n=i(3)(i(0),"Promise");e.exports=n},function(e,t,i){var n=i(3)(i(0),"Set");e.exports=n},function(e,t,i){var n=i(3)(i(0),"WeakMap");e.exports=n}])});
-},{"react":"../../node_modules/react/index.js"}],"../videos/sydney.webm":[function(require,module,exports) {
-module.exports = "sydney.1ea58bea.webm";
-},{}],"starting.js":[function(require,module,exports) {
+
+function calcTimeDelta(date) {
+  var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
+      _ref$now = _ref.now,
+      now = _ref$now === void 0 ? Date.now : _ref$now,
+      _ref$precision = _ref.precision,
+      precision = _ref$precision === void 0 ? 0 : _ref$precision,
+      _ref$controlled = _ref.controlled,
+      controlled = _ref$controlled === void 0 ? false : _ref$controlled,
+      _ref$offsetTime = _ref.offsetTime,
+      offsetTime = _ref$offsetTime === void 0 ? 0 : _ref$offsetTime;
+
+  var startTimestamp;
+
+  if (typeof date === 'string') {
+    startTimestamp = new Date(date).getTime();
+  } else if (date instanceof Date) {
+    startTimestamp = date.getTime();
+  } else {
+    startTimestamp = date;
+  }
+
+  if (!controlled) {
+    startTimestamp += offsetTime;
+  }
+
+  var total = Math.round(parseFloat((Math.max(0, controlled ? startTimestamp : startTimestamp - now()) / 1000).toFixed(Math.max(0, Math.min(20, precision)))) * 1000);
+  var seconds = total / 1000;
+  return {
+    total: total,
+    days: Math.floor(seconds / (3600 * 24)),
+    hours: Math.floor(seconds / 3600 % 24),
+    minutes: Math.floor(seconds / 60 % 60),
+    seconds: Math.floor(seconds % 60),
+    milliseconds: Number((seconds % 1 * 1000).toFixed()),
+    completed: total <= 0
+  };
+}
+
+function formatTimeDelta(delta, options) {
+  var days = delta.days,
+      hours = delta.hours,
+      minutes = delta.minutes,
+      seconds = delta.seconds;
+
+  var _Object$assign = Object.assign({}, timeDeltaFormatOptionsDefaults, options),
+      daysInHours = _Object$assign.daysInHours,
+      zeroPadTime = _Object$assign.zeroPadTime,
+      _Object$assign$zeroPa = _Object$assign.zeroPadDays,
+      zeroPadDays = _Object$assign$zeroPa === void 0 ? zeroPadTime : _Object$assign$zeroPa;
+
+  var formattedHours = daysInHours ? zeroPad(hours + days * 24, zeroPadTime) : zeroPad(hours, Math.min(2, zeroPadTime));
+  return {
+    days: daysInHours ? '' : zeroPad(days, zeroPadDays),
+    hours: formattedHours,
+    minutes: zeroPad(minutes, Math.min(2, zeroPadTime)),
+    seconds: zeroPad(seconds, Math.min(2, zeroPadTime))
+  };
+}
+
+var isEqual = require('lodash.isequal');
+
+var Countdown = function (_React$Component) {
+  _inherits(Countdown, _React$Component);
+
+  function Countdown(props) {
+    var _this;
+
+    _classCallCheck(this, Countdown);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Countdown).call(this, props));
+    _this.mounted = false;
+
+    _this.tick = function () {
+      var onTick = _this.props.onTick;
+
+      var delta = _this.calcTimeDelta();
+
+      _this.setTimeDeltaState(Object.assign({}, delta));
+
+      if (onTick && delta.total > 0) {
+        onTick(delta);
+      }
+    };
+
+    _this.start = function () {
+      _this.setState(function (_ref) {
+        var offsetStart = _ref.offsetStart,
+            offsetTime = _ref.offsetTime;
+        return {
+          offsetStart: 0,
+          offsetTime: offsetTime + (offsetStart ? Date.now() - offsetStart : 0)
+        };
+      }, function () {
+        var timeDelta = _this.calcTimeDelta();
+
+        _this.setTimeDeltaState(timeDelta);
+
+        _this.props.onStart && _this.props.onStart(timeDelta);
+
+        if (!_this.props.controlled) {
+          _this.clearInterval();
+
+          _this.interval = window.setInterval(_this.tick, _this.props.intervalDelay);
+        }
+      });
+    };
+
+    _this.pause = function () {
+      _this.setState({
+        offsetStart: _this.calcOffsetStart()
+      }, function () {
+        _this.clearInterval();
+
+        _this.props.onPause && _this.props.onPause(_this.calcTimeDelta());
+      });
+    };
+
+    _this.isPaused = function () {
+      return _this.state.offsetStart > 0;
+    };
+
+    _this.isCompleted = function () {
+      return _this.state.timeDelta.completed;
+    };
+
+    _this.state = {
+      timeDelta: _this.calcTimeDelta(),
+      offsetStart: props.autoStart ? 0 : _this.calcOffsetStart(),
+      offsetTime: 0
+    };
+    return _this;
+  }
+
+  _createClass(Countdown, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.mounted = true;
+      this.props.autoStart && this.start();
+      this.props.onMount && this.props.onMount(this.calcTimeDelta());
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps) {
+      if (!isEqual(this.props, prevProps)) {
+        this.setTimeDeltaState(this.calcTimeDelta());
+      }
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      this.mounted = false;
+      this.clearInterval();
+    }
+  }, {
+    key: "calcTimeDelta",
+    value: function calcTimeDelta$1() {
+      var _this$props = this.props,
+          date = _this$props.date,
+          now = _this$props.now,
+          precision = _this$props.precision,
+          controlled = _this$props.controlled;
+      return calcTimeDelta(date, {
+        now: now,
+        precision: precision,
+        controlled: controlled,
+        offsetTime: this.state ? this.state.offsetTime : 0
+      });
+    }
+  }, {
+    key: "calcOffsetStart",
+    value: function calcOffsetStart() {
+      return Date.now();
+    }
+  }, {
+    key: "clearInterval",
+    value: function clearInterval() {
+      window.clearInterval(this.interval);
+    }
+  }, {
+    key: "setTimeDeltaState",
+    value: function setTimeDeltaState(delta) {
+      var _this2 = this;
+
+      var callback;
+
+      if (!this.state.timeDelta.completed && delta.completed) {
+        this.clearInterval();
+
+        callback = function callback() {
+          return _this2.props.onComplete && _this2.props.onComplete(delta);
+        };
+      }
+
+      if (this.mounted) {
+        return this.setState({
+          timeDelta: delta
+        }, callback);
+      }
+    }
+  }, {
+    key: "getApi",
+    value: function getApi() {
+      return this.api = this.api || {
+        start: this.start,
+        pause: this.pause,
+        isPaused: this.isPaused,
+        isCompleted: this.isCompleted
+      };
+    }
+  }, {
+    key: "getRenderProps",
+    value: function getRenderProps() {
+      var _this$props2 = this.props,
+          daysInHours = _this$props2.daysInHours,
+          zeroPadTime = _this$props2.zeroPadTime,
+          zeroPadDays = _this$props2.zeroPadDays;
+      var timeDelta = this.state.timeDelta;
+      return Object.assign({}, timeDelta, {
+        api: this.getApi(),
+        props: this.props,
+        formatted: formatTimeDelta(timeDelta, {
+          daysInHours: daysInHours,
+          zeroPadTime: zeroPadTime,
+          zeroPadDays: zeroPadDays
+        })
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$props3 = this.props,
+          children = _this$props3.children,
+          renderer = _this$props3.renderer;
+      var renderProps = this.getRenderProps();
+
+      if (renderer) {
+        return renderer(renderProps);
+      }
+
+      if (children && this.state.timeDelta.completed) {
+        return _react.default.cloneElement(children, {
+          countdown: renderProps
+        });
+      }
+
+      var _renderProps$formatte = renderProps.formatted,
+          days = _renderProps$formatte.days,
+          hours = _renderProps$formatte.hours,
+          minutes = _renderProps$formatte.minutes,
+          seconds = _renderProps$formatte.seconds;
+      return _react.default.createElement("span", null, days, days ? ':' : '', hours, ":", minutes, ":", seconds);
+    }
+  }]);
+
+  return Countdown;
+}(_react.default.Component);
+
+Countdown.defaultProps = Object.assign({}, timeDeltaFormatOptionsDefaults, {
+  controlled: false,
+  intervalDelay: 1000,
+  precision: 0,
+  autoStart: true
+});
+Countdown.propTypes = {
+  date: _propTypes.default.oneOfType([_propTypes.default.instanceOf(Date), _propTypes.default.string, _propTypes.default.number]).isRequired,
+  daysInHours: _propTypes.default.bool,
+  zeroPadTime: _propTypes.default.number,
+  zeroPadDays: _propTypes.default.number,
+  controlled: _propTypes.default.bool,
+  intervalDelay: _propTypes.default.number,
+  precision: _propTypes.default.number,
+  autoStart: _propTypes.default.bool,
+  children: _propTypes.default.element,
+  renderer: _propTypes.default.func,
+  now: _propTypes.default.func,
+  onMount: _propTypes.default.func,
+  onStart: _propTypes.default.func,
+  onPause: _propTypes.default.func,
+  onTick: _propTypes.default.func,
+  onComplete: _propTypes.default.func
+};
+var _default = Countdown;
+exports.default = _default;
+},{"react":"../../node_modules/react/index.js","prop-types":"../../node_modules/prop-types/index.js","lodash.isequal":"../../node_modules/lodash.isequal/index.js"}],"starting.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -74223,7 +76411,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = Starting;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
@@ -74233,35 +76421,46 @@ require("../styles/starting.scss");
 
 var _animlogo = _interopRequireDefault(require("../images/animlogo.gif"));
 
-var _Anime = _interopRequireDefault(require("../components/Anime"));
-
 var _reactParticlesJs = _interopRequireDefault(require("react-particles-js"));
 
-var _sydney = _interopRequireDefault(require("../videos/sydney.webm"));
+var _animejs = _interopRequireDefault(require("animejs"));
+
+var _reactCountdownNow = _interopRequireDefault(require("react-countdown-now"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+// import sydney from "../videos/sydney.webm";
 const key = "_aFcDPiO7vg";
 const yt = ["version=3", `playlist=${key}`, "loop=1", "autoplay=1", "end=3"];
+const currentTime = nodecg.Replicant("time");
+setInterval(() => {
+  let val = currentTime.value;
+  val > 0 && (currentTime.value = val - 1);
+}, 1000);
 
 function Starting() {
-  return _react.default.createElement("div", null, _react.default.createElement(_Anime.default, {
-    opacity: [0, 1]
-  }, _react.default.createElement("div", {
-    className: "ignore fit",
-    style: {
-      overflow: "hidden"
+  const [time, setTime] = (0, _react.useState)(nodecg.readReplicant("time"));
+  (0, _react.useEffect)(() => {
+    if (currentTime.value < 30) {
+      (0, _animejs.default)({
+        targets: ".timer",
+        scale: [1, 1.1, 1],
+        easing: "linear",
+        duration: 500
+      });
     }
-  }, _react.default.createElement("video", {
-    width: "1920",
-    height: "1080",
-    className: "video",
-    autoPlay: true,
-    loop: true
-  }, _react.default.createElement("source", {
-    src: _sydney.default,
-    type: "video/webm"
-  })))), _react.default.createElement(_reactParticlesJs.default, {
+  });
+  (0, _react.useEffect)(() => {
+    currentTime.on(`change`, value => {
+      let minutes = value / 60;
+      minutes = minutes.toString().split(".")[0];
+      let seconds = value % 60;
+      setTime(`${minutes}:${seconds < 10 ? "0" : ""}${seconds}`);
+    });
+  }, []);
+  return _react.default.createElement("div", null, _react.default.createElement(_reactParticlesJs.default, {
     className: "ignore fit",
     params: {
       particles: {
@@ -74276,11 +76475,7 @@ function Starting() {
         }
       }
     }
-  }), _react.default.createElement("div", {
-    className: "ignore blend fit"
-  }), _react.default.createElement(_Anime.default, {
-    opacity: [0, 1]
-  }, _react.default.createElement(_core.Grid, {
+  }), _react.default.createElement(_core.Grid, {
     container: true,
     direction: "column",
     justify: "center",
@@ -74288,22 +76483,24 @@ function Starting() {
     alignItems: "center"
   }, _react.default.createElement("img", {
     src: _animlogo.default
-  }), _react.default.createElement(_core.Typography, {
-    style: {
-      margin: 5
-    },
-    variant: "body2"
-  }, "STARTING SOON"), _react.default.createElement(_core.Typography, {
-    style: {
-      margin: 5
-    },
+  }), _react.default.createElement("div", {
     className: "border",
+    style: {
+      margin: 10
+    }
+  }, _react.default.createElement(_core.Typography, {
+    className: "timer",
+    style: {
+      color: currentTime.value < 30 ? "red" : "white"
+    },
     variant: "h1"
-  }, "5:00"))));
+  }, `${time}`)), _react.default.createElement(_core.Typography, {
+    variant: "body2"
+  }, "STARTING SOON")));
 }
 
 _reactDom.default.render(_react.default.createElement(Starting, null), document.getElementById("root"));
-},{"react":"../../node_modules/react/index.js","react-dom":"../../node_modules/react-dom/index.js","@material-ui/core":"../../node_modules/@material-ui/core/esm/index.js","../styles/starting.scss":"../styles/starting.scss","../images/animlogo.gif":"../images/animlogo.gif","../components/Anime":"../components/Anime.jsx","react-particles-js":"../../node_modules/react-particles-js/lib/particles.js","../videos/sydney.webm":"../videos/sydney.webm"}],"C:/Users/admin/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","react-dom":"../../node_modules/react-dom/index.js","@material-ui/core":"../../node_modules/@material-ui/core/esm/index.js","../styles/starting.scss":"../styles/starting.scss","../images/animlogo.gif":"../images/animlogo.gif","react-particles-js":"../../node_modules/react-particles-js/lib/particles.js","animejs":"../../node_modules/animejs/lib/anime.es.js","react-countdown-now":"../../node_modules/react-countdown-now/dist/index.es.js"}],"C:/Users/admin/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -74331,7 +76528,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56491" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63577" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

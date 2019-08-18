@@ -72327,7 +72327,299 @@ var _Zoom = _interopRequireDefault(require("./Zoom"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-},{"./colors":"../../node_modules/@material-ui/core/esm/colors/index.js","./styles":"../../node_modules/@material-ui/core/esm/styles/index.js","./AppBar":"../../node_modules/@material-ui/core/esm/AppBar/index.js","./Avatar":"../../node_modules/@material-ui/core/esm/Avatar/index.js","./Backdrop":"../../node_modules/@material-ui/core/esm/Backdrop/index.js","./Badge":"../../node_modules/@material-ui/core/esm/Badge/index.js","./BottomNavigation":"../../node_modules/@material-ui/core/esm/BottomNavigation/index.js","./BottomNavigationAction":"../../node_modules/@material-ui/core/esm/BottomNavigationAction/index.js","./Box":"../../node_modules/@material-ui/core/esm/Box/index.js","./Breadcrumbs":"../../node_modules/@material-ui/core/esm/Breadcrumbs/index.js","./Button":"../../node_modules/@material-ui/core/esm/Button/index.js","./ButtonBase":"../../node_modules/@material-ui/core/esm/ButtonBase/index.js","./ButtonGroup":"../../node_modules/@material-ui/core/esm/ButtonGroup/index.js","./Card":"../../node_modules/@material-ui/core/esm/Card/index.js","./CardActionArea":"../../node_modules/@material-ui/core/esm/CardActionArea/index.js","./CardActions":"../../node_modules/@material-ui/core/esm/CardActions/index.js","./CardContent":"../../node_modules/@material-ui/core/esm/CardContent/index.js","./CardHeader":"../../node_modules/@material-ui/core/esm/CardHeader/index.js","./CardMedia":"../../node_modules/@material-ui/core/esm/CardMedia/index.js","./Checkbox":"../../node_modules/@material-ui/core/esm/Checkbox/index.js","./Chip":"../../node_modules/@material-ui/core/esm/Chip/index.js","./CircularProgress":"../../node_modules/@material-ui/core/esm/CircularProgress/index.js","./ClickAwayListener":"../../node_modules/@material-ui/core/esm/ClickAwayListener/index.js","./Collapse":"../../node_modules/@material-ui/core/esm/Collapse/index.js","./Container":"../../node_modules/@material-ui/core/esm/Container/index.js","./CssBaseline":"../../node_modules/@material-ui/core/esm/CssBaseline/index.js","./Dialog":"../../node_modules/@material-ui/core/esm/Dialog/index.js","./DialogActions":"../../node_modules/@material-ui/core/esm/DialogActions/index.js","./DialogContent":"../../node_modules/@material-ui/core/esm/DialogContent/index.js","./DialogContentText":"../../node_modules/@material-ui/core/esm/DialogContentText/index.js","./DialogTitle":"../../node_modules/@material-ui/core/esm/DialogTitle/index.js","./Divider":"../../node_modules/@material-ui/core/esm/Divider/index.js","./Drawer":"../../node_modules/@material-ui/core/esm/Drawer/index.js","./ExpansionPanel":"../../node_modules/@material-ui/core/esm/ExpansionPanel/index.js","./ExpansionPanelActions":"../../node_modules/@material-ui/core/esm/ExpansionPanelActions/index.js","./ExpansionPanelDetails":"../../node_modules/@material-ui/core/esm/ExpansionPanelDetails/index.js","./ExpansionPanelSummary":"../../node_modules/@material-ui/core/esm/ExpansionPanelSummary/index.js","./Fab":"../../node_modules/@material-ui/core/esm/Fab/index.js","./Fade":"../../node_modules/@material-ui/core/esm/Fade/index.js","./FilledInput":"../../node_modules/@material-ui/core/esm/FilledInput/index.js","./FormControl":"../../node_modules/@material-ui/core/esm/FormControl/index.js","./FormControlLabel":"../../node_modules/@material-ui/core/esm/FormControlLabel/index.js","./FormGroup":"../../node_modules/@material-ui/core/esm/FormGroup/index.js","./FormHelperText":"../../node_modules/@material-ui/core/esm/FormHelperText/index.js","./FormLabel":"../../node_modules/@material-ui/core/esm/FormLabel/index.js","./Grid":"../../node_modules/@material-ui/core/esm/Grid/index.js","./GridList":"../../node_modules/@material-ui/core/esm/GridList/index.js","./GridListTile":"../../node_modules/@material-ui/core/esm/GridListTile/index.js","./GridListTileBar":"../../node_modules/@material-ui/core/esm/GridListTileBar/index.js","./Grow":"../../node_modules/@material-ui/core/esm/Grow/index.js","./Hidden":"../../node_modules/@material-ui/core/esm/Hidden/index.js","./Icon":"../../node_modules/@material-ui/core/esm/Icon/index.js","./IconButton":"../../node_modules/@material-ui/core/esm/IconButton/index.js","./Input":"../../node_modules/@material-ui/core/esm/Input/index.js","./InputAdornment":"../../node_modules/@material-ui/core/esm/InputAdornment/index.js","./InputBase":"../../node_modules/@material-ui/core/esm/InputBase/index.js","./InputLabel":"../../node_modules/@material-ui/core/esm/InputLabel/index.js","./LinearProgress":"../../node_modules/@material-ui/core/esm/LinearProgress/index.js","./Link":"../../node_modules/@material-ui/core/esm/Link/index.js","./List":"../../node_modules/@material-ui/core/esm/List/index.js","./ListItem":"../../node_modules/@material-ui/core/esm/ListItem/index.js","./ListItemAvatar":"../../node_modules/@material-ui/core/esm/ListItemAvatar/index.js","./ListItemIcon":"../../node_modules/@material-ui/core/esm/ListItemIcon/index.js","./ListItemSecondaryAction":"../../node_modules/@material-ui/core/esm/ListItemSecondaryAction/index.js","./ListItemText":"../../node_modules/@material-ui/core/esm/ListItemText/index.js","./ListSubheader":"../../node_modules/@material-ui/core/esm/ListSubheader/index.js","./Menu":"../../node_modules/@material-ui/core/esm/Menu/index.js","./MenuItem":"../../node_modules/@material-ui/core/esm/MenuItem/index.js","./MenuList":"../../node_modules/@material-ui/core/esm/MenuList/index.js","./MobileStepper":"../../node_modules/@material-ui/core/esm/MobileStepper/index.js","./Modal":"../../node_modules/@material-ui/core/esm/Modal/index.js","./NativeSelect":"../../node_modules/@material-ui/core/esm/NativeSelect/index.js","./NoSsr":"../../node_modules/@material-ui/core/esm/NoSsr/index.js","./OutlinedInput":"../../node_modules/@material-ui/core/esm/OutlinedInput/index.js","./Paper":"../../node_modules/@material-ui/core/esm/Paper/index.js","./Popover":"../../node_modules/@material-ui/core/esm/Popover/index.js","./Popper":"../../node_modules/@material-ui/core/esm/Popper/index.js","./Portal":"../../node_modules/@material-ui/core/esm/Portal/index.js","./Radio":"../../node_modules/@material-ui/core/esm/Radio/index.js","./RadioGroup":"../../node_modules/@material-ui/core/esm/RadioGroup/index.js","./RootRef":"../../node_modules/@material-ui/core/esm/RootRef/index.js","./Select":"../../node_modules/@material-ui/core/esm/Select/index.js","./Slide":"../../node_modules/@material-ui/core/esm/Slide/index.js","./Slider":"../../node_modules/@material-ui/core/esm/Slider/index.js","./Snackbar":"../../node_modules/@material-ui/core/esm/Snackbar/index.js","./SnackbarContent":"../../node_modules/@material-ui/core/esm/SnackbarContent/index.js","./Step":"../../node_modules/@material-ui/core/esm/Step/index.js","./StepButton":"../../node_modules/@material-ui/core/esm/StepButton/index.js","./StepConnector":"../../node_modules/@material-ui/core/esm/StepConnector/index.js","./StepContent":"../../node_modules/@material-ui/core/esm/StepContent/index.js","./StepIcon":"../../node_modules/@material-ui/core/esm/StepIcon/index.js","./StepLabel":"../../node_modules/@material-ui/core/esm/StepLabel/index.js","./Stepper":"../../node_modules/@material-ui/core/esm/Stepper/index.js","./SvgIcon":"../../node_modules/@material-ui/core/esm/SvgIcon/index.js","./SwipeableDrawer":"../../node_modules/@material-ui/core/esm/SwipeableDrawer/index.js","./Switch":"../../node_modules/@material-ui/core/esm/Switch/index.js","./Tab":"../../node_modules/@material-ui/core/esm/Tab/index.js","./Table":"../../node_modules/@material-ui/core/esm/Table/index.js","./TableBody":"../../node_modules/@material-ui/core/esm/TableBody/index.js","./TableCell":"../../node_modules/@material-ui/core/esm/TableCell/index.js","./TableFooter":"../../node_modules/@material-ui/core/esm/TableFooter/index.js","./TableHead":"../../node_modules/@material-ui/core/esm/TableHead/index.js","./TablePagination":"../../node_modules/@material-ui/core/esm/TablePagination/index.js","./TableRow":"../../node_modules/@material-ui/core/esm/TableRow/index.js","./TableSortLabel":"../../node_modules/@material-ui/core/esm/TableSortLabel/index.js","./Tabs":"../../node_modules/@material-ui/core/esm/Tabs/index.js","./TextField":"../../node_modules/@material-ui/core/esm/TextField/index.js","./Toolbar":"../../node_modules/@material-ui/core/esm/Toolbar/index.js","./Tooltip":"../../node_modules/@material-ui/core/esm/Tooltip/index.js","./Typography":"../../node_modules/@material-ui/core/esm/Typography/index.js","./useMediaQuery":"../../node_modules/@material-ui/core/esm/useMediaQuery/index.js","./useScrollTrigger":"../../node_modules/@material-ui/core/esm/useScrollTrigger/index.js","./withMobileDialog":"../../node_modules/@material-ui/core/esm/withMobileDialog/index.js","./withWidth":"../../node_modules/@material-ui/core/esm/withWidth/index.js","./Zoom":"../../node_modules/@material-ui/core/esm/Zoom/index.js"}],"annoucement.js":[function(require,module,exports) {
+},{"./colors":"../../node_modules/@material-ui/core/esm/colors/index.js","./styles":"../../node_modules/@material-ui/core/esm/styles/index.js","./AppBar":"../../node_modules/@material-ui/core/esm/AppBar/index.js","./Avatar":"../../node_modules/@material-ui/core/esm/Avatar/index.js","./Backdrop":"../../node_modules/@material-ui/core/esm/Backdrop/index.js","./Badge":"../../node_modules/@material-ui/core/esm/Badge/index.js","./BottomNavigation":"../../node_modules/@material-ui/core/esm/BottomNavigation/index.js","./BottomNavigationAction":"../../node_modules/@material-ui/core/esm/BottomNavigationAction/index.js","./Box":"../../node_modules/@material-ui/core/esm/Box/index.js","./Breadcrumbs":"../../node_modules/@material-ui/core/esm/Breadcrumbs/index.js","./Button":"../../node_modules/@material-ui/core/esm/Button/index.js","./ButtonBase":"../../node_modules/@material-ui/core/esm/ButtonBase/index.js","./ButtonGroup":"../../node_modules/@material-ui/core/esm/ButtonGroup/index.js","./Card":"../../node_modules/@material-ui/core/esm/Card/index.js","./CardActionArea":"../../node_modules/@material-ui/core/esm/CardActionArea/index.js","./CardActions":"../../node_modules/@material-ui/core/esm/CardActions/index.js","./CardContent":"../../node_modules/@material-ui/core/esm/CardContent/index.js","./CardHeader":"../../node_modules/@material-ui/core/esm/CardHeader/index.js","./CardMedia":"../../node_modules/@material-ui/core/esm/CardMedia/index.js","./Checkbox":"../../node_modules/@material-ui/core/esm/Checkbox/index.js","./Chip":"../../node_modules/@material-ui/core/esm/Chip/index.js","./CircularProgress":"../../node_modules/@material-ui/core/esm/CircularProgress/index.js","./ClickAwayListener":"../../node_modules/@material-ui/core/esm/ClickAwayListener/index.js","./Collapse":"../../node_modules/@material-ui/core/esm/Collapse/index.js","./Container":"../../node_modules/@material-ui/core/esm/Container/index.js","./CssBaseline":"../../node_modules/@material-ui/core/esm/CssBaseline/index.js","./Dialog":"../../node_modules/@material-ui/core/esm/Dialog/index.js","./DialogActions":"../../node_modules/@material-ui/core/esm/DialogActions/index.js","./DialogContent":"../../node_modules/@material-ui/core/esm/DialogContent/index.js","./DialogContentText":"../../node_modules/@material-ui/core/esm/DialogContentText/index.js","./DialogTitle":"../../node_modules/@material-ui/core/esm/DialogTitle/index.js","./Divider":"../../node_modules/@material-ui/core/esm/Divider/index.js","./Drawer":"../../node_modules/@material-ui/core/esm/Drawer/index.js","./ExpansionPanel":"../../node_modules/@material-ui/core/esm/ExpansionPanel/index.js","./ExpansionPanelActions":"../../node_modules/@material-ui/core/esm/ExpansionPanelActions/index.js","./ExpansionPanelDetails":"../../node_modules/@material-ui/core/esm/ExpansionPanelDetails/index.js","./ExpansionPanelSummary":"../../node_modules/@material-ui/core/esm/ExpansionPanelSummary/index.js","./Fab":"../../node_modules/@material-ui/core/esm/Fab/index.js","./Fade":"../../node_modules/@material-ui/core/esm/Fade/index.js","./FilledInput":"../../node_modules/@material-ui/core/esm/FilledInput/index.js","./FormControl":"../../node_modules/@material-ui/core/esm/FormControl/index.js","./FormControlLabel":"../../node_modules/@material-ui/core/esm/FormControlLabel/index.js","./FormGroup":"../../node_modules/@material-ui/core/esm/FormGroup/index.js","./FormHelperText":"../../node_modules/@material-ui/core/esm/FormHelperText/index.js","./FormLabel":"../../node_modules/@material-ui/core/esm/FormLabel/index.js","./Grid":"../../node_modules/@material-ui/core/esm/Grid/index.js","./GridList":"../../node_modules/@material-ui/core/esm/GridList/index.js","./GridListTile":"../../node_modules/@material-ui/core/esm/GridListTile/index.js","./GridListTileBar":"../../node_modules/@material-ui/core/esm/GridListTileBar/index.js","./Grow":"../../node_modules/@material-ui/core/esm/Grow/index.js","./Hidden":"../../node_modules/@material-ui/core/esm/Hidden/index.js","./Icon":"../../node_modules/@material-ui/core/esm/Icon/index.js","./IconButton":"../../node_modules/@material-ui/core/esm/IconButton/index.js","./Input":"../../node_modules/@material-ui/core/esm/Input/index.js","./InputAdornment":"../../node_modules/@material-ui/core/esm/InputAdornment/index.js","./InputBase":"../../node_modules/@material-ui/core/esm/InputBase/index.js","./InputLabel":"../../node_modules/@material-ui/core/esm/InputLabel/index.js","./LinearProgress":"../../node_modules/@material-ui/core/esm/LinearProgress/index.js","./Link":"../../node_modules/@material-ui/core/esm/Link/index.js","./List":"../../node_modules/@material-ui/core/esm/List/index.js","./ListItem":"../../node_modules/@material-ui/core/esm/ListItem/index.js","./ListItemAvatar":"../../node_modules/@material-ui/core/esm/ListItemAvatar/index.js","./ListItemIcon":"../../node_modules/@material-ui/core/esm/ListItemIcon/index.js","./ListItemSecondaryAction":"../../node_modules/@material-ui/core/esm/ListItemSecondaryAction/index.js","./ListItemText":"../../node_modules/@material-ui/core/esm/ListItemText/index.js","./ListSubheader":"../../node_modules/@material-ui/core/esm/ListSubheader/index.js","./Menu":"../../node_modules/@material-ui/core/esm/Menu/index.js","./MenuItem":"../../node_modules/@material-ui/core/esm/MenuItem/index.js","./MenuList":"../../node_modules/@material-ui/core/esm/MenuList/index.js","./MobileStepper":"../../node_modules/@material-ui/core/esm/MobileStepper/index.js","./Modal":"../../node_modules/@material-ui/core/esm/Modal/index.js","./NativeSelect":"../../node_modules/@material-ui/core/esm/NativeSelect/index.js","./NoSsr":"../../node_modules/@material-ui/core/esm/NoSsr/index.js","./OutlinedInput":"../../node_modules/@material-ui/core/esm/OutlinedInput/index.js","./Paper":"../../node_modules/@material-ui/core/esm/Paper/index.js","./Popover":"../../node_modules/@material-ui/core/esm/Popover/index.js","./Popper":"../../node_modules/@material-ui/core/esm/Popper/index.js","./Portal":"../../node_modules/@material-ui/core/esm/Portal/index.js","./Radio":"../../node_modules/@material-ui/core/esm/Radio/index.js","./RadioGroup":"../../node_modules/@material-ui/core/esm/RadioGroup/index.js","./RootRef":"../../node_modules/@material-ui/core/esm/RootRef/index.js","./Select":"../../node_modules/@material-ui/core/esm/Select/index.js","./Slide":"../../node_modules/@material-ui/core/esm/Slide/index.js","./Slider":"../../node_modules/@material-ui/core/esm/Slider/index.js","./Snackbar":"../../node_modules/@material-ui/core/esm/Snackbar/index.js","./SnackbarContent":"../../node_modules/@material-ui/core/esm/SnackbarContent/index.js","./Step":"../../node_modules/@material-ui/core/esm/Step/index.js","./StepButton":"../../node_modules/@material-ui/core/esm/StepButton/index.js","./StepConnector":"../../node_modules/@material-ui/core/esm/StepConnector/index.js","./StepContent":"../../node_modules/@material-ui/core/esm/StepContent/index.js","./StepIcon":"../../node_modules/@material-ui/core/esm/StepIcon/index.js","./StepLabel":"../../node_modules/@material-ui/core/esm/StepLabel/index.js","./Stepper":"../../node_modules/@material-ui/core/esm/Stepper/index.js","./SvgIcon":"../../node_modules/@material-ui/core/esm/SvgIcon/index.js","./SwipeableDrawer":"../../node_modules/@material-ui/core/esm/SwipeableDrawer/index.js","./Switch":"../../node_modules/@material-ui/core/esm/Switch/index.js","./Tab":"../../node_modules/@material-ui/core/esm/Tab/index.js","./Table":"../../node_modules/@material-ui/core/esm/Table/index.js","./TableBody":"../../node_modules/@material-ui/core/esm/TableBody/index.js","./TableCell":"../../node_modules/@material-ui/core/esm/TableCell/index.js","./TableFooter":"../../node_modules/@material-ui/core/esm/TableFooter/index.js","./TableHead":"../../node_modules/@material-ui/core/esm/TableHead/index.js","./TablePagination":"../../node_modules/@material-ui/core/esm/TablePagination/index.js","./TableRow":"../../node_modules/@material-ui/core/esm/TableRow/index.js","./TableSortLabel":"../../node_modules/@material-ui/core/esm/TableSortLabel/index.js","./Tabs":"../../node_modules/@material-ui/core/esm/Tabs/index.js","./TextField":"../../node_modules/@material-ui/core/esm/TextField/index.js","./Toolbar":"../../node_modules/@material-ui/core/esm/Toolbar/index.js","./Tooltip":"../../node_modules/@material-ui/core/esm/Tooltip/index.js","./Typography":"../../node_modules/@material-ui/core/esm/Typography/index.js","./useMediaQuery":"../../node_modules/@material-ui/core/esm/useMediaQuery/index.js","./useScrollTrigger":"../../node_modules/@material-ui/core/esm/useScrollTrigger/index.js","./withMobileDialog":"../../node_modules/@material-ui/core/esm/withMobileDialog/index.js","./withWidth":"../../node_modules/@material-ui/core/esm/withWidth/index.js","./Zoom":"../../node_modules/@material-ui/core/esm/Zoom/index.js"}],"C:/Users/admin/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+
+  return bundleURL;
+}
+
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"C:/Users/admin/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"C:/Users/admin/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../styles/dashboard.scss":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"C:/Users/admin/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../data/messages.json":[function(require,module,exports) {
+module.exports = [{
+  "msg": "Follow our twitter over @OCESportsOpen"
+}, {
+  "msg": "Support our tournament by donating to our patreon @OceanicEsportsOpen"
+}];
+},{}],"../../../../node_modules/uuid/lib/rng-browser.js":[function(require,module,exports) {
+// Unique ID creation requires a high quality random # generator.  In the
+// browser this is a little complicated due to unknown quality of Math.random()
+// and inconsistent support for the `crypto` API.  We do the best we can via
+// feature-detection
+
+// getRandomValues needs to be invoked in a context where "this" is a Crypto
+// implementation. Also, find the complete implementation of crypto on IE11.
+var getRandomValues = (typeof(crypto) != 'undefined' && crypto.getRandomValues && crypto.getRandomValues.bind(crypto)) ||
+                      (typeof(msCrypto) != 'undefined' && typeof window.msCrypto.getRandomValues == 'function' && msCrypto.getRandomValues.bind(msCrypto));
+
+if (getRandomValues) {
+  // WHATWG crypto RNG - http://wiki.whatwg.org/wiki/Crypto
+  var rnds8 = new Uint8Array(16); // eslint-disable-line no-undef
+
+  module.exports = function whatwgRNG() {
+    getRandomValues(rnds8);
+    return rnds8;
+  };
+} else {
+  // Math.random()-based (RNG)
+  //
+  // If all else fails, use Math.random().  It's fast, but is of unspecified
+  // quality.
+  var rnds = new Array(16);
+
+  module.exports = function mathRNG() {
+    for (var i = 0, r; i < 16; i++) {
+      if ((i & 0x03) === 0) r = Math.random() * 0x100000000;
+      rnds[i] = r >>> ((i & 0x03) << 3) & 0xff;
+    }
+
+    return rnds;
+  };
+}
+
+},{}],"../../../../node_modules/uuid/lib/bytesToUuid.js":[function(require,module,exports) {
+/**
+ * Convert array of 16 byte values to UUID string format of the form:
+ * XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+ */
+var byteToHex = [];
+for (var i = 0; i < 256; ++i) {
+  byteToHex[i] = (i + 0x100).toString(16).substr(1);
+}
+
+function bytesToUuid(buf, offset) {
+  var i = offset || 0;
+  var bth = byteToHex;
+  // join used to fix memory issue caused by concatenation: https://bugs.chromium.org/p/v8/issues/detail?id=3175#c4
+  return ([bth[buf[i++]], bth[buf[i++]], 
+	bth[buf[i++]], bth[buf[i++]], '-',
+	bth[buf[i++]], bth[buf[i++]], '-',
+	bth[buf[i++]], bth[buf[i++]], '-',
+	bth[buf[i++]], bth[buf[i++]], '-',
+	bth[buf[i++]], bth[buf[i++]],
+	bth[buf[i++]], bth[buf[i++]],
+	bth[buf[i++]], bth[buf[i++]]]).join('');
+}
+
+module.exports = bytesToUuid;
+
+},{}],"../../../../node_modules/uuid/v1.js":[function(require,module,exports) {
+var rng = require('./lib/rng');
+var bytesToUuid = require('./lib/bytesToUuid');
+
+// **`v1()` - Generate time-based UUID**
+//
+// Inspired by https://github.com/LiosK/UUID.js
+// and http://docs.python.org/library/uuid.html
+
+var _nodeId;
+var _clockseq;
+
+// Previous uuid creation time
+var _lastMSecs = 0;
+var _lastNSecs = 0;
+
+// See https://github.com/broofa/node-uuid for API details
+function v1(options, buf, offset) {
+  var i = buf && offset || 0;
+  var b = buf || [];
+
+  options = options || {};
+  var node = options.node || _nodeId;
+  var clockseq = options.clockseq !== undefined ? options.clockseq : _clockseq;
+
+  // node and clockseq need to be initialized to random values if they're not
+  // specified.  We do this lazily to minimize issues related to insufficient
+  // system entropy.  See #189
+  if (node == null || clockseq == null) {
+    var seedBytes = rng();
+    if (node == null) {
+      // Per 4.5, create and 48-bit node id, (47 random bits + multicast bit = 1)
+      node = _nodeId = [
+        seedBytes[0] | 0x01,
+        seedBytes[1], seedBytes[2], seedBytes[3], seedBytes[4], seedBytes[5]
+      ];
+    }
+    if (clockseq == null) {
+      // Per 4.2.2, randomize (14 bit) clockseq
+      clockseq = _clockseq = (seedBytes[6] << 8 | seedBytes[7]) & 0x3fff;
+    }
+  }
+
+  // UUID timestamps are 100 nano-second units since the Gregorian epoch,
+  // (1582-10-15 00:00).  JSNumbers aren't precise enough for this, so
+  // time is handled internally as 'msecs' (integer milliseconds) and 'nsecs'
+  // (100-nanoseconds offset from msecs) since unix epoch, 1970-01-01 00:00.
+  var msecs = options.msecs !== undefined ? options.msecs : new Date().getTime();
+
+  // Per 4.2.1.2, use count of uuid's generated during the current clock
+  // cycle to simulate higher resolution clock
+  var nsecs = options.nsecs !== undefined ? options.nsecs : _lastNSecs + 1;
+
+  // Time since last uuid creation (in msecs)
+  var dt = (msecs - _lastMSecs) + (nsecs - _lastNSecs)/10000;
+
+  // Per 4.2.1.2, Bump clockseq on clock regression
+  if (dt < 0 && options.clockseq === undefined) {
+    clockseq = clockseq + 1 & 0x3fff;
+  }
+
+  // Reset nsecs if clock regresses (new clockseq) or we've moved onto a new
+  // time interval
+  if ((dt < 0 || msecs > _lastMSecs) && options.nsecs === undefined) {
+    nsecs = 0;
+  }
+
+  // Per 4.2.1.2 Throw error if too many uuids are requested
+  if (nsecs >= 10000) {
+    throw new Error('uuid.v1(): Can\'t create more than 10M uuids/sec');
+  }
+
+  _lastMSecs = msecs;
+  _lastNSecs = nsecs;
+  _clockseq = clockseq;
+
+  // Per 4.1.4 - Convert from unix epoch to Gregorian epoch
+  msecs += 12219292800000;
+
+  // `time_low`
+  var tl = ((msecs & 0xfffffff) * 10000 + nsecs) % 0x100000000;
+  b[i++] = tl >>> 24 & 0xff;
+  b[i++] = tl >>> 16 & 0xff;
+  b[i++] = tl >>> 8 & 0xff;
+  b[i++] = tl & 0xff;
+
+  // `time_mid`
+  var tmh = (msecs / 0x100000000 * 10000) & 0xfffffff;
+  b[i++] = tmh >>> 8 & 0xff;
+  b[i++] = tmh & 0xff;
+
+  // `time_high_and_version`
+  b[i++] = tmh >>> 24 & 0xf | 0x10; // include version
+  b[i++] = tmh >>> 16 & 0xff;
+
+  // `clock_seq_hi_and_reserved` (Per 4.2.2 - include variant)
+  b[i++] = clockseq >>> 8 | 0x80;
+
+  // `clock_seq_low`
+  b[i++] = clockseq & 0xff;
+
+  // `node`
+  for (var n = 0; n < 6; ++n) {
+    b[i + n] = node[n];
+  }
+
+  return buf ? buf : bytesToUuid(b);
+}
+
+module.exports = v1;
+
+},{"./lib/rng":"../../../../node_modules/uuid/lib/rng-browser.js","./lib/bytesToUuid":"../../../../node_modules/uuid/lib/bytesToUuid.js"}],"../../../../node_modules/uuid/v4.js":[function(require,module,exports) {
+var rng = require('./lib/rng');
+var bytesToUuid = require('./lib/bytesToUuid');
+
+function v4(options, buf, offset) {
+  var i = buf && offset || 0;
+
+  if (typeof(options) == 'string') {
+    buf = options === 'binary' ? new Array(16) : null;
+    options = null;
+  }
+  options = options || {};
+
+  var rnds = options.random || (options.rng || rng)();
+
+  // Per 4.4, set bits for version and `clock_seq_hi_and_reserved`
+  rnds[6] = (rnds[6] & 0x0f) | 0x40;
+  rnds[8] = (rnds[8] & 0x3f) | 0x80;
+
+  // Copy bytes to buffer, if provided
+  if (buf) {
+    for (var ii = 0; ii < 16; ++ii) {
+      buf[i + ii] = rnds[ii];
+    }
+  }
+
+  return buf || bytesToUuid(rnds);
+}
+
+module.exports = v4;
+
+},{"./lib/rng":"../../../../node_modules/uuid/lib/rng-browser.js","./lib/bytesToUuid":"../../../../node_modules/uuid/lib/bytesToUuid.js"}],"../../../../node_modules/uuid/index.js":[function(require,module,exports) {
+var v1 = require('./v1');
+var v4 = require('./v4');
+
+var uuid = v4;
+uuid.v1 = v1;
+uuid.v4 = v4;
+
+module.exports = uuid;
+
+},{"./v1":"../../../../node_modules/uuid/v1.js","./v4":"../../../../node_modules/uuid/v4.js"}],"annoucement.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireWildcard(require("react"));
@@ -72337,6 +72629,12 @@ var _reactDom = _interopRequireDefault(require("react-dom"));
 var _core = require("@material-ui/core");
 
 var _styles = require("@material-ui/core/styles");
+
+require("../styles/dashboard.scss");
+
+var _messages = _interopRequireDefault(require("../data/messages.json"));
+
+var _uuid = _interopRequireDefault(require("uuid"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -72358,18 +72656,57 @@ const Annoucement = () => {
     message = e.target.value;
   };
 
-  const send = () => {
-    nodecg.sendMessage("annoucement-msg", message);
-    console.log(`sent "${message}"`);
+  const send = msg => {
+    nodecg.sendMessage("annoucement-msg", msg);
+    console.log(`sent "${msg}"`);
   };
 
-  return _react.default.createElement(_core.Grid, {
-    spacing: 2,
+  return _react.default.createElement("div", null, _react.default.createElement("div", null, _react.default.createElement(_core.Typography, {
+    variant: "h6",
+    className: "textCenter",
+    gutterBottom: true
+  }, "PRESETS"), _messages.default.map(({
+    msg
+  }) => {
+    return _react.default.createElement(_core.Grid, {
+      container: true,
+      alignItems: "center",
+      key: (0, _uuid.default)()
+    }, _react.default.createElement(_core.Typography, {
+      variant: "body1",
+      className: "textCenter message",
+      style: {
+        width: 250
+      }
+    }, msg), _react.default.createElement(_core.Button, {
+      color: "primary",
+      onClick: () => send(msg),
+      variant: "outlined"
+    }, "Send"));
+  })), _react.default.createElement("div", {
+    className: "group"
+  }, _react.default.createElement(_core.Typography, {
+    variant: "h6",
+    className: "textCenter",
+    gutterBottom: true
+  }, "CUSTOM MESSAGE"), _react.default.createElement(_core.Grid, {
+    style: {
+      width: "100%"
+    },
+    spacing: 1,
     container: true,
+    direction: "column",
+    justify: "center",
     alignItems: "center"
   }, _react.default.createElement(_core.Grid, {
-    item: true
+    item: true,
+    style: {
+      width: "100%"
+    }
   }, _react.default.createElement(_core.TextField, {
+    style: {
+      width: "100%"
+    },
     variant: "outlined",
     onChange: handleMsg,
     label: "message"
@@ -72377,15 +72714,15 @@ const Annoucement = () => {
     item: true
   }, _react.default.createElement(_core.Button, {
     color: "primary",
-    onClick: send,
-    varient: "outlined"
-  }, "Send")));
+    onClick: () => send(message),
+    variant: "outlined"
+  }, "Send")))));
 };
 
 _reactDom.default.render(_react.default.createElement(_styles.MuiThemeProvider, {
   theme: theme
 }, _react.default.createElement(Annoucement, null)), document.getElementById("root"));
-},{"react":"../../node_modules/react/index.js","react-dom":"../../node_modules/react-dom/index.js","@material-ui/core":"../../node_modules/@material-ui/core/esm/index.js","@material-ui/core/styles":"../../node_modules/@material-ui/core/esm/styles/index.js"}],"C:/Users/admin/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","react-dom":"../../node_modules/react-dom/index.js","@material-ui/core":"../../node_modules/@material-ui/core/esm/index.js","@material-ui/core/styles":"../../node_modules/@material-ui/core/esm/styles/index.js","../styles/dashboard.scss":"../styles/dashboard.scss","../data/messages.json":"../data/messages.json","uuid":"../../../../node_modules/uuid/index.js"}],"C:/Users/admin/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -72413,7 +72750,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56490" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63578" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
