@@ -8,6 +8,7 @@ import { Grid, Paper, Typography } from "@material-ui/core";
 import { useReplicant } from "use-nodecg";
 import Swipe from "../components/Swipe.jsx";
 import Particles from "react-particles-js";
+import logo from "../images/animlogo.gif";
 
 const Center = props => {
   const { children, ...properties } = props;
@@ -50,32 +51,45 @@ export default function Main() {
   const Scores = props => {
     return (
       <Center className="ignore">
-        <Anime opacity={[0, 1]} delay={1750} ease="linear">
-          <Typography variant="h2" className="pad">
-            {props.blue}
-          </Typography>
-        </Anime>
+        <Grid container justify="center" alignItems="center" direction="column">
+          <Anime opacity={[0, 1]} delay={1000}>
+            <img src={logo} height="50" style={{ margin: 10 }} />
+          </Anime>
+          <Grid container justify="center" alignItems="center">
+            <Anime opacity={[0, 1]} delay={1750} ease="linear">
+              <Typography variant="h2" className="pad">
+                {props.blue}
+              </Typography>
+            </Anime>
 
-        <Swipe delay={1750}>
-          <Box size={75} color="black">
-            <img height="50" src={defence} />
-          </Box>
-        </Swipe>
-        <Swipe delay={1500}>
-          <Box size={100} color="#ee9b51">
-            VS
-          </Box>
-        </Swipe>
-        <Swipe delay={1750}>
-          <Box size={75} color="black">
-            <img height="50" src={attack} />
-          </Box>
-        </Swipe>
-        <Anime opacity={[0, 1]} delay={1750} ease="linear">
-          <Typography variant="h2" className="pad" style={{ color: "white" }}>
-            {props.red}
-          </Typography>
-        </Anime>
+            <Swipe delay={1750}>
+              <div className="black" style={{ padding: 15 }}>
+                <img height="45" src={defence} />
+              </div>
+            </Swipe>
+            <Swipe delay={1500}>
+              <div className="glow">
+                <Box size={100} color="#ee9b51">
+                  VS
+                </Box>
+              </div>
+            </Swipe>
+            <Swipe delay={1750}>
+              <div className="black" style={{ padding: 15 }}>
+                <img height="45" src={attack} />
+              </div>
+            </Swipe>
+            <Anime opacity={[0, 1]} delay={1750} ease="linear">
+              <Typography
+                variant="h2"
+                className="pad"
+                style={{ color: "white" }}
+              >
+                {props.red}
+              </Typography>
+            </Anime>
+          </Grid>
+        </Grid>
       </Center>
     );
   };
@@ -93,8 +107,7 @@ export default function Main() {
               style={{ marginBottom: 15 }}
             />
             <Typography
-              variant="h2"
-              className="textShadow"
+              variant="h3"
               style={{ width: 750, textAlign: "center", color: text }}
             >
               {name}
@@ -138,13 +151,13 @@ export default function Main() {
       <Grid container alignItems="stretch" className="ignore">
         <TeamBox
           logo={blueURL}
-          name={scoreboard && scoreboard.blue.team.name}
-          setClass="white"
+          name={scoreboard && scoreboard.blue.team.name.toUpperCase()}
+          setClass="white-oeo"
           text="black"
         />
         <TeamBox
           logo={redURL}
-          name={scoreboard && scoreboard.red.team.name}
+          name={scoreboard && scoreboard.red.team.name.toUpperCase()}
           text="white"
         />
       </Grid>

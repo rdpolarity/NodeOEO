@@ -137,12 +137,14 @@
     "antd": "^3.22.0",
     "concurrently": "^4.1.1",
     "react": "^16.8.6",
+    "react-acrylic": "^0.1.1",
     "react-anime": "^2.2.0",
     "react-countdown-now": "^2.1.1",
     "react-dom": "^16.8.6",
     "react-particles-js": "^2.7.0",
     "react-slick": "^0.25.2",
     "slick-carousel": "^1.8.1",
-    "use-nodecg": "^0.4.0"
+    "use-nodecg": "^0.4.0",
+    "uuid": "^3.3.3"
   }
 }

@@ -77199,7 +77199,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"C:/Users/admin/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../node_modules/slick-carousel/slick/slick.css":[function(require,module,exports) {
+},{"./..\\images\\oeo.svg":[["oeo.74b3b263.svg","../images/oeo.svg"],"../images/oeo.svg"],"./..\\images\\Darkoeo.svg":[["Darkoeo.d624403f.svg","../images/Darkoeo.svg"],"../images/Darkoeo.svg"],"_css_loader":"C:/Users/admin/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../node_modules/slick-carousel/slick/slick.css":[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
@@ -77283,7 +77283,9 @@ function ParticleScatter({
   };
   return _react.default.createElement(_reactParticlesJs.default, particles);
 }
-},{"react":"../../node_modules/react/index.js","react-particles-js":"../../node_modules/react-particles-js/lib/particles.js"}],"credits.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","react-particles-js":"../../node_modules/react-particles-js/lib/particles.js"}],"../images/whitelogo.png":[function(require,module,exports) {
+module.exports = "whitelogo.01d7ff20.png";
+},{}],"credits.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -77309,6 +77311,8 @@ var _credits = _interopRequireDefault(require("../data/credits.json"));
 
 var _ParticleScatter = _interopRequireDefault(require("../components/ParticleScatter.jsx"));
 
+var _whitelogo = _interopRequireDefault(require("../images/whitelogo.png"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -77327,8 +77331,16 @@ function Main() {
     slidesToScroll: 1
   };
   return _react.default.createElement("div", {
-    className: "ignore white"
+    className: "ignore black-oeo"
   }, _react.default.createElement(_core.Grid, {
+    container: true,
+    justify: "center",
+    alignItems: "flex-end",
+    className: "ignore pad"
+  }, _react.default.createElement("img", {
+    src: _whitelogo.default,
+    width: "100px"
+  })), _react.default.createElement(_core.Grid, {
     container: true,
     alignItems: "center",
     justify: "center",
@@ -77336,12 +77348,18 @@ function Main() {
     className: "ignore",
     style: {
       textAlign: "center",
-      transform: "scale(1.5)"
+      transform: "scale(1.1)"
     }
   }, _react.default.createElement(_core.Typography, {
-    variant: "h1"
+    variant: "h1",
+    style: {
+      color: "white"
+    }
   }, "THANKS"), _react.default.createElement(_core.Typography, {
-    variant: "h3"
+    variant: "h3",
+    style: {
+      color: "white"
+    }
   }, "FOR WATCHING!"), _react.default.createElement(_reactSlick.default, _extends({}, settings, {
     style: {
       width: 500
@@ -77354,20 +77372,21 @@ function Main() {
       variant: "h2",
       style: {
         color: "#ee9b51"
-      }
+      },
+      className: "glow"
     }, title.toUpperCase()), players.map(player => {
       return _react.default.createElement(_core.Typography, {
-        varient: "body1"
+        varient: "body1",
+        style: {
+          color: "white"
+        }
       }, player);
     }));
-  }))), _react.default.createElement(_ParticleScatter.default, {
-    color: "#ee9b51",
-    amount: 50
-  }));
+  }))));
 }
 
 _reactDom.default.render(_react.default.createElement(Main, null), document.getElementById("root"));
-},{"react":"../../node_modules/react/index.js","react-dom":"../../node_modules/react-dom/index.js","react-slick":"../../node_modules/react-slick/lib/index.js","@material-ui/core":"../../node_modules/@material-ui/core/esm/index.js","../styles/graphics.scss":"../styles/graphics.scss","slick-carousel/slick/slick.css":"../../node_modules/slick-carousel/slick/slick.css","slick-carousel/slick/slick-theme.css":"../../node_modules/slick-carousel/slick/slick-theme.css","../data/credits.json":"../data/credits.json","../components/ParticleScatter.jsx":"../components/ParticleScatter.jsx"}],"C:/Users/admin/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","react-dom":"../../node_modules/react-dom/index.js","react-slick":"../../node_modules/react-slick/lib/index.js","@material-ui/core":"../../node_modules/@material-ui/core/esm/index.js","../styles/graphics.scss":"../styles/graphics.scss","slick-carousel/slick/slick.css":"../../node_modules/slick-carousel/slick/slick.css","slick-carousel/slick/slick-theme.css":"../../node_modules/slick-carousel/slick/slick-theme.css","../data/credits.json":"../data/credits.json","../components/ParticleScatter.jsx":"../components/ParticleScatter.jsx","../images/whitelogo.png":"../images/whitelogo.png"}],"C:/Users/admin/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -77395,7 +77414,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53315" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62850" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

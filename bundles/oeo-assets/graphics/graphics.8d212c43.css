@@ -131,4 +131,20 @@ body {
   position: absolute;
 }
 
+.glow {
+  filter: drop-shadow(0px 0px 10px #ee9b51);
+}
+
+.white-oeo {
+  background-color: white;
+  background-image: url("oeo.74b3b263.svg");
+  background-size: 150px;
+}
+
+.black-oeo {
+  background-color: #111111;
+  background-image: url("Darkoeo.d624403f.svg");
+  background-size: 150px;
+}
+
 /*# sourceMappingURL=graphics.8d212c43.css.map */

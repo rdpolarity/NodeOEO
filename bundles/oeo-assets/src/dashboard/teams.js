@@ -29,7 +29,9 @@ const theme = createMuiTheme({
   }
 });
 
-nodecg.Replicant("team-data");
+nodecg.Replicant("team-data", {
+  defaultValue: [{ name: "default", logo: "" }]
+});
 
 export default function Main() {
   const logos = useReplicant("assets:teamLogos")[0];

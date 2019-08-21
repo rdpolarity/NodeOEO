@@ -27638,7 +27638,7 @@ function(a){a=P(a);for(var c=v.length;c--;)for(var d=v[c],b=d.animations,f=b.len
 !0;a.completed=!0});m(d).forEach(function(b){var d=z(b,D(S,a||{}));d.targets=d.targets||a.targets;b=c.duration;var e=d.offset;d.autoplay=!1;d.direction=c.direction;d.offset=h.und(e)?b:L(e,b);c.began=!0;c.completed=!0;c.seek(d.offset);d=q(d);d.began=!0;d.completed=!0;d.duration>b&&(c.duration=d.duration);c.children.push(d)});c.seek(0);c.reset();c.autoplay&&c.restart();return c};return c};q.random=function(a,c){return Math.floor(Math.random()*(c-a+1))+a};return q});
 },{}],"../../node_modules/react-anime/dist/react-anime.js":[function(require,module,exports) {
 module.exports=function(e){var t={};function r(n){if(t[n])return t[n].exports;var o=t[n]={i:n,l:!1,exports:{}};return e[n].call(o.exports,o,o.exports,r),o.l=!0,o.exports}return r.m=e,r.c=t,r.d=function(e,t,n){r.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},r.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},r.t=function(e,t){if(1&t&&(e=r(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var n=Object.create(null);if(r.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var o in e)r.d(n,o,function(t){return e[t]}.bind(null,o));return n},r.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return r.d(t,"a",t),t},r.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},r.p="",r(r.s=0)}([function(e,t,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default=t.Anime=void 0;var n=function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)if(Object.prototype.hasOwnProperty.call(e,r)){var n=Object.defineProperty&&Object.getOwnPropertyDescriptor?Object.getOwnPropertyDescriptor(e,r):{};n.get||n.set?Object.defineProperty(t,r,n):t[r]=e[r]}return t.default=e,t}(r(1)),o=function(e){return e&&e.__esModule?e:{default:e}}(r(2));function i(e){return(i="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e})(e)}function u(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}function c(e){return(c=Object.setPrototypeOf?Object.getPrototypeOf:function(e){return e.__proto__||Object.getPrototypeOf(e)})(e)}function f(e,t){return(f=Object.setPrototypeOf||function(e,t){return e.__proto__=t,e})(e,t)}function a(e){if(void 0===e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return e}function l(e,t,r){return t in e?Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}):e[t]=r,e}var p="undefined"!=typeof window?r(3):function(e){return e},s=function(e){function t(e){var r;!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t),l(a(a(r=function(e,t){return!t||"object"!==i(t)&&"function"!=typeof t?a(e):t}(this,c(t).call(this,e)))),"createAnime",function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:r.props,t=function(e){for(var t=1;t<arguments.length;t++){var r=null!=arguments[t]?arguments[t]:{},n=Object.keys(r);"function"==typeof Object.getOwnPropertySymbols&&(n=n.concat(Object.getOwnPropertySymbols(r).filter(function(e){return Object.getOwnPropertyDescriptor(r,e).enumerable}))),n.forEach(function(t){l(e,t,r[t])})}return e}({targets:r.targets},e);p.remove(r.targets),delete t.children,i(r.anime),r.anime=p(t)}),l(a(a(r)),"addTarget",function(e){r.targets=function(e){return function(e){if(Array.isArray(e)){for(var t=0,r=new Array(e.length);t<e.length;t++)r[t]=e[t];return r}}(e)||function(e){if(Symbol.iterator in Object(e)||"[object Arguments]"===Object.prototype.toString.call(e))return Array.from(e)}(e)||function(){throw new TypeError("Invalid attempt to spread non-iterable instance")}()}(r.targets).concat([e])}),r.targets=[];var n=e.children;return Array.isArray(n)||(n=[n]),r.children={cur:n,prev:[],next:[]},r}return function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function");e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,writable:!0,configurable:!0}}),t&&f(e,t)}(t,n.Component),function(e,t,r){t&&u(e.prototype,t)}(t,[{key:"componentDidMount",value:function(){this.createAnime()}},{key:"componentWillReceiveProps",value:function(e){var t=e.children,r=this.props.children;Array.isArray(t)||(t=[t]),Array.isArray(r)||(r=[r]);var n=t.filter(function(e){return!r.reduce(function(t,r){return t||(0,o.default)(e,r)},!1)}),i=n.reduce(function(e,t){return e||r.indexOf(t)>-1},!1);this.children={cur:t.filter(function(e){return n.indexOf(e)<0}),prev:i?n:this.children.prev,next:i?this.children.next:n},this.createAnime(e)}},{key:"render",value:function(){var e=this,t=(this.props.style,this.children),r=t.cur;return t.prev,t.next,n.default.createElement(n.Fragment,null,r.map(function(t,r){return n.default.cloneElement(t,{key:r,ref:e.addTarget})}))}}]),t}();t.Anime=s;var y=s;t.default=y},function(e,t){e.exports=require("react")},function(e,t){e.exports=require("lodash.isequal")},function(e,t){e.exports=require("animejs")}]);
-},{"react":"../../node_modules/react/index.js","lodash.isequal":"../../node_modules/lodash.isequal/index.js","animejs":"../../node_modules/react-anime/node_modules/animejs/anime.min.js"}],"../../../../node_modules/uuid/lib/rng-browser.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","lodash.isequal":"../../node_modules/lodash.isequal/index.js","animejs":"../../node_modules/react-anime/node_modules/animejs/anime.min.js"}],"../../node_modules/uuid/lib/rng-browser.js":[function(require,module,exports) {
 // Unique ID creation requires a high quality random # generator.  In the
 // browser this is a little complicated due to unknown quality of Math.random()
 // and inconsistent support for the `crypto` API.  We do the best we can via
@@ -27674,7 +27674,7 @@ if (getRandomValues) {
   };
 }
 
-},{}],"../../../../node_modules/uuid/lib/bytesToUuid.js":[function(require,module,exports) {
+},{}],"../../node_modules/uuid/lib/bytesToUuid.js":[function(require,module,exports) {
 /**
  * Convert array of 16 byte values to UUID string format of the form:
  * XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
@@ -27700,7 +27700,7 @@ function bytesToUuid(buf, offset) {
 
 module.exports = bytesToUuid;
 
-},{}],"../../../../node_modules/uuid/v1.js":[function(require,module,exports) {
+},{}],"../../node_modules/uuid/v1.js":[function(require,module,exports) {
 var rng = require('./lib/rng');
 var bytesToUuid = require('./lib/bytesToUuid');
 
@@ -27811,7 +27811,7 @@ function v1(options, buf, offset) {
 
 module.exports = v1;
 
-},{"./lib/rng":"../../../../node_modules/uuid/lib/rng-browser.js","./lib/bytesToUuid":"../../../../node_modules/uuid/lib/bytesToUuid.js"}],"../../../../node_modules/uuid/v4.js":[function(require,module,exports) {
+},{"./lib/rng":"../../node_modules/uuid/lib/rng-browser.js","./lib/bytesToUuid":"../../node_modules/uuid/lib/bytesToUuid.js"}],"../../node_modules/uuid/v4.js":[function(require,module,exports) {
 var rng = require('./lib/rng');
 var bytesToUuid = require('./lib/bytesToUuid');
 
@@ -27842,7 +27842,7 @@ function v4(options, buf, offset) {
 
 module.exports = v4;
 
-},{"./lib/rng":"../../../../node_modules/uuid/lib/rng-browser.js","./lib/bytesToUuid":"../../../../node_modules/uuid/lib/bytesToUuid.js"}],"../../../../node_modules/uuid/index.js":[function(require,module,exports) {
+},{"./lib/rng":"../../node_modules/uuid/lib/rng-browser.js","./lib/bytesToUuid":"../../node_modules/uuid/lib/bytesToUuid.js"}],"../../node_modules/uuid/index.js":[function(require,module,exports) {
 var v1 = require('./v1');
 var v4 = require('./v4');
 
@@ -27852,7 +27852,7 @@ uuid.v4 = v4;
 
 module.exports = uuid;
 
-},{"./v1":"../../../../node_modules/uuid/v1.js","./v4":"../../../../node_modules/uuid/v4.js"}],"test.js":[function(require,module,exports) {
+},{"./v1":"../../node_modules/uuid/v1.js","./v4":"../../node_modules/uuid/v4.js"}],"test.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -27889,7 +27889,7 @@ function Main() {
 }
 
 _reactDom.default.render(_react.default.createElement(Main, null), document.getElementById("root"));
-},{"react":"../../node_modules/react/index.js","react-dom":"../../node_modules/react-dom/index.js","react-anime":"../../node_modules/react-anime/dist/react-anime.js","uuid":"../../../../node_modules/uuid/index.js"}],"C:/Users/admin/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","react-dom":"../../node_modules/react-dom/index.js","react-anime":"../../node_modules/react-anime/dist/react-anime.js","uuid":"../../node_modules/uuid/index.js"}],"C:/Users/admin/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -27917,7 +27917,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53315" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62850" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
