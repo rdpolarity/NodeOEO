@@ -1,7 +1,7 @@
 {
   "name": "oeo-assets",
   "version": "0.0.0",
-  "description": "Assets for tornament",
+  "description": "Assets for tournament",
   "author": {
     "name": "rdpolarity",
     "email": "rdpolarity@gmail.com",
@@ -95,6 +95,11 @@
         "file": "credits.html",
         "width": 1920,
         "height": 1080
+      },
+      {
+        "file": "alerts.html",
+        "width": 1920,
+        "height": 1080
       }
     ],
     "assetCategories": [
@@ -129,6 +134,7 @@
   "dependencies": {
     "@material-ui/core": "^4.3.1",
     "animejs": "^3.1.0",
+    "antd": "^3.22.0",
     "concurrently": "^4.1.1",
     "react": "^16.8.6",
     "react-anime": "^2.2.0",

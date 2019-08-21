@@ -1,0 +1,134 @@
+body {
+  background-color: white;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  color: black;
+}
+
+.primary {
+  background-color: #ee9b51;
+}
+.primary p {
+  color: white;
+}
+
+.round-bottom {
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.round-top div {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.round-left div {
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.round-right div {
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.center {
+  text-align: center;
+}
+
+.white {
+  background-color: white;
+}
+.white p {
+  color: black;
+}
+
+.gutter {
+  padding: 10px;
+}
+
+.pad {
+  margin: 10px;
+  padding: 10px;
+}
+
+.black {
+  background-color: black;
+}
+.black p {
+  color: white;
+}
+
+.grey {
+  background-color: grey;
+}
+.grey p {
+  color: white;
+}
+
+.pl {
+  margin-left: 10px;
+}
+
+.flip {
+  transform: rotate(90deg);
+}
+
+.box {
+  width: 50px;
+  height: 100%;
+}
+
+.ignore {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+}
+
+.logo {
+  height: 150px;
+  margin: 10px;
+}
+
+.pad {
+  padding: 20px;
+}
+
+.fit {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.teamLogo {
+  height: 250px;
+}
+
+.applyShadow p {
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.applyShadow img {
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+}
+
+.imgShadow {
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+}
+
+.textShadow {
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.grad {
+  background: radial-gradient(#ffffff 20%, rgba(0, 0, 0, 0) 50%);
+}
+
+.behind {
+  border-radius: 10px;
+  position: absolute;
+}
+
+/*# sourceMappingURL=graphics.8d212c43.css.map */

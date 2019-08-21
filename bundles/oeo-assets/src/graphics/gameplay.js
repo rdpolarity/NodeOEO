@@ -7,87 +7,24 @@ import logo from "../images/animlogo.gif";
 import "../styles/graphics.scss";
 import Anime from "../components/Anime";
 import { useReplicant } from "use-nodecg";
+import Swipe from "../components/Swipe.jsx";
+
+import attack from "../images/attack.png";
+import defence from "../images/defence.png";
 
 nodecg.log.info("[OEO] Session Started");
+
+let delay = 3000;
 
 const Logo = () => {
   return (
     <Grid container justify="flex-end" alignItems="flex-end" className="ignore">
       <Grid item>
-        <Anime opacity={[0, 1]} delay={2000}>
+        <Anime opacity={[0, 1]} delay={delay}>
           <img src={logo} className="logo" />
         </Anime>
       </Grid>
     </Grid>
-  );
-};
-
-const Swipe = ({ children }) => {
-  return (
-    <Anime
-      duration={1000}
-      timeout={12000}
-      opacity={[0, 1]}
-      translateX={[-50, 0]}
-      borderRadius={["100%", 0]}
-      easing="easeOutExpo"
-    >
-      {children}
-    </Anime>
-  );
-};
-
-const Annoucements = () => {
-  const [items, setItems] = useState([]);
-
-  const add = msg => {
-    setItems([...items, { id: uuid(), text: msg }]);
-  };
-
-  useEffect(() => {
-    const handler = msg => {
-      add(msg);
-    };
-    nodecg.listenFor("annoucement-msg", handler);
-    return () => {
-      nodecg.unlisten("annoucement-msg", handler);
-    };
-  });
-
-  return (
-    <div>
-      {items.map(({ id, text }) => (
-        <Swipe key={id}>
-          <Paper
-            elevation={20}
-            className="white"
-            style={{ width: 400, height: 150, margin: 10, overflow: "hidden" }}
-          >
-            <div className="primary" style={{ width: "100%", padding: 10 }}>
-              <Typography variant="h5">
-                <Icon>info</Icon>Annoucement
-              </Typography>
-            </div>
-            <Anime
-              width={["100%", 0]}
-              opacity={[1, 1]}
-              duration={12000}
-              easing="linear"
-            >
-              <div style={{ height: 5, backgroundColor: "lightBlue" }} />
-            </Anime>
-
-            <Typography
-              style={{ padding: 10 }}
-              color="textPrimary"
-              variant="h6"
-            >
-              {text}
-            </Typography>
-          </Paper>
-        </Swipe>
-      ))}
-    </div>
   );
 };
 
@@ -122,33 +59,47 @@ const Scoreboard = props => {
         style={{
           backgroundColor: props.color,
           width: props.width,
-          height: "100%"
+          height: 50
         }}
       >
         <Grid item>
-          <Typography variant="h4">{props.children}</Typography>
+          <Typography variant="h4" style={{ color: "white" }}>
+            {props.children}
+          </Typography>
         </Grid>
       </Grid>
     );
   };
 
   const ScoreData = props => {
-    const { team, score, img, ...properties } = props;
+    const { team, score, img, icon, ...properties } = props;
+    useEffect(() => {
+      setTimeout(() => {
+        delay = 0;
+      }, 1100);
+    }, []);
     return (
       <Grid container style={{ height: "100%" }} {...properties}>
-        <Box color="black">
-          <Icon>info</Icon>
-        </Box>
-        <Box color="#ee9b51">{score}</Box>
-        <img height="50" width="50" src={img ? img : ""} />
-
-        <Typography
-          variant="h4"
-          color="textPrimary"
-          style={{ margin: "0px 10px 0px 10px" }}
-        >
-          {team}
-        </Typography>
+        {/* <Swipe delay={delay + 700}>
+          <Box color="black">
+            <img height="25" src={icon} />
+          </Box>
+        </Swipe> */}
+        <Swipe delay={delay + 900}>
+          <Box color="#ee9b51">{score}</Box>
+        </Swipe>
+        <Anime opacity={[0, 1]} delay={delay + 1100}>
+          <img height="50" width="50" src={img ? img : ""} />
+        </Anime>
+        <Anime opacity={[0, 1]} delay={delay + 1200} easing="linear">
+          <Typography
+            variant="h5"
+            color="textPrimary"
+            style={{ margin: "0px 10px 0px 10px" }}
+          >
+            {team && team.toUpperCase()}
+          </Typography>
+        </Anime>
       </Grid>
     );
   };
@@ -174,15 +125,20 @@ const Scoreboard = props => {
         alignItems="flex-start"
         className="ignore"
       >
-        <Anime render={show} opacity={[0, 1]} easing="easeInOutExpo">
+        <Swipe delay={delay + 1500}>
           <Typography
-            style={{ minWidth: 200, overflow: "hidden" }}
+            style={{
+              minWidth: 200,
+              overflow: "hidden",
+              color: "white"
+            }}
             className="black round-bottom center"
             variant="h5"
           >
-            ROUND 1
+            ROUND{" "}
+            {scoreboard && scoreboard.blue.score + scoreboard.red.score + 1}
           </Typography>
-        </Anime>
+        </Swipe>
       </Grid>
       <Grid
         container
@@ -190,7 +146,7 @@ const Scoreboard = props => {
         style={{ padding: "10px 50px 0px 50px" }}
         justify="space-between"
       >
-        <Anime {...animProps} translateX={[-100, 0]}>
+        <Swipe delay={delay}>
           <Paper style={{ height: 50, width: 700, overflow: "hidden" }}>
             <ScoreData
               container
@@ -200,19 +156,21 @@ const Scoreboard = props => {
               img={blueURL}
               team={scoreboard && scoreboard.blue.team.name}
               score={scoreboard && scoreboard.blue.score}
+              icon={defence}
             />
           </Paper>
-        </Anime>
-        <Anime {...animProps} translateX={[100, 0]}>
+        </Swipe>
+        <Swipe delay={delay}>
           <Paper style={{ height: 50, width: 700 }}>
             <ScoreData
               img={redURL}
               team={scoreboard && scoreboard.red.team.name}
               score={scoreboard && scoreboard.red.score}
+              icon={attack}
               alignItems="center"
             />
           </Paper>
-        </Anime>
+        </Swipe>
       </Grid>
     </div>
   );
@@ -223,15 +181,6 @@ export default function Frame() {
     <div>
       <Logo />
       <Scoreboard />
-
-      <Grid
-        container
-        alignItems="flex-end"
-        className="ignore"
-        style={{ padding: 25 }}
-      >
-        <Annoucements />
-      </Grid>
     </div>
   );
 }

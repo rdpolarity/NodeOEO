@@ -1,12 +1,12 @@
 body {
-  background-color: blue;
+  background-color: white;
   // background-image: url(../images/OWSpectatorMockup.jpg);
 }
 
 * {
   padding: 0px;
   margin: 0px;
-  color: white;
+  color: black;
 }
 
 .primary {
@@ -93,7 +93,7 @@ $logo-size: 150px;
 }
 
 .pad {
-  padding: 25px;
+  padding: 20px;
 }
 
 .fit {
@@ -121,4 +121,13 @@ $logo-size: 150px;
 
 .textShadow {
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.grad {
+  background: radial-gradient(#ffffff 20%, rgba(0, 0, 0, 0) 50%);
+}
+
+.behind {
+  border-radius: 10px;
+  position: absolute;
 }

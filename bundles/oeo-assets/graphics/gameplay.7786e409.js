@@ -76320,7 +76320,106 @@ Object.keys(_useListenFor).forEach(function (key) {
     }
   });
 });
-},{"./useReplicant":"../../node_modules/use-nodecg/esm/useReplicant/index.js","./useReplicantOnce":"../../node_modules/use-nodecg/esm/useReplicantOnce/index.js","./useListenFor":"../../node_modules/use-nodecg/esm/useListenFor/index.js"}],"gameplay.js":[function(require,module,exports) {
+},{"./useReplicant":"../../node_modules/use-nodecg/esm/useReplicant/index.js","./useReplicantOnce":"../../node_modules/use-nodecg/esm/useReplicantOnce/index.js","./useListenFor":"../../node_modules/use-nodecg/esm/useListenFor/index.js"}],"../components/Swipe.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _Anime = _interopRequireDefault(require("../components/Anime"));
+
+require("../styles/graphics.scss");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+const Swipe = props => {
+  const {
+    children,
+    delay,
+    ...adds
+  } = props;
+
+  const child = _react.default.useRef(0);
+
+  const [childWidth, setChildWidth] = _react.default.useState(0);
+
+  const [childHeight, setChildHeight] = _react.default.useState(0);
+
+  const properties = {
+    easing: "easeOutExpo",
+    opacity: [0, 1],
+    duration: 1000
+  };
+
+  _react.default.useEffect(() => {
+    setChildWidth(child.current.offsetWidth);
+    setChildHeight(child.current.offsetHeight);
+  }, []);
+
+  return _react.default.createElement("div", {
+    style: {
+      position: "relative"
+    }
+  }, _react.default.createElement("div", {
+    className: "behind"
+  }, _react.default.createElement(_Anime.default, _extends({}, properties, {
+    timeout: 1,
+    delay: delay,
+    scaleX: [0, 1]
+  }), _react.default.createElement("div", {
+    style: {
+      backgroundColor: "#111111",
+      width: childWidth,
+      height: childHeight
+    }
+  }))), _react.default.createElement("div", {
+    className: "behind"
+  }, _react.default.createElement(_Anime.default, _extends({}, properties, {
+    timeout: 1,
+    delay: delay + 250,
+    scaleX: [0, 1]
+  }), _react.default.createElement("div", {
+    style: {
+      backgroundColor: "#ee9b51",
+      width: childWidth,
+      height: childHeight
+    }
+  }))), _react.default.createElement("div", {
+    className: "behind"
+  }, _react.default.createElement(_Anime.default, _extends({}, properties, {
+    timeout: 1,
+    delay: delay + 500,
+    scaleX: [0, 1]
+  }), _react.default.createElement("div", {
+    style: {
+      backgroundColor: "#FFFFFF",
+      width: childWidth,
+      height: childHeight
+    }
+  }))), _react.default.createElement("div", null, _react.default.createElement(_Anime.default, _extends({}, properties, adds, {
+    delay: delay + 750,
+    scaleX: [0, 1]
+  }), _react.default.createElement("div", {
+    ref: child
+  }, children))));
+};
+
+Swipe.defaultProps = {
+  delay: 0
+};
+var _default = Swipe;
+exports.default = _default;
+},{"react":"../../node_modules/react/index.js","../components/Anime":"../components/Anime.jsx","../styles/graphics.scss":"../styles/graphics.scss"}],"../images/attack.png":[function(require,module,exports) {
+module.exports = "attack.f3aee5dc.png";
+},{}],"../images/defence.png":[function(require,module,exports) {
+module.exports = "defence.ea71b545.png";
+},{}],"gameplay.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -76344,6 +76443,12 @@ var _Anime = _interopRequireDefault(require("../components/Anime"));
 
 var _useNodecg = require("use-nodecg");
 
+var _Swipe = _interopRequireDefault(require("../components/Swipe.jsx"));
+
+var _attack = _interopRequireDefault(require("../images/attack.png"));
+
+var _defence = _interopRequireDefault(require("../images/defence.png"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
@@ -76351,6 +76456,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 nodecg.log.info("[OEO] Session Started");
+let delay = 3000;
 
 const Logo = () => {
   return _react.default.createElement(_core.Grid, {
@@ -76362,85 +76468,11 @@ const Logo = () => {
     item: true
   }, _react.default.createElement(_Anime.default, {
     opacity: [0, 1],
-    delay: 2000
+    delay: delay
   }, _react.default.createElement("img", {
     src: _animlogo.default,
     className: "logo"
   }))));
-};
-
-const Swipe = ({
-  children
-}) => {
-  return _react.default.createElement(_Anime.default, {
-    duration: 1000,
-    timeout: 12000,
-    opacity: [0, 1],
-    translateX: [-50, 0],
-    borderRadius: ["100%", 0],
-    easing: "easeOutExpo"
-  }, children);
-};
-
-const Annoucements = () => {
-  const [items, setItems] = (0, _react.useState)([]);
-
-  const add = msg => {
-    setItems([...items, {
-      id: (0, _uuid.default)(),
-      text: msg
-    }]);
-  };
-
-  (0, _react.useEffect)(() => {
-    const handler = msg => {
-      add(msg);
-    };
-
-    nodecg.listenFor("annoucement-msg", handler);
-    return () => {
-      nodecg.unlisten("annoucement-msg", handler);
-    };
-  });
-  return _react.default.createElement("div", null, items.map(({
-    id,
-    text
-  }) => _react.default.createElement(Swipe, {
-    key: id
-  }, _react.default.createElement(_core.Paper, {
-    elevation: 20,
-    className: "white",
-    style: {
-      width: 400,
-      height: 150,
-      margin: 10,
-      overflow: "hidden"
-    }
-  }, _react.default.createElement("div", {
-    className: "primary",
-    style: {
-      width: "100%",
-      padding: 10
-    }
-  }, _react.default.createElement(_core.Typography, {
-    variant: "h5"
-  }, _react.default.createElement(_core.Icon, null, "info"), "Annoucement")), _react.default.createElement(_Anime.default, {
-    width: ["100%", 0],
-    opacity: [1, 1],
-    duration: 12000,
-    easing: "linear"
-  }, _react.default.createElement("div", {
-    style: {
-      height: 5,
-      backgroundColor: "lightBlue"
-    }
-  })), _react.default.createElement(_core.Typography, {
-    style: {
-      padding: 10
-    },
-    color: "textPrimary",
-    variant: "h6"
-  }, text)))));
 };
 
 const Scoreboard = props => {
@@ -76474,12 +76506,15 @@ const Scoreboard = props => {
       style: {
         backgroundColor: props.color,
         width: props.width,
-        height: "100%"
+        height: 50
       }
     }, _react.default.createElement(_core.Grid, {
       item: true
     }, _react.default.createElement(_core.Typography, {
-      variant: "h4"
+      variant: "h4",
+      style: {
+        color: "white"
+      }
     }, props.children)));
   };
 
@@ -76488,28 +76523,41 @@ const Scoreboard = props => {
       team,
       score,
       img,
+      icon,
       ...properties
     } = props;
+    (0, _react.useEffect)(() => {
+      setTimeout(() => {
+        delay = 0;
+      }, 1100);
+    }, []);
     return _react.default.createElement(_core.Grid, _extends({
       container: true,
       style: {
         height: "100%"
       }
-    }, properties), _react.default.createElement(Box, {
-      color: "black"
-    }, _react.default.createElement(_core.Icon, null, "info")), _react.default.createElement(Box, {
+    }, properties), _react.default.createElement(_Swipe.default, {
+      delay: delay + 900
+    }, _react.default.createElement(Box, {
       color: "#ee9b51"
-    }, score), _react.default.createElement("img", {
+    }, score)), _react.default.createElement(_Anime.default, {
+      opacity: [0, 1],
+      delay: delay + 1100
+    }, _react.default.createElement("img", {
       height: "50",
       width: "50",
       src: img ? img : ""
-    }), _react.default.createElement(_core.Typography, {
-      variant: "h4",
+    })), _react.default.createElement(_Anime.default, {
+      opacity: [0, 1],
+      delay: delay + 1200,
+      easing: "linear"
+    }, _react.default.createElement(_core.Typography, {
+      variant: "h5",
       color: "textPrimary",
       style: {
         margin: "0px 10px 0px 10px"
       }
-    }, team));
+    }, team && team.toUpperCase())));
   };
 
   Box.defaultProps = {
@@ -76523,27 +76571,26 @@ const Scoreboard = props => {
     justify: "center",
     alignItems: "flex-start",
     className: "ignore"
-  }, _react.default.createElement(_Anime.default, {
-    render: show,
-    opacity: [0, 1],
-    easing: "easeInOutExpo"
+  }, _react.default.createElement(_Swipe.default, {
+    delay: delay + 1500
   }, _react.default.createElement(_core.Typography, {
     style: {
       minWidth: 200,
-      overflow: "hidden"
+      overflow: "hidden",
+      color: "white"
     },
     className: "black round-bottom center",
     variant: "h5"
-  }, "ROUND 1"))), _react.default.createElement(_core.Grid, {
+  }, "ROUND", " ", scoreboard && scoreboard.blue.score + scoreboard.red.score + 1))), _react.default.createElement(_core.Grid, {
     container: true,
     className: "ignore",
     style: {
       padding: "10px 50px 0px 50px"
     },
     justify: "space-between"
-  }, _react.default.createElement(_Anime.default, _extends({}, animProps, {
-    translateX: [-100, 0]
-  }), _react.default.createElement(_core.Paper, {
+  }, _react.default.createElement(_Swipe.default, {
+    delay: delay
+  }, _react.default.createElement(_core.Paper, {
     style: {
       height: 50,
       width: 700,
@@ -76556,10 +76603,11 @@ const Scoreboard = props => {
     alignItems: "center",
     img: blueURL,
     team: scoreboard && scoreboard.blue.team.name,
-    score: scoreboard && scoreboard.blue.score
-  }))), _react.default.createElement(_Anime.default, _extends({}, animProps, {
-    translateX: [100, 0]
-  }), _react.default.createElement(_core.Paper, {
+    score: scoreboard && scoreboard.blue.score,
+    icon: _defence.default
+  }))), _react.default.createElement(_Swipe.default, {
+    delay: delay
+  }, _react.default.createElement(_core.Paper, {
     style: {
       height: 50,
       width: 700
@@ -76568,23 +76616,17 @@ const Scoreboard = props => {
     img: redURL,
     team: scoreboard && scoreboard.red.team.name,
     score: scoreboard && scoreboard.red.score,
+    icon: _attack.default,
     alignItems: "center"
   })))));
 };
 
 function Frame() {
-  return _react.default.createElement("div", null, _react.default.createElement(Logo, null), _react.default.createElement(Scoreboard, null), _react.default.createElement(_core.Grid, {
-    container: true,
-    alignItems: "flex-end",
-    className: "ignore",
-    style: {
-      padding: 25
-    }
-  }, _react.default.createElement(Annoucements, null)));
+  return _react.default.createElement("div", null, _react.default.createElement(Logo, null), _react.default.createElement(Scoreboard, null));
 }
 
 _reactDom.default.render(_react.default.createElement(Frame, null), document.getElementById("root"));
-},{"react":"../../node_modules/react/index.js","react-dom":"../../node_modules/react-dom/index.js","@material-ui/core":"../../node_modules/@material-ui/core/esm/index.js","uuid":"../../../../node_modules/uuid/index.js","../images/animlogo.gif":"../images/animlogo.gif","../styles/graphics.scss":"../styles/graphics.scss","../components/Anime":"../components/Anime.jsx","use-nodecg":"../../node_modules/use-nodecg/esm/index.js"}],"C:/Users/admin/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","react-dom":"../../node_modules/react-dom/index.js","@material-ui/core":"../../node_modules/@material-ui/core/esm/index.js","uuid":"../../../../node_modules/uuid/index.js","../images/animlogo.gif":"../images/animlogo.gif","../styles/graphics.scss":"../styles/graphics.scss","../components/Anime":"../components/Anime.jsx","use-nodecg":"../../node_modules/use-nodecg/esm/index.js","../components/Swipe.jsx":"../components/Swipe.jsx","../images/attack.png":"../images/attack.png","../images/defence.png":"../images/defence.png"}],"C:/Users/admin/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -76612,7 +76654,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63577" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53315" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

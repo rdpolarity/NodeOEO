@@ -1,11 +1,11 @@
 body {
-  background-color: blue;
+  background-color: white;
 }
 
 * {
   padding: 0px;
   margin: 0px;
-  color: white;
+  color: black;
 }
 
 .primary {
@@ -94,7 +94,7 @@ body {
 }
 
 .pad {
-  padding: 25px;
+  padding: 20px;
 }
 
 .fit {
@@ -120,6 +120,15 @@ body {
 
 .textShadow {
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.grad {
+  background: radial-gradient(#ffffff 20%, rgba(0, 0, 0, 0) 50%);
+}
+
+.behind {
+  border-radius: 10px;
+  position: absolute;
 }
 
 /*# sourceMappingURL=gameplay.7786e409.css.map */
