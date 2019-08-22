@@ -78319,7 +78319,8 @@ function Main() {
   }), _react.default.createElement(TeamBox, {
     logo: redURL,
     name: scoreboard && scoreboard.red.team.name.toUpperCase(),
-    text: "white"
+    text: "white",
+    setClass: "black-oeo"
   })), _react.default.createElement(Scores, {
     blue: scoreboard && scoreboard.blue.score,
     red: scoreboard && scoreboard.red.score
@@ -78355,7 +78356,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62850" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64771" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

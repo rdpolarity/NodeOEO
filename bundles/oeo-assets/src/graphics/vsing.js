@@ -159,6 +159,7 @@ export default function Main() {
           logo={redURL}
           name={scoreboard && scoreboard.red.team.name.toUpperCase()}
           text="white"
+          setClass="black-oeo"
         />
       </Grid>
       <Scores
