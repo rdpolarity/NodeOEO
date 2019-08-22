@@ -11,10 +11,10 @@ pipeline {
         sh 'npm install --prefix bundles/oeo-assets'
       }
     }
-    stage('Deliver') {
+    stage('Deliver NodeCG') {
       steps {
         input 'Start NodeCG server?'
-        sh 'node index.js'
+        sh 'pm2 start index.js'
       }
     }
   }
