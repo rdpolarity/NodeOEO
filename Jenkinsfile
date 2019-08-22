@@ -13,7 +13,8 @@ pipeline {
     }
     stage('Deliver NodeCG') {
       steps {
-        sh 'pm2 start index.js'
+        sh '''node index.js
+'''
       }
     }
   }
