@@ -1,0 +1,13 @@
+{
+	"host": "dev.rdpolarity.me",
+	"port": "80",
+	"login": {
+		"enabled": true,
+		"sessionSecret": "supersecret",
+		"steam": {
+			"enabled": true,
+			"apiKey": "YYYYY",
+			"allowedIds": ["11111111111111111", "22222222222222222"]
+		}
+	}
+}
