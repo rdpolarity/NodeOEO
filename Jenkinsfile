@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'npm install'
+        sh 'npm install -g npm-install-missing'
+        sh 'npm-install-missing'
       }
     }
     stage('Build Bundle') {
@@ -13,7 +14,6 @@ pipeline {
     }
     stage('Deliver') {
       steps {
-        input 'Start NodeCG server?'
         sh 'node index.js'
       }
     }
