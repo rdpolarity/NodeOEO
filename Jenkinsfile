@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'npm install npm-install-missing'
-        sh 'npm-install-missing'
+        sh 'npm install'
       }
     }
     stage('Build Bundle') {
