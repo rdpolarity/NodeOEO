@@ -1,19 +1,25 @@
 pipeline {
   agent any
   stages {
-    stage('Build') {
+    stage('Clone NodeCG') {
+      steps {
+        sh 'git clone https://github.com/nodecg/nodecg.git'
+      }
+    }
+    stage('Build NodeCG') {
       steps {
         sh 'npm install'
       }
     }
-    stage('Build Bundle') {
+    stage('Clone Asset') {
       steps {
-        sh 'npm install --prefix bundles/oeo-assets'
+        sh '''cd bundles
+git clone https://github.com/rdpolarity/oeo-assets'''
       }
     }
-    stage('Deliver') {
+    stage('Build Assets') {
       steps {
-        sh 'node index.js'
+
       }
     }
   }
