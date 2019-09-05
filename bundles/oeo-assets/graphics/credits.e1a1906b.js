@@ -77213,17 +77213,20 @@ module.hot.accept(reloadCSS);
       
 },{"./ajax-loader.gif":[["ajax-loader.09913def.gif","../../node_modules/slick-carousel/slick/ajax-loader.gif"],"../../node_modules/slick-carousel/slick/ajax-loader.gif"],"./fonts\\slick.eot":[["slick.6967a593.eot","../../node_modules/slick-carousel/slick/fonts/slick.eot"],"../../node_modules/slick-carousel/slick/fonts/slick.eot"],"./fonts\\slick.woff":[["slick.5b2ebb0b.woff","../../node_modules/slick-carousel/slick/fonts/slick.woff"],"../../node_modules/slick-carousel/slick/fonts/slick.woff"],"./fonts\\slick.ttf":[["slick.f1b5da07.ttf","../../node_modules/slick-carousel/slick/fonts/slick.ttf"],"../../node_modules/slick-carousel/slick/fonts/slick.ttf"],"./fonts\\slick.svg":[["slick.18533c16.svg","../../node_modules/slick-carousel/slick/fonts/slick.svg"],"../../node_modules/slick-carousel/slick/fonts/slick.svg"],"_css_loader":"C:/Users/admin/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../data/credits.json":[function(require,module,exports) {
 module.exports = [{
-  "title": "Stream",
-  "players": ["Designer / Developer: RDPolarity", "Streamer: Zer0aim", "Caster: Cyberwaste", "Caster: Dominojack", "Caster: Pironious", "Caster: Graham"]
+  "title": "Producers",
+  "players": ["RDPolarity", "Zer0aim", "Oludus"]
+}, {
+  "title": "Casters",
+  "players": ["Cyberwaste", "Dominojack", "Pironious", "Graham"]
 }, {
   "title": "Staff",
-  "players": ["Founder: RDPolarity", "Founder: Chungui", "Founder: FiLeZekk", "Founder: vaZ", "Staff: Bloodbourne", "Staff: Tannutuva", "Staff: Husky", "Staff: ToboTheHobo", "Staff: Zuper", "Staff: Cherhorowitz", "Staff: Bugalugs"]
+  "players": ["Bloodbourne", "TannuTuva", "Husky", "ToboTheHobo", "Zuper", "Cherhorowitz", "Bugalugs"]
+}, {
+  "title": "Founders",
+  "players": ["RDPolarity", "vaZ", "FiLeZekk", "Chung"]
 }, {
   "title": "Sponsors",
-  "players": ["Become a sponser! email OceanicEsportsOpen@gmail.com", "Paradigm Shift", "Base 1"]
-}, {
-  "title": "Supporters",
-  "players": ["Support us on patreon at @OceanicEsportsOpen", "FiLeZekk", "Chungui", "Ike", "Kriiolophosaurus", "Synx", "Vaz", "Bugalugs"]
+  "players": ["For business inquires! Email: OceanicEsportsOpen@gmail.com"]
 }];
 },{}],"../../node_modules/react-particles-js/lib/particles.js":[function(require,module,exports) {
 var define;
@@ -77414,7 +77417,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64771" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60041" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
