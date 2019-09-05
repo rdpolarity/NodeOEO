@@ -77226,7 +77226,7 @@ module.exports = [{
   "players": ["RDPolarity", "vaZ", "FiLeZekk", "Chung"]
 }, {
   "title": "Sponsors",
-  "players": ["For business inquires! Email: OceanicEsportsOpen@gmail.com"]
+  "players": ["For business inquiries, contact OceanicEsportsOpen@gmail.com"]
 }];
 },{}],"../../node_modules/react-particles-js/lib/particles.js":[function(require,module,exports) {
 var define;
@@ -77417,7 +77417,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60041" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60894" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
