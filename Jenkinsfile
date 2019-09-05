@@ -19,8 +19,7 @@ git clone https://github.com/rdpolarity/oeo-assets'''
     }
     stage('Build Assets') {
       steps {
-        sh '''cd bundles
-npm install'''
+
       }
     }
   }
