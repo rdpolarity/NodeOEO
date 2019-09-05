@@ -1,50 +1,30 @@
 [
   {
-    "title": "Stream",
-    "players": [
-      "Designer / Developer: RDPolarity",
-      "Streamer: Zer0aim",
-      "Caster: Cyberwaste",
-      "Caster: Dominojack",
-      "Caster: Pironious",
-      "Caster: Graham"
-    ]
+    "title": "Producers",
+    "players": ["RDPolarity", "Zer0aim", "Oludus"]
+  },
+  {
+    "title": "Casters",
+    "players": ["Cyberwaste", "Dominojack", "Pironious", "Graham"]
   },
   {
     "title": "Staff",
     "players": [
-      "Founder: RDPolarity",
-      "Founder: Chungui",
-      "Founder: FiLeZekk",
-      "Founder: vaZ",
-      "Staff: Bloodbourne",
-      "Staff: Tannutuva",
-      "Staff: Husky",
-      "Staff: ToboTheHobo",
-      "Staff: Zuper",
-      "Staff: Cherhorowitz",
-      "Staff: Bugalugs"
+      "Bloodbourne",
+      "TannuTuva",
+      "Husky",
+      "ToboTheHobo",
+      "Zuper",
+      "Cherhorowitz",
+      "Bugalugs"
     ]
+  },
+  {
+    "title": "Founders",
+    "players": ["RDPolarity", "vaZ", "FiLeZekk", "Chung"]
   },
   {
     "title": "Sponsors",
-    "players": [
-      "Become a sponser! email OceanicEsportsOpen@gmail.com",
-      "Paradigm Shift",
-      "Base 1"
-    ]
-  },
-  {
-    "title": "Supporters",
-    "players": [
-      "Support us on patreon at @OceanicEsportsOpen",
-      "FiLeZekk",
-      "Chungui",
-      "Ike",
-      "Kriiolophosaurus",
-      "Synx",
-      "Vaz",
-      "Bugalugs"
-    ]
+    "players": ["For business inquires! Email: OceanicEsportsOpen@gmail.com"]
   }
 ]
